@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Be kind to yours-elf — 39 little Christmas cards</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen&family=Shrikhand&family=Bagel+Fat+One&family=Yellowtail&family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,400;1,9..144,500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#F7EEDD; --paper:#FFF8EC; --ink:#3A2420; --muted:#7A625A; --line:#E9D9C2;
+  --tomato:#C63B2F; --pink:#F09A93; --blush:#F7CDC5; --pine:#2D5A3D; --pine-d:#21452F; --mustard:#D9A23C;
+  --foil:linear-gradient(100deg,#A97A26 0%,#F3D37A 22%,#C9973D 45%,#F8E19A 62%,#B88A31 82%,#E9C36A 100%);
+  --emerald:#1F6B4F; --orange:#E8743B; --lilac:#C9B6E4;
+  --body:#C63B2F; --mind:#2D5A3D; --heart:#9C620A; --kid:#7A55B8;
+  --sc:6px; /* scallop radius */
+}
+*{box-sizing:border-box}
+:root{color-scheme:light}
+input,textarea,select{color:var(--ink)!important;-webkit-text-fill-color:var(--ink)}
+input::placeholder,textarea::placeholder{color:#9A8A82;-webkit-text-fill-color:#9A8A82}
+html,body{margin:0}
+body{font-family:'DM Sans',system-ui,sans-serif;background-color:var(--cream);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg opacity='.5'%3E%3Cpath d='M20 30 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2z' fill='%23D9A23C'/%3E%3Ccircle cx='120' cy='40' r='3' fill='%23F09A93'/%3E%3Cpath d='M90 120 q8 -10 16 0 t16 0' stroke='%231F6B4F' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='40' cy='120' r='2.5' fill='%23E8743B'/%3E%3Cpath d='M135 95 l1.5 3.5 3.5 1.5 -3.5 1.5 -1.5 3.5 -1.5 -3.5 -3.5 -1.5 3.5 -1.5z' fill='%23C63B2F'/%3E%3C/g%3E%3C/svg%3E");color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+button{font:inherit;cursor:pointer;color:inherit}
+:focus-visible{outline:3px solid var(--mustard);outline-offset:3px}
+[hidden]{display:none!important}
+.groovy{font-family:'Shrikhand',Georgia,serif;font-weight:400;letter-spacing:.01em}
+.script{font-family:'Yellowtail',cursive;font-weight:400}
+.foil{background:var(--foil);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmer 6s ease-in-out infinite}
+@keyframes shimmer{0%,100%{background-position:0% 0}50%{background-position:100% 0}}
+
+/* scalloped shape: a tiled circle row + an inset rectangle */
+.scallop{
+  -webkit-mask:linear-gradient(#000 0 0) center/calc(100% - 2*var(--sc)) calc(100% - 2*var(--sc)) no-repeat,
+    radial-gradient(circle,#000 calc(var(--sc) - .5px),#0000 var(--sc)) 0 0/calc(2*var(--sc)) calc(2*var(--sc)) round;
+          mask:linear-gradient(#000 0 0) center/calc(100% - 2*var(--sc)) calc(100% - 2*var(--sc)) no-repeat,
+    radial-gradient(circle,#000 calc(var(--sc) - .5px),#0000 var(--sc)) 0 0/calc(2*var(--sc)) calc(2*var(--sc)) round;
+}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;overflow:hidden;padding:70px 20px 90px;background:radial-gradient(circle at 15% 20%,#F7C2B8 0 18%,transparent 19%),radial-gradient(circle at 88% 85%,#F7C2B8 0 16%,transparent 17%),#F2A79E}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:22px;background:conic-gradient(var(--tomato) 25%,var(--paper) 0 50%,var(--tomato) 0 75%,var(--paper) 0) 0 0/22px 22px}
+.frond{position:absolute;pointer-events:none;width:260px}
+.frond.a{left:-50px;bottom:10px;transform:rotate(18deg)}
+.frond.b{right:-40px;top:-30px;transform:rotate(200deg);width:230px}
+.frond.c{left:4%;top:-20px;width:120px;transform:rotate(160deg)}
+.blob{position:absolute;pointer-events:none}
+@media(max-width:760px){.frond{width:150px}.frond.c{display:none}}
+.hero-card{--sc:9px;position:relative;max-width:720px;margin:0 auto;background:var(--foil);padding:6px;filter:drop-shadow(0 18px 30px rgba(58,36,32,.25))}
+.hero-in{--sc:8px;background:var(--paper);padding:46px 34px 36px;text-align:center}
+.hero .to{font-size:1.45rem;color:var(--tomato);margin:0}
+.hero h1{margin:4px 0 6px;line-height:.9;font-size:clamp(3.6rem,13vw,7.4rem)}
+.hero h1 .groovy{color:var(--tomato);display:block;font-size:.4em;margin-bottom:.08em}
+.hero h1 .fat{display:inline-block;font-family:'Bagel Fat One',Georgia,serif;font-weight:400;font-size:.92em;line-height:1.05;padding:.04em .08em .1em;letter-spacing:-.01em}
+.hero .tag{font-family:'Fraunces',serif;font-style:italic;font-size:1.25rem;margin:12px auto 4px;max-width:34ch;color:var(--ink)}
+.how{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:0;padding:0;list-style:none;text-align:left}
+.how li{background:var(--cream);border-radius:12px;padding:10px 12px;font-size:.86rem;color:var(--muted)}
+.how b{display:block;color:var(--ink);font-size:.95rem}
+.sparkle{position:absolute;color:var(--mustard);font-size:20px;pointer-events:none}
+.bauble{position:absolute;top:-6px;width:70px;transform-origin:50% 0;animation:swing 5s ease-in-out infinite}
+.bauble.r{right:7%;width:58px;animation-delay:-2s}
+.bauble.l{left:6%}
+@keyframes swing{0%,100%{transform:rotate(4deg)}50%{transform:rotate(-4deg)}}
+@media(max-width:760px){.bauble{display:none}}
+
+/* ---------- Bar ---------- */
+.bar{position:sticky;top:0;z-index:5;background:rgba(247,238,221,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px;padding:12px 20px}
+.wrap{max-width:1080px;margin:0 auto}
+.progress{display:flex;align-items:center;gap:10px}
+.track{flex:1;height:8px;border-radius:99px;background:var(--line);overflow:hidden;max-width:220px}
+.fill{height:100%;background:var(--foil);width:0;transition:width .5s}
+.stat{font-size:.9rem;color:var(--muted);white-space:nowrap}
+.stat b{color:var(--ink)}
+.toggle{display:inline-flex;align-items:center;gap:8px;font-size:.9rem;color:var(--muted);background:none;border:0;padding:0}
+.switch{width:36px;height:20px;border-radius:99px;background:var(--line);position:relative;transition:background .2s}
+.switch::after{content:"";position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.2);transition:left .2s}
+.toggle[aria-pressed="true"] .switch{background:var(--tomato)}
+.toggle[aria-pressed="true"] .switch::after{left:18px}
+.pill{background:var(--tomato);color:#fff;border:0;border-radius:999px;padding:9px 18px;font-weight:700;font-size:.9rem}
+.pill:disabled{opacity:.45;cursor:default}
+
+main .wrap{padding:30px 20px 40px}
+.hero-cta{position:relative;z-index:2;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px 18px;margin-top:34px}
+.hero-cta .pill{font-size:.95rem!important;padding:13px 22px!important}
+.hero-cta .pill:disabled{background:#EDE3D8!important;color:#5E4E48!important;cursor:not-allowed}
+.cta-note{flex-basis:100%;text-align:center;margin:2px 0 0;font-family:'Silkscreen',monospace;font-size:.78rem;text-transform:uppercase;color:var(--ink)}
+.mytree .progress{flex-direction:column;gap:8px;min-width:0;width:100%}
+.mytree .track{width:220px;flex:none;background:rgba(255,255,255,.6)}
+.kids-t{font-family:'Silkscreen',monospace;text-transform:uppercase;font-size:.74rem;background:#E7DDF6;color:var(--ink);border:0;padding:7px 12px;margin:6px 6px 14px;box-shadow:0 -2px 0 0 var(--ink),0 2px 0 0 var(--ink),-2px 0 0 0 var(--ink),2px 0 0 0 var(--ink),3px 5px 0 0 rgba(58,36,32,.2);transform:rotate(-1.5deg)}
+.kids-t[aria-pressed="true"]{background:#8E6CC4;color:#fff}
+.fr-in .kids{position:relative;background:#F3ECFB;border:3px dashed #8E6CC4;border-radius:18px 22px 16px 24px;padding:14px 16px 14px 62px;transform:rotate(.6deg);animation:kidpop .45s cubic-bezier(.2,.8,.3,1.5) both}
+.fr-in .kids .kid-ico{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:2rem;animation:wob 2.4s ease-in-out infinite}
+.fr-in .kids b{display:block;color:#6B4FA3;font-size:1.05rem;font-weight:400;line-height:1.2}
+.kids .kid-x{display:block;font-size:1rem;margin-top:2px}
+@keyframes kidpop{from{opacity:0;transform:scale(.8) rotate(-4deg)}to{opacity:1;transform:rotate(.6deg)}}
+@keyframes wob{0%,100%{transform:translateY(-50%) rotate(-8deg)}50%{transform:translateY(-50%) rotate(8deg)}}
+.notice{background:var(--paper);border:1px dashed var(--pink);border-radius:12px;padding:12px 16px;margin-bottom:30px;font-size:.95rem;text-align:center}
+
+/* ---------- Tree ---------- */
+.mytree{display:flex;flex-direction:column-reverse;align-items:center;max-width:560px;margin-left:auto;margin-right:auto;gap:12px;text-align:center;border-radius:28px;padding:26px;border:10px solid transparent;background:linear-gradient(var(--blush),var(--blush)) padding-box,repeating-conic-gradient(var(--emerald) 0 25%,var(--paper) 0 50%) 0 0/20px 20px border-box;margin-bottom:46px;align-items:center;position:relative;overflow:hidden}
+.mytree::before{content:"";position:absolute;inset:0;background:radial-gradient(circle,rgba(255,255,255,.5) 1.5px,transparent 2px) 0 0/22px 22px;pointer-events:none}
+.mytree>*{position:relative}
+@media(max-width:640px){.mytree{grid-template-columns:1fr}}
+.mytree h2{font-size:2rem;color:var(--tomato);margin:0;line-height:1.1}
+.mytree .sub{color:var(--ink);font-size:.95rem;margin:4px 0 16px}
+.tree-arch{width:340px;max-width:100%;background:#FBE3DC;border-radius:200px 200px 18px 18px;padding:24px 14px 6px;border:3px solid var(--tomato);box-shadow:inset 0 0 0 6px #FBE3DC,inset 0 0 0 8px var(--mustard)}
+.tree-svg{width:100%;height:auto;display:block}
+.bulb{fill:#4C7559;stroke:#3C6449;stroke-width:1;transform-box:fill-box;transform-origin:center}
+.bulb.on{stroke:none;filter:url(#glow);animation:twinkle 2.8s ease-in-out infinite}
+.bulb.gold{fill:#FFD66B!important}
+.bulb.pop{animation:pop .7s ease,twinkle 2.8s ease-in-out .7s infinite}
+.bulb.l1{opacity:.5;filter:none;animation:none}
+.bulb.l2{opacity:.85}
+.bulb.l3{animation:shine 1.8s ease-in-out infinite}
+@keyframes shine{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.85;transform:scale(1.18)}}
+@keyframes twinkle{0%,100%{opacity:1}50%{opacity:.62}}
+@keyframes pop{0%{transform:scale(.2);opacity:0}60%{transform:scale(1.8)}100%{transform:scale(1)}}
+.star{fill:#E7B4AA;transition:fill .5s}
+.star.on{fill:#FFD66B;filter:url(#glow) drop-shadow(0 0 8px #FFE9A8);transform-box:fill-box;transform-origin:center;animation:shine 2.4s ease-in-out infinite}
+.badges{display:grid;grid-template-columns:repeat(auto-fill,minmax(98px,1fr));gap:12px;margin:0;padding:0;list-style:none}
+.badge{--sc:5px;background:var(--paper);padding:14px 6px 12px;text-align:center}
+.badge .ico{font-size:1.8rem;line-height:1;display:block;margin-bottom:6px}
+.badge b{display:block;font-size:.82rem}
+.badge small{display:block;font-size:.72rem;color:var(--muted);line-height:1.3;margin-top:2px}
+.badge.locked{background:rgba(255,248,236,.55)}
+.badge.locked .ico{filter:grayscale(1);opacity:.35}
+.badge.locked b{color:var(--muted)}
+.badge.new{animation:pop .7s ease;background:#FFF2CF}
+
+/* ---------- Deck ---------- */
+section.phase{margin-bottom:46px}
+.phase-head{text-align:center;margin-bottom:22px}
+.phase-head h2{font-size:clamp(1.8rem,4vw,2.5rem);margin:0;line-height:1}
+.phase-head .script{font-size:1.4rem;color:var(--tomato);display:block}
+.phase-head h2::after{content:"";display:block;width:120px;height:12px;margin:6px auto 0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='12' viewBox='0 0 120 12'%3E%3Cpath d='M2 6 q7.5 -8 15 0 t15 0 t15 0 t15 0 t15 0 t15 0 t15 0 t15 0' stroke='%23E8743B' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center}
+.phase-head p{margin:6px auto 0;color:var(--muted);max-width:60ch;font-size:.95rem}
+.phase:nth-of-type(1) h2{color:var(--pine)}.phase:nth-of-type(2) h2{color:var(--tomato)}.phase:nth-of-type(3) h2{color:var(--pine)}
+.deck{display:grid;grid-template-columns:repeat(auto-fill,minmax(124px,1fr));gap:18px 14px;perspective:1200px}
+.card{position:relative;aspect-ratio:5/7;border:0;padding:0;background:none;transform:rotate(var(--tilt,0deg));transition:transform .25s ease;animation:deal .6s cubic-bezier(.2,.8,.3,1.2) both;animation-delay:var(--d,0s)}
+@keyframes deal{from{opacity:0;transform:translate(var(--dx,0),-60px) rotate(calc(var(--tilt,0deg)*8)) scale(.85)}to{opacity:1;transform:rotate(var(--tilt,0deg))}}
+.card:not(.locked):hover{transform:translateY(-6px) rotate(calc(var(--tilt,0deg)*-1)) scale(1.03)}
+.card .edge{--sc:5px;position:absolute;inset:0;background:var(--foil);filter:drop-shadow(0 6px 10px rgba(58,36,32,.18))}
+.card .face{--sc:4.6px;position:absolute;inset:3px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:12px 10px;overflow:hidden}
+/* card backs */
+.back-stripe{background:repeating-linear-gradient(90deg,var(--tomato) 0 11px,var(--pink) 11px 22px)}
+.back-dots{background:radial-gradient(circle,var(--paper) 3px,transparent 3.5px) 0 0/18px 18px,radial-gradient(circle,var(--paper) 3px,transparent 3.5px) 9px 9px/18px 18px,var(--pink)}
+.back-checker{background:repeating-conic-gradient(var(--emerald) 0 25%,#F7CDC5 0 50%) 0 0/24px 24px}
+.back-wave{background-color:var(--orange);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='20' viewBox='0 0 40 20'%3E%3Cpath d='M0 10 q10 -10 20 0 t20 0' stroke='%23FFF8EC' stroke-width='3' fill='none'/%3E%3C/svg%3E")}
+.back-gingham{background:repeating-linear-gradient(0deg,rgba(255,248,236,.28) 0 10px,transparent 10px 20px),repeating-linear-gradient(90deg,rgba(255,248,236,.28) 0 10px,transparent 10px 20px),var(--pine)}
+.back-sprig{background-color:var(--paper);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 44 44'%3E%3Cg fill='none' stroke='%232D5A3D' stroke-width='1.6' stroke-linecap='round'%3E%3Cpath d='M8 30 L22 16'/%3E%3Cpath d='M12 26 l-5 -2 M12 26 l1 5 M16 22 l-5 -2 M16 22 l1 5 M20 18 l-5 -2 M20 18 l1 5'/%3E%3C/g%3E%3Ccircle cx='34' cy='34' r='2.6' fill='%23C63B2F'/%3E%3Cpath d='M34 6 l1.2 3 3 1.2 -3 1.2 -1.2 3 -1.2 -3 -3 -1.2 3 -1.2z' fill='%23D9A23C'/%3E%3C/svg%3E")}
+.back-num{width:58%;aspect-ratio:1;border-radius:50%;background:var(--paper);display:grid;place-items:center;box-shadow:0 0 0 3px var(--mustard),0 0 0 5px var(--paper)}
+.back-num .groovy{font-size:2.2rem;line-height:1;color:var(--tomato)}
+.back-num small{display:block;font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:-4px}
+.card.locked .face::after{content:none}
+.card.locked{cursor:not-allowed}
+.card .seal{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);background:var(--paper);border-radius:99px;font-size:.66rem;font-weight:700;padding:3px 9px;color:var(--muted);white-space:nowrap;z-index:2;letter-spacing:.04em}
+.card.today .edge{filter:drop-shadow(0 0 10px rgba(217,162,60,.9)) drop-shadow(0 6px 10px rgba(58,36,32,.2))}
+.card.today .seal{background:var(--tomato);color:#fff}
+/* face up (lit) */
+.front{background:var(--paper)}
+.front .dt{font-size:1.15rem;color:var(--tomato);line-height:1}
+.front .tt{font-family:'Shrikhand',serif;font-size:1.02rem;line-height:1.1;color:var(--pine);margin:6px 0 8px}
+.front .st{font-size:1.6rem;line-height:1}
+.pips{display:flex;gap:5px;justify-content:center;margin-top:8px}
+.pip{width:9px;height:9px;border-radius:50%;border:1.5px solid var(--c)}
+.pip.on{background:var(--c)}
+.card.gold .front{background:radial-gradient(circle at 50% 35%,#FFF4D6,var(--paper) 70%)}
+
+.tick-state{font-family:'Silkscreen',monospace;text-transform:uppercase;font-size:.85rem;text-align:center;margin:0 0 12px;color:#8A5A0B}
+.tick-state[data-n="2"]{color:#A8461A;text-shadow:0 0 8px rgba(232,116,59,.35)}
+.tick-state[data-n="3"]{color:#7A4F00;text-shadow:0 0 10px rgba(255,214,107,.9),0 0 2px #fff;font-size:.95rem}
+.quote{margin:4px 0 16px;padding:16px 18px 12px;background:#FFF3B8;text-align:center;transform:rotate(-1deg);box-shadow:4px 6px 0 rgba(58,36,32,.12)}
+.quote blockquote{margin:0;font-family:'Fraunces',serif;font-style:italic;font-size:1.05rem;line-height:1.35}
+.quote figcaption{font-family:'Silkscreen',monospace;font-size:.72rem;text-transform:uppercase;margin-top:8px;color:var(--tomato)}
+.jwrap{width:100%;max-width:560px;max-height:94vh;animation:up .3s ease}
+.jlist{margin-top:16px;display:grid;gap:10px}
+.jentry{background:var(--paper) repeating-linear-gradient(transparent 0 25px,#EFE1CB 25px 26px);border-radius:10px;padding:10px 14px;font-family:'Fraunces',serif;line-height:26px;white-space:pre-wrap}
+.jentry b{display:block;font-family:'Silkscreen',monospace;font-weight:400;font-size:.72rem;text-transform:uppercase;color:var(--tomato)}
+@keyframes up{from{transform:translateY(20px);opacity:0}to{transform:none;opacity:1}}
+.tree-btns{display:flex;flex-wrap:wrap;gap:4px 8px;justify-content:center;margin-top:6px}
+#journalBtn{background:var(--emerald)!important}
+.treelinks{display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap;color:var(--muted)}
+.howlink{background:none;border:0;padding:0;font-size:.85rem;color:var(--ink);text-decoration:underline dotted;text-underline-offset:4px;margin-top:-4px}
+.sheet-scrim{position:fixed;inset:0;background:rgba(58,36,32,.45);z-index:30;display:none;align-items:flex-end;justify-content:center}
+.sheet-scrim.open{display:flex}
+.sheet{background:var(--paper);width:100%;max-width:560px;border-radius:24px 24px 0 0;padding:12px 24px 28px;animation:sheetUp .35s cubic-bezier(.2,.8,.3,1) both;box-shadow:0 -10px 30px rgba(58,36,32,.2)}
+@keyframes sheetUp{from{transform:translateY(100%)}to{transform:none}}
+.grab{width:44px;height:5px;border-radius:9px;background:var(--line);margin:0 auto 14px}
+.sheet h3{color:var(--tomato);font-size:1.6rem;margin:0 0 12px}
+.how-list{list-style:none;margin:0 0 18px;padding:0;display:grid;gap:10px}
+.how-list li{display:grid;grid-template-columns:54px 1fr;align-items:center;gap:8px;font-size:.98rem}
+.how-list span{text-align:center;font-size:1.1rem}
+.how-list .b1{color:#F09A93;opacity:.6}.how-list .b2{color:#F09A93;text-shadow:0 0 6px #F09A93}.how-list .b3{color:#FFD66B;text-shadow:0 0 10px #FFD66B,0 0 2px #C9973D;font-size:1.4rem}
+.savecode{margin:0 0 18px;border-top:1px dashed var(--line);padding-top:12px}
+.savecode summary{cursor:pointer;font-weight:700;font-size:.92rem}
+.savecode p{font-size:.88rem;color:var(--muted);margin:8px 0}
+.sheet{max-height:92vh;overflow:auto}
+/* card states */
+.card.locked .face,.card.locked .edge{filter:grayscale(1) contrast(.8) brightness(1.12);opacity:.45}
+.card.locked .seal{background:rgba(255,248,236,.95);color:var(--muted);font-weight:700}
+.card.ready .face::after{content:"";position:absolute;inset:-40%;background:linear-gradient(115deg,transparent 40%,rgba(255,255,255,.55) 50%,transparent 60%);animation:sweep 2.6s ease-in-out infinite;pointer-events:none}
+@keyframes sweep{0%{transform:translateX(-60%)}60%,100%{transform:translateX(60%)}}
+.card.ready:hover{transform:translateY(-8px) rotate(-2deg) scale(1.05)}
+.seal.reveal{font-family:'Silkscreen',monospace;font-weight:400;text-transform:uppercase;font-size:.66rem;background:var(--tomato)!important;color:#fff!important;border-radius:0;padding:4px 8px;box-shadow:0 -2px 0 0 var(--ink),0 2px 0 0 var(--ink),-2px 0 0 0 var(--ink),2px 0 0 0 var(--ink),3px 4px 0 0 rgba(58,36,32,.25);bottom:12px;animation:bob 1.6s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,-3px)}}
+.front .ic{font-size:1.9rem;line-height:1;margin:4px 0 2px}
+.flycard{position:fixed;left:50%;top:50%;width:110px;aspect-ratio:5/7;z-index:50;pointer-events:none;transform:translate(-50%,-50%)}
+.flycard .edge{--sc:5px;position:absolute;inset:0;background:var(--foil)}
+.flycard .face{--sc:4.6px;position:absolute;inset:3px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px 8px}
+.flycard .tt{font-size:.85rem}
+.sack{transform-box:fill-box;transform-origin:50% 100%}
+.sack.wiggle{animation:wiggle .6s ease}
+@keyframes wiggle{0%,100%{transform:rotate(0)}20%{transform:rotate(-12deg) scale(1.1)}40%{transform:rotate(10deg)}60%{transform:rotate(-6deg)}80%{transform:rotate(3deg)}}
+.mytree .progress .btn{margin-top:6px}
+/* first-open pause */
+.intro-go{display:none;text-align:center;margin:8px 0 6px}
+.fr-in.intro .intro-go{display:block;animation:rise .6s .9s both}
+.fr-in.intro>*:not(.close):not(.addr):not(.m-title):not(.m-date):not(.quote):not(.intro-go){display:none!important}
+.fr-in.intro .quote{margin:26px 0 22px;padding:26px 22px 18px;animation:rise .7s .25s both}
+.fr-in.intro .quote blockquote{font-size:1.35rem}
+.opts.stagger .opt{animation:rise .55s both}
+.opts.stagger .opt:nth-child(1){animation-delay:.1s}.opts.stagger .opt:nth-child(2){animation-delay:.6s}.opts.stagger .opt:nth-child(3){animation-delay:1.1s}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.ico-share{width:12px;height:12px;vertical-align:-1px;margin-right:6px;shape-rendering:crispEdges}
+.card.locked .face::before,.card.ready .face::before{content:"";position:absolute;inset:0;backdrop-filter:blur(2.5px);-webkit-backdrop-filter:blur(2.5px)}
+.back-num{position:relative;z-index:1}
+.hero-cta .herolink{flex-basis:100%}
+#beenBtn{flex-basis:auto;margin-top:4px}
+.herolink{background:none;border:0;color:var(--ink);font-size:.88rem;text-decoration:underline dotted;text-underline-offset:4px;margin-top:2px}
+.tour{text-align:center}
+.slide p{font-size:1.1rem;max-width:34ch;margin:12px auto 0;min-height:3.2em}
+.vis{height:130px;display:grid;place-items:center;font-size:2.6rem}
+.v1{position:relative}
+.v1 span{position:absolute;width:62px;height:86px;border-radius:6px;border:3px solid #D9A23C;background:repeating-linear-gradient(90deg,#C63B2F 0 8px,#F09A93 8px 16px)}
+.v1 span:nth-child(1){transform:rotate(-12deg) translateX(-36px)}.v1 span:nth-child(2){background:repeating-conic-gradient(#1F6B4F 0 25%,#F7CDC5 0 50%) 0 0/14px 14px;transform:rotate(2deg)}.v1 span:nth-child(3){background:#FFF8EC;transform:rotate(12deg) translateX(36px);animation:peek 2s ease-in-out infinite}
+@keyframes peek{0%,100%{transform:rotate(12deg) translateX(36px)}50%{transform:rotate(18deg) translate(44px,-10px)}}
+.v3 svg{width:120px;height:110px}
+.tb{animation:twinkle 2s ease-in-out infinite}
+.dots{display:flex;gap:8px;justify-content:center;margin:16px 0 14px}
+.dots i{width:9px;height:9px;background:var(--line);display:block}
+.dots i.on{background:var(--tomato)}
+.tour-nav{display:flex;justify-content:space-between;align-items:center}
+.tip{margin:16px 0 4px;padding:12px 14px;border-radius:12px;background:#EEF4EF;font-size:.92rem;line-height:1.45}
+.tip b{display:block;font-family:'Silkscreen',monospace;font-weight:400;font-size:.7rem;text-transform:uppercase;color:var(--emerald);margin-bottom:3px}
+.fr-in.intro .tip{display:none!important}
+.fw{transform-box:fill-box;transform-origin:center;animation:fw 2.1s ease-out infinite}
+@keyframes fw{0%{transform:scale(.2);opacity:0}30%{opacity:1}100%{transform:scale(1.25);opacity:0}}
+.treeflip{perspective:1800px;max-width:560px;margin:0 auto 46px}
+.tf-inner{display:grid;transform-style:preserve-3d;transition:transform .9s cubic-bezier(.3,.7,.25,1)}
+.treeflip.flipped .tf-inner{transform:rotateY(180deg)}
+.tf-inner>section{grid-area:1/1;backface-visibility:hidden;-webkit-backface-visibility:hidden;margin:0!important;max-width:none!important}
+.jback{transform:rotateY(180deg);border-radius:28px;padding:22px 24px;border:10px solid transparent;background:linear-gradient(var(--paper),var(--paper)) padding-box,repeating-conic-gradient(var(--emerald) 0 25%,var(--paper) 0 50%) 0 0/20px 20px border-box;position:relative}
+.jback::before{content:"";position:absolute;inset:0;border-radius:18px;background:repeating-linear-gradient(transparent 0 31px,#EFE1CB 31px 32px);opacity:.5;pointer-events:none}
+.jback>*{position:relative}
+.jclose{margin:0 0 10px!important}
+@media (prefers-reduced-motion:reduce){.tf-inner{transition:none}}
+.oi{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;font-size:1.55rem;background:color-mix(in srgb,var(--c) 12%,#fff);transition:transform .2s}
+.opt[aria-pressed="true"] .oi{transform:rotate(-8deg) scale(1.08)}
+.opt .alt i{font-style:normal;font-weight:700;color:var(--ink)}
+.callink{display:inline-block;margin-top:12px;font-size:.88rem}
+.namebtn{background:none;border:0;font-size:1rem;margin-left:8px;vertical-align:middle;color:var(--muted);cursor:pointer}
+.nameform{display:flex;gap:6px;align-items:center;justify-content:center}
+.nameform input{font:inherit;border:1px solid var(--line);border-radius:10px;padding:7px 10px;background:#fff;width:180px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.testbar{background:var(--ink);color:#fff;text-align:center;font-family:'Silkscreen',monospace;font-size:.75rem;padding:8px 12px;text-transform:uppercase}
+.testbar button{font:inherit;background:#fff;color:var(--ink);border:0;padding:3px 8px;margin-left:8px;cursor:pointer}
+.cw{position:relative}
+.cw .card{width:100%}
+.flipbtn{position:absolute;right:8px;bottom:8px;z-index:3;width:22px;height:22px;border:0;border-radius:50%;background:rgba(255,248,236,.85);color:var(--muted);font-size:.75rem;line-height:1;cursor:pointer;opacity:0;transition:opacity .2s,transform .2s}
+.cw:hover .flipbtn,.flipbtn:focus-visible{opacity:1}
+.flipbtn:hover{transform:rotate(-90deg);color:var(--ink)}
+@media (hover:none){.flipbtn{opacity:.6}}
+.back-num .pips{margin-top:2px}
+.parcel{grid-column:1/-1;position:relative;min-height:150px;border-radius:14px;display:grid;place-items:center;
+  background:linear-gradient(90deg,transparent calc(50% - 9px),#D9A23C calc(50% - 9px) calc(50% + 9px),transparent calc(50% + 9px)),linear-gradient(0deg,transparent calc(50% - 9px),#D9A23C calc(50% - 9px) calc(50% + 9px),transparent calc(50% + 9px)),repeating-linear-gradient(135deg,#C63B2F 0 14px,#E14F43 14px 28px);
+  box-shadow:0 6px 14px rgba(58,36,32,.15);filter:saturate(.9)}
+.parcel:nth-of-type(odd){background:linear-gradient(90deg,transparent calc(50% - 9px),#D9A23C calc(50% - 9px) calc(50% + 9px),transparent calc(50% + 9px)),linear-gradient(0deg,transparent calc(50% - 9px),#D9A23C calc(50% - 9px) calc(50% + 9px),transparent calc(50% + 9px)),repeating-conic-gradient(#1F6B4F 0 25%,#2D7A5C 0 50%) 0 0/28px 28px}
+.parcel .bow{position:absolute;left:50%;top:50%;transform:translate(-50%,-80%);font-size:2.2rem}
+.parcel .ptag{position:relative;z-index:1;background:var(--paper);padding:8px 16px;text-align:center;transform:translateY(24px) rotate(-2deg);box-shadow:2px 3px 0 rgba(58,36,32,.2);display:grid;line-height:1.3}
+.parcel .ptag b{font-family:'Shrikhand',serif;font-weight:400;color:var(--tomato);font-size:1.05rem}
+.parcel .ptag span{font-size:.8rem;color:var(--muted)}
+.jprompt{font-family:'Fraunces',serif;font-style:italic;font-size:1.05rem;margin:4px 0 8px;color:var(--ink)}
+.jswitch{display:block;margin:4px 0 14px;font-size:.9rem}
+.pick{position:relative;margin:16px 0 0;padding:14px 18px 12px;background:#FFF;border:1.5px solid var(--pink);border-radius:4px;transform:rotate(-.6deg);box-shadow:3px 4px 0 rgba(240,154,147,.35)}
+.pick::before{content:"";position:absolute;top:-8px;left:22px;width:54px;height:16px;background:rgba(217,162,60,.45);transform:rotate(-4deg)}
+.pick b{display:block;font-weight:400;font-size:1.35rem;color:var(--tomato);line-height:1.1;margin-bottom:4px}
+.pick span{font-family:'Fraunces',serif;font-size:1rem;line-height:1.45}
+.pick i{display:block;text-align:right;font-style:normal;font-size:1.3rem;color:var(--tomato);margin-top:-2px}
+.fr-in.intro .pick{display:none!important}
+.givebtn{text-decoration:none;display:inline-block}
+.hero-cta .cta-note{order:3}
+.givelink{flex-basis:100%;text-align:center;font-size:.88rem;color:var(--ink);margin-top:2px;text-decoration:underline dotted;text-underline-offset:4px}
+.about{text-align:left}
+.avatarwrap{display:flex;flex-direction:column;align-items:center;gap:4px;margin:2px 0 6px}
+.avatar{width:150px;height:auto;image-rendering:pixelated}
+.avatarwrap span{font-family:'Silkscreen',monospace;font-size:.7rem;text-transform:uppercase;color:var(--muted)}
+footer #aboutBtn{margin-bottom:10px}
+.about summary{cursor:pointer;font-weight:700;color:var(--ink);text-align:center}
+.about a{color:var(--tomato)}
+.about p{margin:8px 0;color:var(--ink);font-size:.92rem;line-height:1.55}
+.tip .mypick{display:block;margin-top:8px;padding-top:8px;border-top:1px dashed rgba(31,107,79,.25);font-size:.88rem;color:var(--muted)}
+.tip .mypick i{font-style:normal;font-weight:700;color:var(--ink)}
+.howto{display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;margin:-2px 0 12px;font-size:.85rem}
+.howto span{color:var(--muted)}
+.howto a{color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:99px;padding:3px 10px;text-decoration:none}
+.howto a:hover{border-color:var(--tomato);color:var(--tomato)}
+.fr-in.intro .howto{display:none!important}
+.optwrap{position:relative;border:1.5px dashed var(--line);border-radius:14px;background:#fff;transition:background .2s}
+.optwrap .opt{border:0!important;background:transparent!important}
+.optwrap:has(.opt[aria-pressed="true"]){border-style:solid;border-color:var(--c);background:color-mix(in srgb,var(--c) 7%,#fff)}
+.optimer{display:flex;width:fit-content;align-items:center;gap:6px;margin:-4px 0 12px 76px;font:inherit;font-size:.82rem;font-weight:700;color:var(--c);background:color-mix(in srgb,var(--c) 10%,#fff);border:1.5px solid color-mix(in srgb,var(--c) 40%,#fff);border-radius:999px;padding:5px 12px;cursor:pointer}
+.optimer.run{background:var(--c);color:#fff;border-color:var(--c);font-variant-numeric:tabular-nums}
+.optimer.done{background:#fff}
+.optvid{display:inline-block;margin:-4px 0 12px 76px;font-size:.82rem;color:var(--c);text-decoration:underline;text-underline-offset:3px}
+.quest{margin:16px 0 0;padding:12px 16px;background:#FFF3B8;border:2px dashed #D9A23C;border-radius:10px;transform:rotate(-.5deg);font-size:.95rem;line-height:1.45}
+.quest b{display:block;font-family:'Silkscreen',monospace;font-weight:400;font-size:.72rem;text-transform:uppercase;color:#7A4F00;margin-bottom:3px}
+.fr-in.intro .quest{display:none!important}
+.optip{margin:0 14px 12px 76px;padding:8px 10px;background:#EEF4EF;border-radius:8px;font-size:.84rem;line-height:1.45;color:var(--ink)}
+.optip b{font-weight:700;color:var(--emerald)}
+.opt .alt .lvl{display:block;margin-top:3px}
+.opt .alt .lvl.mine{background:color-mix(in srgb,var(--c) 10%,#fff);border-left:3px solid var(--c);padding:6px 8px;border-radius:6px;color:var(--ink);font-size:.88rem}
+#setScrim .seg{flex-wrap:wrap}
+/* ---------- Secret deck ---------- */
+.phase.secret{border-radius:34px;padding:36px 20px 30px;background:radial-gradient(circle at 50% 150%,#C9B6E4 0 24%,#A8C8E8 24% 30%,#B9DDB0 30% 36%,#F6E19C 36% 42%,#F7C59F 42% 48%,#F4A6A0 48% 54%,transparent 54%),linear-gradient(#FFF8EC,#FFF8EC);box-shadow:inset 0 0 0 3px #fff,0 10px 30px rgba(201,182,228,.45)}
+.phase.secret .phase-head h2{background:linear-gradient(90deg,#E0675E,#E8943B,#D9B23C,#5FA36B,#5B8FC7,#8E6CC4);-webkit-background-clip:text;background-clip:text;color:transparent}
+.phase.secret .phase-head .script{color:#8E6CC4}
+.phase.secret .phase-head p{color:var(--ink)}
+.phase.secret .phase-head h2{filter:drop-shadow(0 1px 0 #fff)}
+.phase.secret .phase-head h2::after{filter:hue-rotate(220deg)}
+.phase.reveal{animation:revealIn 1.2s cubic-bezier(.2,.8,.3,1.1) both}
+@keyframes revealIn{from{opacity:0;transform:translateY(40px) scale(.96);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
+.back-rainbow{background:repeating-linear-gradient(90deg,#F4A6A0 0 9px,#F7C59F 9px 18px,#F6E19C 18px 27px,#B9DDB0 27px 36px,#A8C8E8 36px 45px,#C9B6E4 45px 54px)}
+.card.holo .edge{background:linear-gradient(120deg,#F6D1FF,#C8F2FF,#FFF3B0,#FFD1DC,#C8F2FF,#F6D1FF);background-size:300% 300%;animation:holo 4s ease-in-out infinite}
+@keyframes holo{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.card.holo .back-num{box-shadow:0 0 0 3px #C9B6E4,0 0 0 5px var(--paper)}
+.card.holo .back-num .groovy{color:#8E6CC4}
+
+/* ---------- Modal (flip card) ---------- */
+.scrim{position:fixed;inset:0;background:rgba(58,36,32,.55);display:none;align-items:center;justify-content:center;z-index:20;padding:14px;perspective:1600px}
+.scrim.open{display:flex}
+.flip{position:relative;width:100%;max-width:600px;max-height:94vh;transform-style:preserve-3d;animation:spin .9s cubic-bezier(.3,.7,.25,1) both}
+@keyframes spin{0%{transform:rotateY(180deg) scale(.55) rotate(-6deg)}100%{transform:rotateY(0) scale(1) rotate(0)}}
+.flip .bk,.flip .fr{backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.flip .bk{--sc:9px;position:absolute;inset:0;transform:rotateY(180deg);background:var(--foil);padding:6px}
+.flip .bk>div{--sc:8.4px;width:100%;height:100%}
+.fr{--sc:9px;background:var(--foil);padding:6px;max-height:94vh;display:flex}
+.fr-in{--sc:8.4px;background:var(--paper);width:100%;overflow:auto;padding:30px 26px 24px;position:relative}
+@media(max-width:520px){.fr-in{padding:26px 18px 20px}}
+.close{position:absolute;right:16px;top:16px;border:0;background:var(--cream);width:36px;height:36px;border-radius:50%;font-size:1.2rem;color:var(--muted);z-index:2}
+.addr{display:flex;gap:18px;font-size:1.25rem;color:var(--tomato);margin-bottom:2px}
+.m-title{font-size:clamp(1.9rem,6vw,2.5rem);line-height:1.05;color:var(--pine);margin:2px 0 4px;padding-right:36px}
+.m-date{color:var(--muted);font-size:.88rem;letter-spacing:.06em;text-transform:uppercase;font-weight:700}
+.m-line{font-family:'Fraunces',serif;font-style:italic;font-size:1.15rem;margin:14px 0 18px;padding-left:14px;border-left:3px solid var(--pink)}
+.pick-hint{font-size:.88rem;color:var(--muted);margin:0 0 10px}
+.opts{display:grid;gap:10px;margin-bottom:12px}
+.opt{display:grid;grid-template-columns:48px 1fr auto;gap:10px;align-items:start;text-align:left;border:1.5px dashed var(--line);background:#fff;border-radius:14px;padding:12px 14px;width:100%;transition:transform .15s,background .2s}
+.opt:hover:not(:disabled){transform:translateY(-1px)}
+.opt .k{font-size:.74rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--c)}
+.opt .x{display:block;font-size:.98rem;margin-top:2px}
+.optwrap.kid{background:#F6F0FC;border-color:#C9B6E4}
+.opt .alt{display:block;font-size:.82rem;color:var(--muted);margin-top:4px}
+.box{width:26px;height:26px;border-radius:50%;border:2px solid var(--c);display:grid;place-items:center;font-size:.85rem;font-weight:700;color:#fff;flex:none}
+.opt[aria-pressed="true"]{border-style:solid;border-color:var(--c);background:color-mix(in srgb,var(--c) 7%,#fff)}
+.opt[aria-pressed="true"] .box{background:var(--c)}
+.opt:disabled{opacity:.65;cursor:default}
+.kids{background:var(--cream);border-radius:12px;padding:10px 14px;font-size:.92rem;margin-bottom:12px}
+.kids b{color:var(--pine)}
+.whos{font-size:.88rem;color:var(--muted);margin:0 0 12px}
+.complete{border-top:1px dashed var(--line);padding-top:14px}
+.complete h4{font-family:'Yellowtail',cursive;font-weight:400;font-size:1.5rem;color:var(--tomato);margin:0 0 8px}
+.field{display:grid;gap:4px;margin-bottom:10px}
+.field label,.flabel{font-size:.76rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.field input[type=text],.field textarea{font:inherit;border:1px solid var(--line);background:#fff;border-radius:10px;padding:9px 12px;width:100%}
+.field textarea{resize:vertical;min-height:50px}
+.photo-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+label.pickp{border:1.5px dashed var(--pink);border-radius:10px;padding:8px 14px;font-size:.9rem;cursor:pointer}
+.photo-row input{position:absolute;opacity:0;width:1px;height:1px}
+.photo-row input:focus-visible+label{outline:3px solid var(--mustard)}
+.thumb{width:56px;height:56px;border-radius:10px;object-fit:cover;display:none}
+.linkish{background:none;border:0;color:var(--tomato);font-size:.85rem;text-decoration:underline;padding:0}
+.check{display:flex;gap:8px;align-items:flex-start;font-size:.88rem;margin:4px 0 14px}
+.check input{margin-top:4px;accent-color:var(--tomato)}
+.actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.btn{border-radius:999px;padding:10px 18px;font-weight:700;font-size:.93rem;border:1.5px solid var(--tomato)}
+.btn.primary{background:var(--tomato);color:#fff}
+.btn.primary:disabled{opacity:.4;cursor:default}
+.btn.ghost{background:none;color:var(--tomato)}
+.toast{font-size:.85rem;color:var(--pine)}
+.celebrate{margin-top:12px;background:#FFF2CF;border-radius:12px;padding:10px 14px;font-size:.93rem}
+.support{margin-top:14px;font-size:.86rem;background:var(--cream);border-radius:10px;padding:10px 14px}
+.burst{position:fixed;pointer-events:none;z-index:40;font-size:18px;color:var(--mustard);animation:fly 1s ease-out forwards}
+@keyframes fly{from{transform:translate(0,0) scale(.6);opacity:1}to{transform:translate(var(--x),var(--y)) scale(1.2) rotate(120deg);opacity:0}}
+
+/* ---------- Wall ---------- */
+.wall-head{text-align:center;margin-bottom:8px}
+.wall-head h2{font-size:clamp(1.8rem,4vw,2.5rem);color:var(--tomato);margin:0;line-height:1}
+.wall-head .script{font-size:1.4rem;color:var(--pine);display:block}
+.wall-ctl{display:flex;justify-content:center;margin:10px 0 4px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;background:var(--paper);padding:3px}
+.seg button{border:0;background:none;padding:6px 14px;border-radius:999px;font-size:.88rem;color:var(--muted)}
+.seg button[aria-pressed="true"]{background:var(--pine);color:#fff}
+.hint{font-size:.85rem;color:var(--muted);text-align:center}
+.posts{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:22px 16px;margin-top:18px}
+.post{background:#fff;padding:10px 10px 14px;box-shadow:0 6px 16px rgba(58,36,32,.12);transform:rotate(var(--tilt,0deg));position:relative}
+.post::before{content:"";position:absolute;top:-9px;left:50%;width:70px;height:20px;transform:translateX(-50%) rotate(-2deg);background:rgba(240,154,147,.6)}
+.post img{width:100%;aspect-ratio:1;object-fit:cover;display:block;margin-bottom:8px}
+.post .who{font-family:'Yellowtail',cursive;font-size:1.35rem;color:var(--tomato);line-height:1.1}
+.post .what{font-size:.8rem;color:var(--muted);font-weight:500}
+.post .note{font-size:.9rem;margin-top:4px}
+.post .when{font-size:.74rem;color:var(--muted);margin-top:6px}
+.post .del{position:absolute;right:8px;top:8px;background:rgba(255,255,255,.92);border:0;border-radius:99px;font-size:.74rem;padding:3px 8px;color:var(--tomato)}
+.empty{color:var(--muted);font-size:.95rem;background:var(--paper);border:1px dashed var(--pink);border-radius:12px;padding:16px;text-align:center;grid-column:1/-1}
+
+/* Letters */
+.envelope{display:flex;gap:18px;align-items:center;background:var(--paper);border-radius:18px;padding:18px 20px;margin-bottom:30px;box-shadow:0 6px 18px rgba(58,36,32,.1);border:1px solid var(--line)}
+.env-ico{flex:none;width:74px;height:52px;position:relative;background:var(--pink);border-radius:4px;overflow:hidden}
+.env-ico::before{content:"";position:absolute;left:0;right:0;top:0;height:60%;background:var(--tomato);clip-path:polygon(0 0,100% 0,50% 100%)}
+.env-ico::after{content:"✦";position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);width:20px;height:20px;border-radius:50%;background:var(--mustard);color:var(--paper);font-size:11px;display:grid;place-items:center}
+.envelope h3{font-family:'Yellowtail',cursive;font-weight:400;font-size:1.6rem;color:var(--tomato);margin:0;line-height:1.1}
+.envelope p{margin:2px 0 0;font-size:.92rem;color:var(--muted)}
+.envelope .btn{margin-left:auto}
+.letter-paper{background:var(--paper) repeating-linear-gradient(transparent 0 27px,#EBDCC6 27px 28px);border-radius:12px;padding:16px 18px;font-family:'Fraunces',serif;font-size:1.05rem;line-height:28px;white-space:pre-wrap;margin:0 0 30px;box-shadow:0 6px 18px rgba(58,36,32,.1)}
+.letter-paper .sign{font-family:'Yellowtail',cursive;color:var(--tomato);font-size:1.4rem;display:block;margin-top:6px}
+.lbox{border:1.5px dashed var(--pink);border-radius:14px;padding:12px 14px;margin-bottom:12px;background:#FFF5F2}
+.lbox h4{font-family:'Yellowtail',cursive;font-weight:400;font-size:1.4rem;color:var(--tomato);margin:0}
+.lbox p{margin:2px 0 8px;font-size:.88rem;color:var(--muted)}
+.lbox textarea{font-family:'Fraunces',serif;font-size:1rem;width:100%;min-height:130px;border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--paper) repeating-linear-gradient(transparent 0 25px,#F0E3CF 25px 26px);line-height:26px;resize:vertical}
+.compose{max-width:560px;margin:14px auto 0;background:var(--paper);border-radius:16px;padding:16px 18px;border:1px solid var(--line)}
+.compose .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.compose textarea{min-height:90px}
+.post.letter{background:var(--paper) repeating-linear-gradient(transparent 0 25px,#EFE1CB 25px 26px);padding:16px 16px 14px}
+.post.letter::before{background:rgba(217,162,60,.55)}
+.post .to{font-family:'Yellowtail',cursive;font-size:1.3rem;color:var(--pine)}
+.post .msg{font-family:'Fraunces',serif;font-size:.98rem;line-height:26px;margin:4px 0}
+
+/* ---------- 8-bit sticker buttons ---------- */
+.pill,.btn,.seg button,.close,.envelope .btn{
+  font-family:'Silkscreen',monospace!important;font-weight:400!important;text-transform:uppercase;letter-spacing:.03em;font-size:.8rem!important;
+  border:0!important;border-radius:0!important;padding:9px 14px!important;position:relative;margin:6px;
+  box-shadow:0 -3px 0 0 var(--ink),0 3px 0 0 var(--ink),-3px 0 0 0 var(--ink),3px 0 0 0 var(--ink),
+    0 -6px 0 0 #fff,0 6px 0 0 #fff,-6px 0 0 0 #fff,6px 0 0 0 #fff,
+    -3px -3px 0 0 #fff,3px -3px 0 0 #fff,-3px 3px 0 0 #fff,3px 3px 0 0 #fff,
+    5px 10px 0 0 rgba(58,36,32,.22);
+  transition:transform .08s steps(2)}
+.pill:hover:not(:disabled),.btn:hover:not(:disabled){transform:rotate(-2deg) scale(1.03)}
+.pill:active:not(:disabled),.btn:active:not(:disabled){transform:translate(2px,3px)}
+.btn.primary,.pill{background:var(--tomato)!important;color:#fff!important}
+.btn.ghost{background:#FFF3B8!important;color:var(--ink)!important}
+.btn.primary:disabled,.pill:disabled,.btn.ghost:disabled{background:#EDE3D8!important;color:#5E4E48!important;opacity:1;cursor:not-allowed}
+.seg{border:0;background:none;padding:0;gap:14px}
+.seg button{background:var(--paper);color:var(--ink)}
+.seg button[aria-pressed="true"]{background:var(--emerald);color:#fff}
+.close{position:absolute!important;margin:0;width:auto;height:auto;padding:5px 9px!important;background:var(--pink);color:var(--ink);font-size:.8rem!important;right:20px;top:20px}
+.switch{border-radius:0;box-shadow:0 0 0 2px var(--ink)}
+.switch::after{border-radius:0;box-shadow:none;background:var(--ink)}
+.toggle[aria-pressed="true"] .switch::after{background:#fff}
+.toggle{font-family:'Silkscreen',monospace;text-transform:uppercase;font-size:.74rem;letter-spacing:.03em;color:var(--ink)}
+
+footer{padding:26px 20px 44px;color:var(--muted);font-size:.84rem;text-align:center;border-top:1px dashed var(--line)}
+footer .wrap{display:grid;gap:8px;max-width:1080px}
+footer .legal{font-size:.74rem;line-height:1.45;max-width:1000px;margin:0 auto}
+@media(max-width:600px){footer{padding-left:12px;padding-right:12px}}
+footer .script{font-size:1.5rem;color:var(--tomato)}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="testbar" id="testbar" hidden>🧪 Test mode: every card is open. <button id="testReset">Reset my progress</button></div>
+<header class="hero">
+  <svg class="frond a" viewBox="0 0 200 260" aria-hidden="true"><path d="M100 255 C98 180 102 110 100 10" stroke="#1F6B4F" stroke-width="4" fill="none" stroke-linecap="round"/><g fill="#1F6B4F"><ellipse cx="72" cy="215" rx="34" ry="12" transform="rotate(-25 72 215)"/><ellipse cx="128" cy="195" rx="34" ry="12" transform="rotate(25 128 195)"/><ellipse cx="70" cy="165" rx="32" ry="11" transform="rotate(-30 70 165)"/><ellipse cx="130" cy="145" rx="32" ry="11" transform="rotate(30 130 145)"/><ellipse cx="73" cy="115" rx="28" ry="10" transform="rotate(-35 73 115)"/><ellipse cx="127" cy="95" rx="28" ry="10" transform="rotate(35 127 95)"/><ellipse cx="80" cy="65" rx="22" ry="8" transform="rotate(-40 80 65)"/><ellipse cx="120" cy="48" rx="20" ry="7" transform="rotate(40 120 48)"/></g></svg>
+  <svg class="frond b" viewBox="0 0 200 260" aria-hidden="true"><path d="M100 255 C98 180 102 110 100 10" stroke="#E8743B" stroke-width="4" fill="none" stroke-linecap="round"/><g fill="#E8743B"><ellipse cx="72" cy="215" rx="34" ry="12" transform="rotate(-25 72 215)"/><ellipse cx="128" cy="195" rx="34" ry="12" transform="rotate(25 128 195)"/><ellipse cx="70" cy="165" rx="32" ry="11" transform="rotate(-30 70 165)"/><ellipse cx="130" cy="145" rx="32" ry="11" transform="rotate(30 130 145)"/><ellipse cx="73" cy="115" rx="28" ry="10" transform="rotate(-35 73 115)"/><ellipse cx="127" cy="95" rx="28" ry="10" transform="rotate(35 127 95)"/></g></svg>
+  <svg class="frond c" viewBox="0 0 200 260" aria-hidden="true"><path d="M100 255 C98 180 102 110 100 10" stroke="#C63B2F" stroke-width="5" fill="none" stroke-linecap="round"/><g fill="#C63B2F"><circle cx="80" cy="200" r="12"/><circle cx="122" cy="170" r="12"/><circle cx="78" cy="130" r="11"/><circle cx="120" cy="100" r="10"/><circle cx="84" cy="62" r="9"/></g></svg>
+  <svg class="bauble l" viewBox="0 0 70 150" aria-hidden="true"><line x1="35" y1="0" x2="35" y2="62" stroke="#3A2420" stroke-width="1.5"/><rect x="27" y="58" width="16" height="12" rx="2" fill="#D9A23C"/><circle cx="35" cy="100" r="32" fill="#2D5A3D"/><path d="M5 92 Q35 80 65 92" stroke="#F09A93" stroke-width="5" fill="none"/><path d="M4 108 Q35 120 66 108" stroke="#F09A93" stroke-width="5" fill="none"/><path d="M35 94 l2.4 4.6 5 .8 -3.6 3.5 .9 5 -4.7 -2.4 -4.7 2.4 .9 -5 -3.6 -3.5 5 -.8z" fill="#F3D37A"/></svg>
+  <svg class="bauble r" viewBox="0 0 60 170" aria-hidden="true"><line x1="30" y1="0" x2="30" y2="80" stroke="#3A2420" stroke-width="1.5"/><rect x="23" y="76" width="14" height="10" rx="2" fill="#D9A23C"/><path d="M30 86 C58 100 58 128 30 162 C2 128 2 100 30 86z" fill="#FFF8EC"/><path d="M12 112 Q30 104 48 112 M10 126 Q30 134 50 126" stroke="#C63B2F" stroke-width="4" fill="none"/><circle cx="30" cy="119" r="3" fill="#D9A23C"/></svg>
+  <div class="hero-card scallop">
+    <div class="hero-in scallop">
+      <span class="sparkle" style="left:8%;top:14%">✦</span><span class="sparkle" style="right:10%;top:22%;font-size:14px">✦</span><span class="sparkle" style="left:14%;bottom:20%;font-size:13px">✦</span><span class="sparkle" style="right:7%;bottom:30%">✦</span>
+      <h1><span class="groovy pre">Be kind to</span><span class="fat foil">yours-elf</span></h1>
+      <p class="tag">This season of giving, give yourself a little something too.</p>
+    </div>
+  </div>
+  <div class="hero-cta">
+    <button class="pill" id="todayBtn">Reveal today's card</button>
+    <p class="cta-note" id="ctaNote" hidden></p>
+    <a class="btn ghost givebtn" href="https://www.justgiving.com/fundraising/darcy1793832488739?utm_medium=FR&amp;utm_source=CL" target="_blank" rel="noopener">💛 Share the love: give to Samaritans</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="notice" id="notice"></div>
+
+    <section class="envelope" id="post" hidden aria-live="polite">
+      <div class="env-ico" aria-hidden="true"></div>
+      <div><h3 id="postH"></h3><p id="postP"></p></div>
+      <button class="btn primary" id="postBtn" hidden>Open it</button>
+    </section>
+    <div class="letter-paper" id="postLetter" hidden></div>
+
+<div class="treeflip" id="treeflip"><div class="tf-inner">
+    <section class="mytree" id="treefront" aria-labelledby="treeH">
+        <div class="treelinks"><button class="herolink" id="setBtn">⚙ Settings</button><span aria-hidden="true">·</span><button class="herolink" id="previewBtn">Preview a card</button><span aria-hidden="true">·</span><button class="herolink" id="beenBtn">Been here before?</button></div>
+        <div class="progress">
+          <div class="track" aria-hidden="true"><div class="fill" id="fill"></div></div>
+          <span class="stat"><b id="litCount">0</b> of <span id="totalCount">32</span> lit · <b id="goldCount">0</b> shining · <b id="streak">0</b>-day streak</span>
+          <div class="tree-btns"><button class="btn primary" id="journalBtn" aria-haspopup="dialog">📓 My wellness journal</button><button class="btn ghost" id="shareTree"><svg class="ico-share" viewBox="0 0 16 16" aria-hidden="true"><path d="M7 1h2v2h2v2H9v6H7V5H5V3h2z M2 7h3v2H4v4h8V9h-1V7h3v8H2z" fill="currentColor"/></svg>Share my tree</button></div><span class="toast" id="treeToast" role="status"></span>
+        </div>
+      <div class="tree-arch"><svg class="tree-svg" id="treeSvg" viewBox="0 0 300 342" role="img" aria-labelledby="treeDesc">
+        <title id="treeDesc">Your tree</title>
+        <defs><filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+        <polygon points="150,40 70,140 230,140" fill="#2D5A3D"/>
+        <polygon points="150,85 50,215 250,215" fill="#2A5439"/>
+        <polygon points="150,140 25,300 275,300" fill="#264D34"/>
+        <rect x="128" y="300" width="44" height="30" rx="4" fill="#C63B2F"/><rect x="146" y="300" width="8" height="30" fill="#D9A23C"/>
+        <path id="starPath" class="star" d="M150 10 l7.6 15.4 17 2.5 -12.3 12 2.9 16.9 -15.2 -8 -15.2 8 2.9 -16.9 -12.3 -12 17 -2.5z"/>
+        <g id="bulbs"></g>
+        <g id="ny" class="ny" style="display:none">
+          <g class="fw" style="animation-delay:0s"><circle cx="40" cy="60" r="3" fill="#FFD66B"/><path d="M40 40v10M40 70v10M20 60h10M50 60h10M26 46l7 7M47 67l7 7M54 46l-7 7M33 67l-7 7" stroke="#FFD66B" stroke-width="2.5" stroke-linecap="round"/></g>
+          <g class="fw" style="animation-delay:.7s"><circle cx="262" cy="90" r="3" fill="#F09A93"/><path d="M262 70v10M262 100v10M242 90h10M272 90h10M248 76l7 7M269 97l7 7M276 76l-7 7M255 97l-7 7" stroke="#F09A93" stroke-width="2.5" stroke-linecap="round"/></g>
+          <g class="fw" style="animation-delay:1.4s"><circle cx="250" cy="30" r="2.5" fill="#B9DDB0"/><path d="M250 16v8M250 36v8M236 30h8M256 30h8" stroke="#B9DDB0" stroke-width="2.5" stroke-linecap="round"/></g>
+          <path d="M58 228 Q150 252 242 228 L246 250 Q150 274 54 250 Z" fill="#FFF8EC" stroke="#C63B2F" stroke-width="2"/>
+          <text x="150" y="254" text-anchor="middle" font-family="Silkscreen, monospace" font-size="17" fill="#C63B2F">HAPPY 2027</text>
+        </g>
+        <g id="sack" class="sack"><path d="M236 296 C222 300 218 334 230 336 L274 336 C286 334 282 300 268 296 Z" fill="#C63B2F"/><path d="M240 296 Q252 286 264 296" stroke="#D9A23C" stroke-width="5" fill="none" stroke-linecap="round"/><circle cx="252" cy="296" r="4" fill="#D9A23C"/><path d="M246 314 l2.5 5 5.5 .8 -4 3.9 1 5.5 -5 -2.6 -5 2.6 1 -5.5 -4 -3.9 5.5 -.8z" fill="#F3D37A"/></g>
+      </svg></div>
+      <div class="treelinks"><button class="howlink" id="howBtn" aria-haspopup="dialog">How it works</button></div><h2 class="groovy" id="treeH"><span id="treeName">Your tree</span><button class="namebtn" id="nameBtn" aria-label="Add your name">✎</button></h2><form class="nameform" id="nameForm" hidden><label class="sr" for="nameIn">Your name</label><input type="text" id="nameIn" maxlength="30" placeholder="Your name"><button class="btn primary" type="submit">Save</button></form><p id="treeSub" hidden></p>
+    </section>
+    <section class="jback" id="jback" aria-labelledby="jH" inert>
+      <button class="btn ghost jclose" id="jclose">← Back to my tree</button>
+      <h3 class="m-title groovy" id="jH">My wellness journal</h3>
+      <p class="hint" style="text-align:left;margin:0 0 4px">A private place for your thoughts, good days, less good days and anything in between. Nobody else can see it.</p>
+      <div class="seg" role="tablist" style="display:none">
+        <button role="tab" data-t="letter" aria-pressed="true">Letter</button>
+        <button role="tab" data-t="notes" aria-pressed="false">Notes</button>
+      </div>
+      <div id="jLetter">
+        <button type="button" class="howlink jswitch" id="toNotes">← Back to my notes</button>
+        <div class="lbox">
+          <h4>Dear January me,</h4>
+          <p id="mLetterP"></p>
+          <textarea id="lText" maxlength="2000" aria-label="Letter to January you" placeholder="Dear me,"></textarea>
+          <div class="actions" style="margin-top:8px"><button type="button" class="btn primary" id="lSeal">Seal it ✉</button><span class="toast" id="lToast" role="status"></span></div>
+          <a class="howlink callink" id="calLink" target="_blank" rel="noopener" hidden>📅 Also send it to my Google Calendar for 31 December</a>
+        </div>
+      </div>
+      <div id="jNotes" hidden>
+        <div class="field"><label for="jText" id="jLabel">Today</label><p class="jprompt" id="jPrompt"></p><textarea id="jText" maxlength="1500" style="min-height:140px"></textarea></div>
+        <div class="actions"><button type="button" class="btn primary" id="jSave">Save</button><span class="toast" id="jToast" role="status"></span></div>
+        <button type="button" class="howlink jswitch" id="toLetter" style="margin-top:18px">✉ Write a letter to January you</button>
+        <div id="jList" class="jlist"></div>
+      </div>
+      <p class="hint" style="text-align:left;margin-top:14px">Your journal is private and only saved on this device.</p>
+    </section>
+</div></div>
+    <div id="phases"></div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <button class="howlink" id="aboutBtn" aria-haspopup="dialog">About this project</button>
+    <div class="script" id="signoff">With love, yours truly</div>
+    <div><button class="toggle" id="peek" aria-pressed="false" hidden><span class="switch"></span>Admin view</button></div>
+    <div class="legal"><b>Here's some legal stuff I have to put here because the AI robot that helped me make this site told me I might get sued if I don't:</b><br>These are general suggestions, not medical advice. If you have a health condition or injury, or are pregnant, check with a GP or physio before trying new exercise. Stop anything that causes pain, dizziness or chest discomfort.<br><br>Your ticks, journal notes and letter are saved only in this browser. Nothing is sent to me or anyone else. If you share this device, anyone using the same browser can see them. Clearing your browser data deletes them, so copy your save code (under “Been here before?”) if you want to keep them.</div>
+  </div>
+</footer>
+
+<div class="scrim" id="scrim" aria-hidden="true">
+  <div class="flip" id="flip" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+    <div class="bk scallop" aria-hidden="true"><div class="scallop" id="flipBack"></div></div>
+    <div class="fr scallop"><div class="fr-in scallop">
+      <button class="close" id="close" aria-label="Close">X</button>
+      <div class="addr script"><span>To: you</span><span>Love, yours-elf</span></div>
+      <h3 class="m-title groovy" id="mTitle"></h3>
+      <div class="m-date" id="mDate"></div>
+      <figure class="quote" id="mQuote"><blockquote id="mQ"></blockquote><figcaption id="mQa"></figcaption></figure>
+      <div class="intro-go"><button type="button" class="btn primary" id="introGo">Open the card ✦</button></div>
+      <p class="m-line" id="mLine"></p>
+      <p class="pick-hint" id="pickHint"></p>
+      <div class="opts" id="opts"></div>
+      <div class="howto" id="howto" hidden></div>
+      <div class="tick-state" id="tickState" hidden></div>
+      <div id="mJournal" hidden style="margin:-4px 0 12px"><button type="button" class="btn ghost" id="mJournalBtn">📓 Write in my journal</button></div>
+      <div id="mLetter" hidden><button type="button" class="btn ghost" id="openJournal2">📓 Open my wellness journal</button></div>
+      <button type="button" class="kids-t" id="kidsT" aria-pressed="false">🧒 Doing this with kids?</button>
+      <div class="kids" id="mKids" hidden></div>
+      <div class="whos" id="mWhos"></div>
+      <div id="mForm" hidden></div><div id="fShareRow" hidden></div>
+      <aside class="quest" id="mQuest"><b>🎲 Bonus side quest</b><span id="mQuestX"></span></aside>
+      <aside class="tip" id="mTip"><b>🧝 Santa's little helper tip</b><span id="mTipX"></span></aside>
+      <div class="celebrate" id="celebrate" role="status" hidden></div>
+      <div class="actions" style="margin-top:12px" hidden><button type="button" class="btn ghost" id="mCopy" hidden>Share this card</button><span class="toast" id="toast" role="status"></span></div>
+      <div class="support" id="mSupport" hidden></div>
+    </div></div>
+  </div>
+</div>
+
+
+<div class="sheet-scrim" id="howScrim" aria-hidden="true">
+  <div class="sheet tour" role="dialog" aria-modal="true" aria-labelledby="howH" aria-roledescription="carousel">
+    <div class="grab" aria-hidden="true"></div>
+    <h3 class="groovy" id="howH">How it works</h3>
+    <div class="slides" id="slides">
+      <section class="slide" aria-label="1 of 5"><div class="vis v1" aria-hidden="true"><span></span><span></span><span></span></div><p>This is a digital advent calendar for wellness. Each day, you can open a new holiday card, with a warm-up week to ease you in.</p></section>
+      <section class="slide" aria-label="2 of 5"><div class="vis v2" aria-hidden="true">🧠 💪 ✨</div><p>Each card has three small things to try: one for your body, one for your mind and one for your soft lil soul. Do whichever you fancy, or all three.</p></section>
+      <section class="slide" aria-label="3 of 5"><div class="vis v3" aria-hidden="true"><svg viewBox="0 0 120 110"><polygon points="60,10 22,80 98,80" fill="#2D5A3D"/><rect x="52" y="80" width="16" height="14" fill="#C63B2F"/><circle class="tb" cx="50" cy="45" r="5" fill="#F09A93"/><circle class="tb" cx="70" cy="58" r="5" fill="#FFD66B" style="animation-delay:.5s"/><circle class="tb" cx="44" cy="68" r="5" fill="#C63B2F" style="animation-delay:1s"/><circle class="tb" cx="76" cy="72" r="5" fill="#FFD66B" style="animation-delay:1.5s"/><path d="M60 0 l3 6 6 1 -4.5 4 1 6 -5.5 -3 -5.5 3 1 -6 -4.5 -4 6 -1z" fill="#FFD66B"/></svg></div><p>Tick off what you've done and your tree lights up. One tick lights a bulb, and all three make it shine.</p></section>
+      <section class="slide" aria-label="4 of 5"><div class="vis v2" aria-hidden="true">🎲</div><p>Every card also has a bonus little side quest. Won't affect your tree, but it will remind you that you have free will to do completely optional things for funsies.</p></section>
+      <section class="slide" aria-label="5 of 5"><div class="vis v2" aria-hidden="true">📓</div><p>If you like, you can also write reflection notes in a digital wellness journal as you go, or not. It's private and only saved on your browser.</p></section>
+    </div>
+    <div class="dots" id="dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="tour-nav"><button class="btn ghost" id="tourBack">Back</button><button class="btn primary" id="tourNext">Next</button></div>
+  </div>
+</div>
+
+<div class="sheet-scrim" id="shareScrim" aria-hidden="true">
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="shareH" style="text-align:center">
+    <div class="grab" aria-hidden="true"></div>
+    <h3 class="groovy" id="shareH">Share my tree</h3>
+    <img id="shareImg" alt="An image of your tree to share" style="width:100%;max-width:300px;border-radius:12px;box-shadow:0 6px 18px rgba(58,36,32,.15)">
+    <p class="hint" style="margin:10px 0">On a phone, press and hold the image to save or share it.</p>
+    <div class="actions" style="justify-content:center"><button class="btn primary" id="shareSave" hidden>Save image</button><button class="btn ghost" id="shareCopyImg">Copy image</button><button class="btn ghost" id="shareCopyTxt">Copy message</button></div>
+    <p class="toast" id="shareToast" role="status" style="min-height:1.2em"></p>
+    <button class="btn ghost" id="shareClose">Close</button>
+  </div>
+</div>
+
+<div class="sheet-scrim" id="aboutScrim" aria-hidden="true">
+  <div class="sheet about" role="dialog" aria-modal="true" aria-labelledby="aboutH">
+    <div class="grab" aria-hidden="true"></div>
+    <div class="avatarwrap"><svg class="avatar" viewBox="0 0 30 21" shape-rendering="crispEdges" role="img" aria-label="A pixel drawing of Darcy and her blonde cockapoo Buddy"><rect x="5" y="2" width="6" height="1" fill="#3A2420"/><rect x="3" y="3" width="2" height="1" fill="#3A2420"/><rect x="5" y="3" width="6" height="1" fill="#6B3F2A"/><rect x="11" y="3" width="2" height="1" fill="#3A2420"/><rect x="2" y="4" width="1" height="1" fill="#3A2420"/><rect x="3" y="4" width="10" height="1" fill="#6B3F2A"/><rect x="13" y="4" width="1" height="1" fill="#3A2420"/><rect x="1" y="5" width="1" height="1" fill="#3A2420"/><rect x="2" y="5" width="12" height="1" fill="#6B3F2A"/><rect x="14" y="5" width="1" height="1" fill="#3A2420"/><rect x="1" y="6" width="1" height="1" fill="#3A2420"/><rect x="2" y="6" width="3" height="1" fill="#6B3F2A"/><rect x="5" y="6" width="7" height="1" fill="#F6D2B8"/><rect x="12" y="6" width="2" height="1" fill="#6B3F2A"/><rect x="14" y="6" width="1" height="1" fill="#3A2420"/><rect x="1" y="7" width="1" height="1" fill="#3A2420"/><rect x="2" y="7" width="2" height="1" fill="#6B3F2A"/><rect x="4" y="7" width="9" height="1" fill="#F6D2B8"/><rect x="13" y="7" width="1" height="1" fill="#6B3F2A"/><rect x="14" y="7" width="1" height="1" fill="#3A2420"/><rect x="1" y="8" width="1" height="1" fill="#3A2420"/><rect x="2" y="8" width="2" height="1" fill="#6B3F2A"/><rect x="4" y="8" width="1" height="1" fill="#F6D2B8"/><rect x="5" y="8" width="1" height="1" fill="#3A2420"/><rect x="6" y="8" width="5" height="1" fill="#F6D2B8"/><rect x="11" y="8" width="1" height="1" fill="#3A2420"/><rect x="12" y="8" width="1" height="1" fill="#F6D2B8"/><rect x="13" y="8" width="1" height="1" fill="#6B3F2A"/><rect x="14" y="8" width="1" height="1" fill="#3A2420"/><rect x="1" y="9" width="1" height="1" fill="#3A2420"/><rect x="2" y="9" width="2" height="1" fill="#6B3F2A"/><rect x="4" y="9" width="1" height="1" fill="#F6D2B8"/><rect x="5" y="9" width="1" height="1" fill="#3A2420"/><rect x="6" y="9" width="5" height="1" fill="#F6D2B8"/><rect x="11" y="9" width="1" height="1" fill="#3A2420"/><rect x="12" y="9" width="1" height="1" fill="#F6D2B8"/><rect x="13" y="9" width="1" height="1" fill="#6B3F2A"/><rect x="14" y="9" width="1" height="1" fill="#3A2420"/><rect x="1" y="10" width="1" height="1" fill="#3A2420"/><rect x="2" y="10" width="2" height="1" fill="#6B3F2A"/><rect x="4" y="10" width="1" height="1" fill="#F09A93"/><rect x="5" y="10" width="6" height="1" fill="#F6D2B8"/><rect x="11" y="10" width="1" height="1" fill="#F09A93"/><rect x="12" y="10" width="1" height="1" fill="#F6D2B8"/><rect x="13" y="10" width="1" height="1" fill="#6B3F2A"/><rect x="14" y="10" width="1" height="1" fill="#3A2420"/><rect x="1" y="11" width="1" height="1" fill="#3A2420"/><rect x="2" y="11" width="2" height="1" fill="#6B3F2A"/><rect x="4" y="11" width="4" height="1" fill="#F6D2B8"/><rect x="8" y="11" width="2" height="1" fill="#3A2420"/><rect x="10" y="11" width="3" height="1" fill="#F6D2B8"/><rect x="13" y="11" width="1" height="1" fill="#6B3F2A"/><rect x="14" y="11" width="1" height="1" fill="#3A2420"/><rect x="1" y="12" width="1" height="1" fill="#3A2420"/><rect x="2" y="12" width="3" height="1" fill="#6B3F2A"/><rect x="5" y="12" width="7" height="1" fill="#F6D2B8"/><rect x="12" y="12" width="2" height="1" fill="#6B3F2A"/><rect x="14" y="12" width="1" height="1" fill="#3A2420"/><rect x="1" y="13" width="1" height="1" fill="#3A2420"/><rect x="2" y="13" width="3" height="1" fill="#6B3F2A"/><rect x="5" y="13" width="2" height="1" fill="#3A2420"/><rect x="7" y="13" width="3" height="1" fill="#F6D2B8"/><rect x="10" y="13" width="2" height="1" fill="#3A2420"/><rect x="12" y="13" width="2" height="1" fill="#6B3F2A"/><rect x="14" y="13" width="1" height="1" fill="#3A2420"/><rect x="2" y="14" width="2" height="1" fill="#3A2420"/><rect x="4" y="14" width="8" height="1" fill="#C63B2F"/><rect x="12" y="14" width="2" height="1" fill="#3A2420"/><rect x="1" y="15" width="1" height="1" fill="#3A2420"/><rect x="2" y="15" width="4" height="1" fill="#C63B2F"/><rect x="6" y="15" width="1" height="1" fill="#FFF8EE"/><rect x="7" y="15" width="2" height="1" fill="#C63B2F"/><rect x="9" y="15" width="1" height="1" fill="#FFF8EE"/><rect x="10" y="15" width="4" height="1" fill="#C63B2F"/><rect x="14" y="15" width="1" height="1" fill="#3A2420"/><rect x="1" y="16" width="1" height="1" fill="#3A2420"/><rect x="2" y="16" width="12" height="1" fill="#C63B2F"/><rect x="14" y="16" width="1" height="1" fill="#3A2420"/><rect x="1" y="17" width="1" height="1" fill="#3A2420"/><rect x="2" y="17" width="2" height="1" fill="#C63B2F"/><rect x="4" y="17" width="1" height="1" fill="#FFF8EE"/><rect x="5" y="17" width="6" height="1" fill="#C63B2F"/><rect x="11" y="17" width="1" height="1" fill="#FFF8EE"/><rect x="12" y="17" width="2" height="1" fill="#C63B2F"/><rect x="14" y="17" width="1" height="1" fill="#3A2420"/><rect x="1" y="18" width="1" height="1" fill="#3A2420"/><rect x="2" y="18" width="12" height="1" fill="#C63B2F"/><rect x="14" y="18" width="1" height="1" fill="#3A2420"/><rect x="1" y="19" width="1" height="1" fill="#3A2420"/><rect x="2" y="19" width="2" height="1" fill="#F6D2B8"/><rect x="4" y="19" width="8" height="1" fill="#C63B2F"/><rect x="12" y="19" width="2" height="1" fill="#F6D2B8"/><rect x="14" y="19" width="1" height="1" fill="#3A2420"/><rect x="2" y="20" width="12" height="1" fill="#3A2420"/><rect x="19" y="6" width="6" height="1" fill="#3A2420"/><rect x="18" y="7" width="1" height="1" fill="#3A2420"/><rect x="19" y="7" width="1" height="1" fill="#DDB467"/><rect x="20" y="7" width="1" height="1" fill="#F3D9A4"/><rect x="21" y="7" width="1" height="1" fill="#DDB467"/><rect x="22" y="7" width="1" height="1" fill="#F3D9A4"/><rect x="23" y="7" width="1" height="1" fill="#DDB467"/><rect x="24" y="7" width="1" height="1" fill="#F3D9A4"/><rect x="25" y="7" width="1" height="1" fill="#3A2420"/><rect x="17" y="8" width="1" height="1" fill="#3A2420"/><rect x="18" y="8" width="1" height="1" fill="#F3D9A4"/><rect x="19" y="8" width="1" height="1" fill="#DDB467"/><rect x="20" y="8" width="1" height="1" fill="#F3D9A4"/><rect x="21" y="8" width="1" height="1" fill="#DDB467"/><rect x="22" y="8" width="1" height="1" fill="#F3D9A4"/><rect x="23" y="8" width="1" height="1" fill="#DDB467"/><rect x="24" y="8" width="1" height="1" fill="#F3D9A4"/><rect x="25" y="8" width="1" height="1" fill="#DDB467"/><rect x="26" y="8" width="1" height="1" fill="#3A2420"/><rect x="16" y="9" width="1" height="1" fill="#3A2420"/><rect x="17" y="9" width="1" height="1" fill="#C9974A"/><rect x="18" y="9" width="1" height="1" fill="#DDB467"/><rect x="19" y="9" width="6" height="1" fill="#FBEBC8"/><rect x="25" y="9" width="1" height="1" fill="#DDB467"/><rect x="26" y="9" width="1" height="1" fill="#C9974A"/><rect x="27" y="9" width="1" height="1" fill="#3A2420"/><rect x="15" y="10" width="1" height="1" fill="#3A2420"/><rect x="16" y="10" width="1" height="1" fill="#C9974A"/><rect x="17" y="10" width="1" height="1" fill="#DDB467"/><rect x="18" y="10" width="1" height="1" fill="#C9974A"/><rect x="19" y="10" width="1" height="1" fill="#FBEBC8"/><rect x="20" y="10" width="1" height="1" fill="#3A2420"/><rect x="21" y="10" width="2" height="1" fill="#FBEBC8"/><rect x="23" y="10" width="1" height="1" fill="#3A2420"/><rect x="24" y="10" width="1" height="1" fill="#FBEBC8"/><rect x="25" y="10" width="1" height="1" fill="#C9974A"/><rect x="26" y="10" width="1" height="1" fill="#DDB467"/><rect x="27" y="10" width="1" height="1" fill="#C9974A"/><rect x="28" y="10" width="1" height="1" fill="#3A2420"/><rect x="15" y="11" width="1" height="1" fill="#3A2420"/><rect x="16" y="11" width="1" height="1" fill="#DDB467"/><rect x="17" y="11" width="1" height="1" fill="#C9974A"/><rect x="18" y="11" width="1" height="1" fill="#DDB467"/><rect x="19" y="11" width="6" height="1" fill="#FBEBC8"/><rect x="25" y="11" width="1" height="1" fill="#DDB467"/><rect x="26" y="11" width="1" height="1" fill="#C9974A"/><rect x="27" y="11" width="1" height="1" fill="#DDB467"/><rect x="28" y="11" width="1" height="1" fill="#3A2420"/><rect x="15" y="12" width="1" height="1" fill="#3A2420"/><rect x="16" y="12" width="1" height="1" fill="#C9974A"/><rect x="17" y="12" width="1" height="1" fill="#DDB467"/><rect x="18" y="12" width="1" height="1" fill="#C9974A"/><rect x="19" y="12" width="2" height="1" fill="#FBEBC8"/><rect x="21" y="12" width="2" height="1" fill="#3A2420"/><rect x="23" y="12" width="2" height="1" fill="#FBEBC8"/><rect x="25" y="12" width="1" height="1" fill="#C9974A"/><rect x="26" y="12" width="1" height="1" fill="#DDB467"/><rect x="27" y="12" width="1" height="1" fill="#C9974A"/><rect x="28" y="12" width="1" height="1" fill="#3A2420"/><rect x="15" y="13" width="1" height="1" fill="#3A2420"/><rect x="16" y="13" width="1" height="1" fill="#DDB467"/><rect x="17" y="13" width="1" height="1" fill="#C9974A"/><rect x="18" y="13" width="1" height="1" fill="#DDB467"/><rect x="19" y="13" width="6" height="1" fill="#FBEBC8"/><rect x="25" y="13" width="1" height="1" fill="#DDB467"/><rect x="26" y="13" width="1" height="1" fill="#C9974A"/><rect x="27" y="13" width="1" height="1" fill="#DDB467"/><rect x="28" y="13" width="1" height="1" fill="#3A2420"/><rect x="15" y="14" width="1" height="1" fill="#3A2420"/><rect x="16" y="14" width="1" height="1" fill="#C9974A"/><rect x="17" y="14" width="1" height="1" fill="#DDB467"/><rect x="18" y="14" width="1" height="1" fill="#C9974A"/><rect x="19" y="14" width="2" height="1" fill="#FBEBC8"/><rect x="21" y="14" width="2" height="1" fill="#F09A93"/><rect x="23" y="14" width="2" height="1" fill="#FBEBC8"/><rect x="25" y="14" width="1" height="1" fill="#C9974A"/><rect x="26" y="14" width="1" height="1" fill="#DDB467"/><rect x="27" y="14" width="1" height="1" fill="#C9974A"/><rect x="28" y="14" width="1" height="1" fill="#3A2420"/><rect x="15" y="15" width="1" height="1" fill="#3A2420"/><rect x="16" y="15" width="1" height="1" fill="#DDB467"/><rect x="17" y="15" width="1" height="1" fill="#C9974A"/><rect x="18" y="15" width="1" height="1" fill="#DDB467"/><rect x="19" y="15" width="1" height="1" fill="#3A2420"/><rect x="20" y="15" width="4" height="1" fill="#FBEBC8"/><rect x="24" y="15" width="1" height="1" fill="#3A2420"/><rect x="25" y="15" width="1" height="1" fill="#DDB467"/><rect x="26" y="15" width="1" height="1" fill="#C9974A"/><rect x="27" y="15" width="1" height="1" fill="#DDB467"/><rect x="28" y="15" width="1" height="1" fill="#3A2420"/><rect x="16" y="16" width="1" height="1" fill="#3A2420"/><rect x="17" y="16" width="1" height="1" fill="#C9974A"/><rect x="18" y="16" width="1" height="1" fill="#3A2420"/><rect x="20" y="16" width="1" height="1" fill="#3A2420"/><rect x="21" y="16" width="2" height="1" fill="#FBEBC8"/><rect x="23" y="16" width="1" height="1" fill="#3A2420"/><rect x="25" y="16" width="1" height="1" fill="#3A2420"/><rect x="26" y="16" width="1" height="1" fill="#C9974A"/><rect x="27" y="16" width="1" height="1" fill="#3A2420"/><rect x="19" y="17" width="1" height="1" fill="#3A2420"/><rect x="20" y="17" width="1" height="1" fill="#F3D9A4"/><rect x="21" y="17" width="1" height="1" fill="#DDB467"/><rect x="22" y="17" width="1" height="1" fill="#F3D9A4"/><rect x="23" y="17" width="1" height="1" fill="#DDB467"/><rect x="24" y="17" width="1" height="1" fill="#F3D9A4"/><rect x="25" y="17" width="1" height="1" fill="#3A2420"/><rect x="18" y="18" width="1" height="1" fill="#3A2420"/><rect x="19" y="18" width="1" height="1" fill="#DDB467"/><rect x="20" y="18" width="1" height="1" fill="#F3D9A4"/><rect x="21" y="18" width="1" height="1" fill="#DDB467"/><rect x="22" y="18" width="1" height="1" fill="#F3D9A4"/><rect x="23" y="18" width="1" height="1" fill="#DDB467"/><rect x="24" y="18" width="1" height="1" fill="#F3D9A4"/><rect x="25" y="18" width="1" height="1" fill="#DDB467"/><rect x="26" y="18" width="1" height="1" fill="#3A2420"/><rect x="18" y="19" width="1" height="1" fill="#3A2420"/><rect x="19" y="19" width="1" height="1" fill="#F3D9A4"/><rect x="20" y="19" width="1" height="1" fill="#FBEBC8"/><rect x="21" y="19" width="1" height="1" fill="#F3D9A4"/><rect x="22" y="19" width="1" height="1" fill="#DDB467"/><rect x="23" y="19" width="1" height="1" fill="#F3D9A4"/><rect x="24" y="19" width="1" height="1" fill="#FBEBC8"/><rect x="25" y="19" width="1" height="1" fill="#F3D9A4"/><rect x="26" y="19" width="1" height="1" fill="#3A2420"/><rect x="18" y="20" width="9" height="1" fill="#3A2420"/><rect x="14" y="0" width="1" height="1" fill="#F09A93"/><rect x="16" y="0" width="1" height="1" fill="#F09A93"/><rect x="13" y="1" width="5" height="1" fill="#F09A93"/><rect x="14" y="2" width="3" height="1" fill="#F09A93"/><rect x="15" y="3" width="1" height="1" fill="#F09A93"/></svg><span>xoxo Darcy &amp; Buddy</span></div>
+    <h3 class="groovy" id="aboutH">About this project</h3>
+      <p>Hi, I’m Darcy.</p>
+      <p>The idea came from my colleague Katia (thank you!), who made a digital advent calendar for her and her family to do festive crafts. I wanted to make something just because: a little reason to look after ourselves – and each other.</p>
+      <p>I’ve always preferred small habits to big “new year, new me” resolutions, and hate the idea of waiting until January (or some arbitrary later date when your to-do list is done) to make progress towards your goals, especially when that goal is partly just to enjoy our silly little lives.</p>
+      <p>There’s no sign-up required and no data tracking. Everything stays on your browser.</p>
+      <p>This project is free to use, but if you’d like to give something back for using this tool, please <a href="https://www.justgiving.com/fundraising/darcy1793832488739?utm_medium=FR&amp;utm_source=CL" target="_blank" rel="noopener">donate to Samaritans</a>, or pass a small kindness on to someone near you.</p>
+    <div style="text-align:center;margin-top:14px"><button class="btn ghost" id="aboutClose">Close</button></div>
+  </div>
+</div>
+
+<div class="sheet-scrim" id="setScrim" aria-hidden="true">
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="setH">
+    <div class="grab" aria-hidden="true"></div>
+    <h3 class="groovy" id="setH">Make it yours</h3>
+    <p class="hint" style="text-align:left;margin:0 0 14px">You can change these any time from Settings under your tree.</p>
+    <div class="field"><label for="setName">What should we call you? (optional)</label><input type="text" id="setName" maxlength="30" placeholder="Your name"></div>
+    <div class="field"><span class="flabel">How much movement would you like?</span>
+      <div class="seg" role="group" aria-label="Movement level" id="setLevel">
+        <button type="button" data-v="gentle">Gentler</button><button type="button" data-v="standard">Standard</button><button type="button" data-v="harder">Harder</button>
+      </div>
+      <p class="hint" id="setLevelHint" style="text-align:left;margin:6px 0 0"></p>
+    </div>
+    <div class="field"><span class="flabel">Doing this with kids?</span>
+      <div class="seg" role="group" aria-label="Kids" id="setKids"><button type="button" data-v="no">Not this time</button><button type="button" data-v="yes">Yes, show kids' versions</button></div>
+    </div>
+    <div class="actions" style="margin-top:8px"><button class="btn primary" id="setSave">Save</button></div>
+  </div>
+</div>
+
+<div class="sheet-scrim" id="saveScrim" aria-hidden="true">
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="saveH">
+    <div class="grab" aria-hidden="true"></div>
+    <h3 class="groovy" id="saveH">Been here before?</h3>
+    <div class="savecode">
+      
+      <p>Started your tree on another device? On that device, tap "Been here before?" then "Copy my save code". Paste it here.</p>
+      <div class="field" style="margin-top:8px"><label for="codeIn">Save code</label><input type="text" id="codeIn" autocomplete="off" spellcheck="false"></div>
+      <div class="actions"><button type="button" class="btn primary" id="codeLoad">Restore my tree</button></div>
+      <p style="margin-top:16px">Switching to another device?</p>
+      <div class="actions"><button type="button" class="btn ghost" id="codeCopy">Copy my save code</button><span class="toast" id="codeToast" role="status"></span></div>
+    </div>
+    <div style="margin-top:14px"><button class="btn ghost" id="saveClose">Close</button></div>
+  </div>
+</div>
+
+<script>
+const STRANDS={
+  mind:{name:'Mind',ico:'🧠',c:'var(--mind)'},
+  body:{name:'Body',ico:'💪',c:'var(--body)'},
+  heart:{name:'Heart',ico:'✨',c:'var(--heart)'}
+};
+// [date, title, line, body, bodyAlt, mind, heartTag, heart, kids]
+const DAYS=[["2026-11-23", "Begin gently", "", "Go for a ten-minute walk, at whatever pace feels comfortable.", "Go for a five-minute walk at an easy pace.||Go for a 30-minute brisk walk wearing a backpack with a few kilos in it, or a 20-minute jog with a minute of walking every five minutes.", "Open your wellness journal (the green button under your tree) and write a short letter to yourself about what you hope this December brings. We'll keep it sealed and give it back to you on New Year's Eve.", "Softness", "Put on a song you love and dance to it like you're in the big montage scene at the end of a film.", "Everyone picks a favourite song, then take turns dancing to it like you're the star of a film montage.", "My song pick for this one is \"Here Comes the Sun\" by The Beatles.", "Colour hunt||Pick a colour out of a hat and find 6 things in that shade. Turn them into a slideshow with a nature-documentary voiceover (\"Here we see the rare red mug in its natural habitat…\") and send it to the group chat.", "body", "Ask everyone to draw or write what they're most excited about this December. Fold them up and keep them somewhere safe to open on New Year's Eve.", "Go for a ten-minute walk together, and take turns choosing which way to turn at each corner.", "Everyone picks a favourite song, then take turns dancing to it like you're the star of a film montage.", ""], ["2026-11-24", "Wake up slowly", "", "Spend five minutes stretching when you get up: roll your neck slowly, circle your shoulders, and reach your arms up high.", "Spend five minutes stretching when you get up: roll your neck slowly, circle your shoulders, and reach your arms up high.||Follow a 15-minute morning yoga flow, including sun salutations and a held downward dog.", "In your journal, write down one thing you're genuinely looking forward to this week.", "Whimsy", "Make your morning tea or coffee in your favourite mug and drink it slowly, sitting down, rather than on the go.", "Do animal stretches together: reach up tall like a giraffe, arch your back like a cat, and spread out wide like a starfish.", "My favourite slow morning is a proper mug of tea and a slice of toast with honey, sat by the window before anyone else is up.", "The great staring contest||Spend 10 phone-free minutes staring out the window like a Victorian heroine waiting for a letter. Shawl optional. Then write a one-line diary entry about what you saw (\"A pigeon. He did not write back.\").", "heart", "At breakfast, everyone says one thing they're looking forward to this week.", "Do animal stretches together: reach up tall like a giraffe, arch your back like a cat, and spread out wide like a starfish.", "Let everyone choose their favourite cup and have breakfast sitting down together, with no rushing.", ""], ["2026-11-25", "Sit to stand", "", "Sit on a sturdy chair, then stand up and sit back down slowly ten times, without using your hands.", "Stand up from a sturdy chair and sit back down slowly ten times, using your hands to help.||Do three rounds of 15 goblet squats holding a dumbbell or kettlebell at your chest, lowering slowly for a count of three each time.", "When a worry pops into your head today, jot it down in your journal and tell yourself you'll come back to it at 6pm.", "Kindness", "Pay someone a compliment today, and make it specific, like something they did well rather than just \"you look nice\".", "At dinner, go around the table and have each person say one kind, specific thing about the person sitting to their left.", "Put on \"Don't Stop Me Now\" by Queen and do your sit-to-stands in time with it. It's much harder to quit halfway.", "Main-character walk||30 minutes of Japanese walking: 3 min brisk, 3 min easy. On the brisk bits you're late for your own surprise party; on the easy bits you're a duchess inspecting her estate.", "body", "If anyone has a worry today, write it on a scrap of paper and pop it in a jar to talk about after tea.", "Have a slow-motion race: who can sit down and stand up from a chair ten times the slowest without wobbling?", "At dinner, go around the table and have each person say one kind, specific thing about the person sitting to their left.", ""], ["2026-11-26", "Seasonal supper", "", "Put on one song you love and dance around the kitchen while you cook.", "Dance around the kitchen to one song while dinner cooks, at whatever pace suits you.||Dance non-stop for three songs while you cook, adding a squat every time the chorus comes round.", "Try box breathing for a minute: breathe in for a count of four, hold for four, breathe out for four, and hold for four again.", "Nourish", "Add one seasonal winter vegetable to your dinner tonight, such as squash, leeks, parsnips, kale or red cabbage.", "Let the kids pick a winter vegetable and wash it for dinner, then have everyone give it a score out of ten.", "Try roasting chunks of butternut squash and red onion with olive oil, chilli flakes and sage, then stir it through pasta with a big handful of parmesan.", "Coffee vigilante||Pay for the next person's coffee in the queue, then leave before they can thank you, like a festive superhero. Can't get to a café? Leave a treat for whoever's next to make tea at work.", "heart", "Try hand tracing: spread one hand out like a star, then trace up each finger with the other hand as you breathe in, and down as you breathe out.", "Put on a song and have a kitchen dance-off while dinner cooks.", "Let the kids pick a winter vegetable and wash it for dinner, then have everyone give it a score out of ten.", ""], ["2026-11-27", "Fresh air", "", "Spend ten minutes outside on a short walk.", "Go for a five-minute walk around the block.||Go for a 40-minute brisk walk that includes a hill or a set of stairs.", "While you're outside, stand still for a minute and see if you can pick out three different sounds.", "Whimsy", "Keep an eye out on your walk for the most interesting leaf, stone or pine cone you can find, and bring it home with you.", "On a walk together, try to find something red, something round and something that crunches underfoot.", "Take the long way round to somewhere you go every day. It's amazing what you've been walking straight past.", "The tiny-win ceremony||Pick one small win from your week. Make a mini dessert, light a candle and hold a proper ceremony with a speech, applause and a tinfoil medal. Film it and send it to friends and family for a giggle.", "body", "Stand still outside together for one minute and count how many different sounds you can hear.", "Go for a ten-minute walk together and try to find something red, something round and something that crunches underfoot.", "", ""], ["2026-11-28", "Cosy evening", "", "Before bed, lie on your back and hug your knees to your chest for 30 seconds. Then let both knees drop gently to one side, then the other, holding each for a few slow breaths.", "Before bed, lie on your back and hug your knees to your chest for 30 seconds, then gently let both knees drop to one side, then the other.||Hold a deep squat for one minute, then hold pigeon pose for one minute on each side.", "For your last half hour before sleep, leave your phone in another room.", "Softness", "Turn on some fairy lights or light a candle, then read a few pages of a book you've been meaning to get back to.", "Build a blanket fort together and read a bedtime story inside it.", "If you want something gentle to read before bed, \"The Boy, the Mole, the Fox and the Horse\" by Charlie Mackesy is perfect for a few pages at a time.", "Page 37 haiku||Grab any book in your home and turn to page 37. Write a haiku (5-7-5 syllables) using only words from that page. Read it aloud like it's a profound literary event.", "mind", "Put all the screens to bed half an hour before the kids go to bed, and do something quiet instead.", "Do bedtime stretches together: curl up small like a hedgehog, then stretch out long like a sleepy cat.", "Build a blanket fort together and read a bedtime story inside it.", ""], ["2026-11-29", "Gather your people", "", "Go for a walk with a friend, or ring someone you haven't spoken to in a while and chat while you walk.", "Go for a ten-minute walk while you ring someone you haven't spoken to in a while.||Go for a 5k walk or jog with a friend.", "In your journal, write down three people who make you feel good. Then message one of them today and put a date in the diary to see them in December.", "Together", "Send this calendar to two or three friends and ask if they'd like to do it with you, so you can cheer each other on.", "Make a list together of fun things you'd like to do in December, and stick it on the fridge.", "My favourite way to see friends in winter is a walk that ends somewhere with a fire and a hot drink.", "The grand lock-in||Turn film night into your own private cinema: a handwritten ticket, snacks in proper bowls, phone in another room. Leave a 5-star review on the fridge after.", "heart", "Everyone draws three people who make them happy, then picks one to ring or visit in December.", "Go for a walk with friends or family, and let the kids lead the way.", "Make a list together of fun things you'd like to do in December, and stick it on the fridge.", ""], ["2026-11-30", "Strong arms", "", "Stand facing a wall, place your hands on it at shoulder height, and do two sets of eight wall push-ups.", "Do two sets of five wall push-ups, standing a little closer to the wall than usual.||Do three sets of ten push-ups on the floor, then three sets of ten overhead presses with a pair of dumbbells or two full water bottles.", "In your journal, write about a hard moment from this year that you got through, and what helped you at the time.", "Whimsy", "Make a five-song playlist called \"December me\" with songs that lift your mood.", "Make a family playlist where everyone adds one song, then play it while you tidy or cook.", "Three songs to start your playlist: \"Dancing Queen\" by ABBA, \"September\" by Earth, Wind & Fire, and \"Valerie\" by Mark Ronson and Amy Winehouse.", "The startled-elf wake-up||Do 50 jumps first thing in the morning. Switch to a new accent every 10.", "body", "Talk about a time something was hard and what helped. Grown-ups go first.", "Have a wheelbarrow race down the hallway or garden, taking turns to be the wheelbarrow.", "Make a family playlist where everyone adds one song, then play it while you tidy or cook.", ""], ["2026-12-01", "Your starting point", "", "Count how many times you can sit down and stand up from a chair in 30 seconds, then write the number down.", "Count how many times you can stand up from a chair in 30 seconds, using your hands to help, and write the number down.||Count how many sit-to-stands you can do in 30 seconds and how many push-ups you can do in a minute, then time your longest plank. Write all three down.", "Before bed, write three good things that happened today in your journal, however small.", "Softness", "Make yourself a hot drink and enjoy it without your phone.", "See how many star jumps everyone can do in 30 seconds, and keep the scores safe so you can try again on 31 December.", "Stir a little cinnamon into a mug of hot milk. It's the cosiest thing I know.", "Dot cake bake-off||Make mini sponge cakes topped with sprinkles. Judge them with a stern stare and award the best one a handshake.", "body", "At bedtime, everyone shares three good things that happened today.", "See how many star jumps everyone can do in 30 seconds, and write the scores down so you can try again on 31 December.", "Make everyone a hot chocolate and drink it together, with no screens.", ""], ["2026-12-02", "Reverse advent", "", "Spend five minutes stepping up and down on the bottom step of your stairs.", "Step up and down on the bottom step of your stairs for three minutes, holding the rail.||Do ten minutes of step-ups on the bottom stair holding a dumbbell in each hand, or walk up and down your stairs ten times as briskly as is safe.", "Learn about something completely random: open Wikipedia's random article page, read whatever comes up, and tell someone one fact from it at dinner.", "Kindness", "Find a box and put one tin or toiletry in it for your local food bank. If you like, add one more every day until the 22nd.", "Let the kids choose the item for the food bank box each day, and decorate the box together.", "Food banks often run low on things like tinned fish, tinned fruit, UHT milk and toiletries, so they're all brilliant things to add.", "Compliment a stranger||Give one stranger a very specific compliment, like their scarf, their dog's outfit or their excellent laugh. Then send two friends an oddly specific one too (\"Your 2019 playlist changed my life.\").", "heart", "Take a random book off the shelf, open it anywhere, and see who can find the weirdest fact.", "Step up and down on the bottom stair together, counting out loud to 50.", "Let the kids choose the item for the food bank box each day, and decorate the box together.", ""], ["2026-12-03", "Window light", "", "Go for a ten-minute walk before midday, while the daylight is at its best.", "Go for a five-minute walk before midday, while the daylight is at its best.||Go for a 30-minute walk before midday, with three one-minute bursts of fast walking or jogging.", "Choose one job you've been putting off, like a phone call or a pile of post. Set a timer for five minutes and just make a start. If you're stuck, try the Free Bird trick: put on \"Free Bird\" by Lynyrd Skynyrd, and by the time the guitar solo kicks in, you'll be well on your way to emptying out that everything drawer.", "Whimsy", "Fold and cut a paper snowflake and stick it in your window.", "Have a snowflake-making contest and see how many windows you can cover.", "Fold your paper into a triangle three times before you start cutting. The more folds, the fancier your snowflake.", "Snowflake factory||Cut paper snowflakes while judging each one like it's Bake Off. Name the winner and give it pride of place on a window.", "body", "Set a five-minute timer and race to tidy one messy spot together, like the toy box or the shoe pile.", "Go for a ten-minute walk before midday, and see who can find the brightest patch of sunshine.", "Have a snowflake-making contest and see how many windows you can cover.", ""], ["2026-12-04", "Feel-good Friday", "", "Put on three songs you love and dance to all of them back to back.", "Dance to one song you love, at whatever pace suits you.||Follow a 20-minute dance workout video.", "Send someone a message telling them one thing you're proud of yourself for this week.", "Together", "Message a friend and arrange something cosy for the weekend, like a walk and a coffee. Pick a day and a time so it actually happens.", "Play freeze dance: everyone dances while the music plays and freezes as soon as it stops.", "My three for tonight: \"I Wanna Dance with Somebody\" by Whitney Houston, \"Mr. Blue Sky\" by ELO, and \"Dancing On My Own\" by Robyn.", "Kitchen disco||Put on one song and dance until you're completely out of breath. Film the last 10 seconds of panting and send it to someone with no explanation.", "body", "Everyone shares one thing they're proud of themselves for this week.", "Play freeze dance: everyone dances while the music plays and freezes as soon as it stops.", "Plan something cosy for the weekend together, like the park and a hot chocolate, and pick the day and time.", ""], ["2026-12-05", "Move together", "", "Go for a 20-minute walk somewhere new, or try a parkrun, which is a free, timed 5k on Saturday mornings.", "Go for a ten-minute walk somewhere new. Walking a parkrun is welcome too, and lots of the courses are step-free.||Run the parkrun, or try to beat your time if you've done one before.", "Leave your headphones off for the first five minutes and just notice what's around you.", "Together", "Go for a walk with a friend and stop somewhere for a hot drink on the way.", "Try junior parkrun together. It's a free 2k on Sunday mornings for children aged 4 to 14, and walking is fine.", "If you try parkrun, honestly, the people at the back are the friendliest bunch there.", "Colour hunt, festive edition||Challenge a friend: you each pick a festive colour (robin red, tinsel gold) and race to photograph 6 things in it. Loser makes the tea.", "heart", "Walk the first five minutes without talking, then everyone says the most interesting thing they spotted.", "Try junior parkrun together. It's a free 2k on Sunday mornings for children aged 4 to 14, and walking is fine.", "Walk somewhere with friends and stop for a hot chocolate on the way.", ""], ["2026-12-06", "Sunday reset", "", "Spend ten minutes stretching. Reach for your toes, circle your hips, and stretch your arms up above your head, holding each stretch for a few slow breaths.", "Spend ten minutes stretching: reach towards your knees, circle your hips, and stretch your arms above your head, holding each for a few slow breaths.||Follow a 30-minute yoga video.", "In your journal, look at the week ahead and write down one thing that would make it easier. Then spend ten minutes on it now, like writing a shopping list, starting some meal prep or laying out your workout clothes.", "Softness", "Put fresh sheets on your bed tonight.", "Put on a song and race to tidy one room before it finishes.", "A little lavender spray on your pillow when you change the sheets makes the whole evening feel like a treat.", "Christmas film trial||Rank your top 5 Christmas films, then defend them in a full courtroom trial with objections and a verdict. Recruit a jury.", "mind", "Look at the week ahead together, then spend ten minutes getting one thing ready, like packing bags or laying out PE kits.", "Put on a song and race to tidy one room before it finishes.", "Let the kids help put fresh sheets on their beds, and choose a teddy to tuck in.", ""], ["2026-12-07", "Balance", "", "Stand on one leg for 30 seconds, then switch, and do this three times on each side.", "Holding onto a counter, stand on one leg for 20 seconds, then switch. Do this three times on each side.||Do ten single-leg deadlifts on each side holding a dumbbell or kettlebell, then balance on each leg for 30 seconds with your eyes closed.", "Pick up a local paper and do the crossword. If you can't get hold of one, try the Guardian's free quick crossword online.", "Whimsy", "Wear something festive today. A pair of Christmas socks absolutely counts.", "Have a flamingo contest to see who can stand on one leg the longest.", "Christmas socks are the easiest festive win there is. Wear the silliest pair you own.", "Elf in hiding||Hold a plank somewhere ridiculous (under the table, beside the tree) like an elf hiding from the kids. Photo for proof.", "body", "Do a crossword or word search together, taking turns to read out the clues.", "Have a flamingo contest to see who can stand on one leg the longest.", "Everyone wears something festive today, like Christmas socks or a sparkly hairband.", ""], ["2026-12-08", "Kind words", "", "Do two sets of 12 bodyweight squats while you wait for the kettle to boil: feet hip-width apart, sit back as if you're aiming for a chair, then stand up tall.", "Stand up from a chair and sit back down slowly 12 times, using your hands to help.||Do three sets of 15 goblet squats holding a dumbbell or kettlebell at your chest.", "When you catch an unkind thought about yourself, write it in your journal, then rewrite it the way you'd say it to a good friend.", "Kindness", "Write a Christmas card to a friend and send it, either in the post or as a message.", "Draw or make a Christmas card together for a grandparent, teacher or neighbour.", "Write about one specific memory you share with them. That's always the bit people keep.", "Post to future you||Write a postcard to yourself to open on 1 January. Hide it in the decorations box.", "mind", "If someone says something unkind about themselves today, ask them what they'd say to their best friend instead.", "Do ten squats together while you wait for the toast.", "Draw or make a Christmas card together for a grandparent, teacher or neighbour.", ""], ["2026-12-09", "Home-cooked", "", "Go for a five-minute walk after dinner.", "Go for a five-minute walk around your home or garden after dinner.||Go for a 20-minute brisk walk after dinner.", "Cook with no screens on, and pay attention to the smells and sounds in the kitchen.", "Nourish", "Cook a dinner from scratch using a winter vegetable, like roasted carrots and parsnips with sausages, or make an apple crumble for pudding.", "Cook together and give the kids jobs like washing veg, stirring and setting the table.", "Apple and blackberry crumble is my favourite: add oats to the topping and a pinch of cinnamon to the fruit.", "Shadow puppet theatre||Lights off, torch on. Put on a 1-minute shadow puppet show of a Christmas story using only your hands. A rabbit playing Mary is allowed.", "heart", "While dinner cooks, everyone closes their eyes and guesses what they can smell.", "Go for a five-minute walk together after dinner, with torches if it's dark.", "Cook together and give the kids jobs like washing veg, stirring and setting the table.", ""], ["2026-12-10", "Hello neighbour", "", "Lie face down, then lift yourself up onto your forearms and toes, keeping your body in a straight line like a plank of wood. Hold for 20 seconds, rest, and do this three times.", "Do a plank leaning on the kitchen counter for 20 seconds, rest, and do this three times.||Hold a plank for 60 seconds, three times, then do ten renegade rows: in a plank on your hands, row a light dumbbell up to your side with one hand, then the other.", "In your journal, write down three things you can't control right now, then one thing you can.", "Kindness", "Check in on a neighbour: knock and say hello properly, or put a note through their door with your name and number saying to get in touch if they ever need anything.", "Draw a picture together and post it through a neighbour's door.", "A note that says \"I'm at number 12 if you ever need anything\" is more than enough.", "Winter treasure walk||Go for a walk and collect 5 tiny treasures (a pinecone, a leaf, an interesting twig). Turn them into a table centrepiece.", "heart", "Talk about one thing that's been on everyone's mind, and one small thing you could do about it.", "Hold a plank together and see who lasts longest. Kids can go on their knees.", "Draw a picture together and post it through a neighbour's door.", ""], ["2026-12-11", "Tiny joys", "", "Once an hour, stand up and have a good stretch: reach both arms up over your head, roll your shoulders backwards five times, then gently tilt your head towards each shoulder.", "Once an hour, stand up, roll your shoulders backwards five times, and gently tilt your head towards each shoulder.||Once an hour, do ten squats and ten counter push-ups, then reach both arms over your head for a long stretch.", "Do a one-minute body scan: close your eyes and notice how each part of your body feels, from your toes up to your head.", "Softness", "Put on some hand cream and give yourself a slow, one-minute hand massage.", "Give each other a one-minute hand massage with some hand cream.", "Pick a hand cream that smells like something you love. It turns a minute into a proper little treat.", "The soundtrack of your year||Build a Spotify playlist of your 2026 in 12 songs, one per month, so each track takes you back to that moment. Make it collaborative and invite three friends to add one song each, with the rule that they have to text you why they picked it. Give the playlist a ridiculous name.", "body", "Do a body scan together at bedtime: wiggle your toes, then your knees, and work all the way up to your nose.", "Play Simon Says with stretches: reach up high, touch your toes, roll your shoulders.", "Give each other a one-minute hand massage with some hand cream.", ""], ["2026-12-12", "Get outside", "", "Go for a 30-minute walk somewhere green, like a park, a canal path or some woods.", "Go for a 15-minute walk somewhere green, with places to sit along the way.||Go for an hour-long walk or hike with some hills, wearing a backpack with a few kilos in it.", "While you're out, look for five signs of winter, like frost, bare trees, a robin, red berries or your breath in the cold air.", "Whimsy", "Take a photo of the most beautiful small thing you see on your walk.", "Play winter bingo on a walk: see who can spot a robin, some holly, frost and a puddle first.", "Take a flask. Everything outside is better with a flask.", "Library love note||Visit your local library. Wander the shelves until a book catches your eye, then borrow it. Before you leave, slip a kind anonymous note into another book for the next reader to find (\"Whoever you are, I hope this book is exactly what you needed today.\").", "body", "Play winter bingo: see who can spot frost, bare trees, a robin, red berries and their own breath in the cold air first.", "Go for a 30-minute walk somewhere green, and let the kids choose the route at each fork.", "Give the kids a phone or camera and let them photograph the most beautiful small thing they find.", ""], ["2026-12-13", "Slow Sunday", "", "Follow a ten-minute gentle yoga video, or do ten minutes of your favourite stretches.", "Follow a ten-minute beginners' yoga video.||Follow a 30-minute yoga flow.", "Choose one thing that's just for you, like a bath, a film or a coffee on your own. If you can do it today, do it. If not, put it in your calendar now, with a day and a time.", "Nourish", "Make a proper hot chocolate on the hob and take your time drinking it.", "Make hot chocolate together and set out toppings like marshmallows, sprinkles and squirty cream.", "My hot chocolate: melt a few squares of dark chocolate into hot milk, then add a tiny pinch of salt.", "The Borecore Awards||Present awards to your household objects (Best Supporting Mug, Lifetime Achievement: Kettle). You can also create categories and let your family vote. Acceptance speeches, in little voices from the objects' point of view, are mandatory. Crafting little awards to hand out is optional.", "body", "Have everyone choose one thing to do this week that's just for them, and write it on the calendar.", "Follow a kids' yoga video together. Cosmic Kids Yoga on YouTube is a good place to start.", "Make hot chocolate together and set out toppings like marshmallows, sprinkles and squirty cream.", ""], ["2026-12-14", "Mini circuit", "", "Do 40 seconds each of bodyweight squats, wall push-ups and marching on the spot, then hold a plank for 25 seconds. Repeat the whole thing twice more.", "Do 30 seconds each of sit-to-stands from a chair, wall push-ups and marching on the spot, then lean on the counter in a plank for 15 seconds. Repeat once more.||Do four rounds of 45 seconds each: squats holding a pair of dumbbells or two full water bottles, floor push-ups, bent-over dumbbell rows and high knees.", "In your journal, write down one thing you're proud of today, however small.", "Whimsy", "Sing one of your favourite songs as loudly as you like. In the shower or the car counts.", "Let the kids lead the circuit and choose the moves.", "The song to sing loudly is obviously \"All I Want for Christmas Is You\" by Mariah Carey.", "Snow angels, indoors||Lie on the floor and do 10 slow snow angels, then 5 minutes of stretching to your favourite festive song.", "body", "Everyone says one thing they're proud of from today.", "Let the kids lead a circuit and choose four moves, 30 seconds each.", "Have a sing-along to everyone's favourite songs, as loudly as you like.", ""], ["2026-12-15", "Done list", "", "Step up and down on the bottom stair 12 times with each leg, then do it all again.", "Holding the bannister, step up and down on the bottom stair ten times with each leg.||Do three sets of 15 step-ups on each leg, holding a dumbbell in each hand.", "In your journal, make a list of everything you've done or got through this year, big and small.", "Kindness", "Leave a kind online review for a local café, shop or business you love.", "Have everyone name three people they're thankful for this year, and say why.", "Write the review for the café or shop you'd be gutted to lose.", "Call, don't text||Ring someone you'd usually just message. Open with: \"This is a festive wellness check from the North Pole.\"", "mind", "Make a 'things we did this year' list together on a big sheet of paper, with drawings.", "Take turns counting each other's step-ups on the bottom stair: ten with each leg.", "Have everyone name three people they're thankful for this year, and say why.", ""], ["2026-12-16", "Screen pause", "", "Go for a ten-minute walk at lunchtime. If you don't get a lunch break today, go before or after work instead.", "Go for a five-minute walk at lunchtime, or before or after work.||Go for a 30-minute walk at lunchtime, briskly enough that it's hard to hold a conversation.", "Have a digital detox evening: no phone and no TV from dinner until bed. Music is allowed.", "Softness", "Go to bed half an hour earlier than usual tonight, and take a warm drink with you, like chamomile tea or hot milk.", "Put all the phones away for an hour and play a board game together.", "Swap the scrolling for a chapter of something. \"A Christmas Carol\" is short and still brilliant.", "Fortune teller||Make a paper fortune teller like you did in the playground. Fill it with festive fortunes (\"You will find a mince pie in an unexpected place.\") and test it on the next person you see.", "mind", "Have a screen-free evening: no phones, tablets or TV after dinner. Put some music on and play a board game instead.", "Go for a ten-minute walk together after school, and play I spy on the way.", "Have an early night, with a warm drink and a story in bed.", ""], ["2026-12-17", "Pull day", "", "Fill a backpack with a few books. Rest one hand on a chair, lean forward slightly, and pull the backpack up towards your side with the other hand, then lower it slowly. Do 10 on each arm, three times.", "Hold a tin of beans in one hand, lean on a chair with the other, and pull the tin up towards your side. Do ten on each arm, twice.||Do four sets of 12 one-arm rows on each side with a dumbbell or kettlebell, lowering slowly.", "Do today's New York Times Connections puzzle, then send your result to a friend and see who did better.", "Together", "Send a friend a voice note instead of a text today.", "Record a voice message together for a grandparent or relative.", "Send your voice note to someone you haven't properly spoken to since the summer.", "Gingerbread you||Build a model of your actual home out of biscuits, crackers or cereal boxes. Include a tiny you.", "body", "Play \"I went to the North Pole and I packed…\": each person repeats the whole list and adds one more thing.", "Have a gentle tug of war with a towel.", "Record a voice message together for a grandparent or relative.", ""], ["2026-12-18", "Festive Friday", "", "Put on a Christmas song and dance to the whole thing.", "Dance to one Christmas song, at whatever pace suits you.||Dance through a Christmas playlist for at least 20 minutes.", "If you're going out, decide what time you'd like to leave, and then give yourself permission to go.", "Whimsy", "Wear a Christmas jumper today.", "Have everyone wear a Christmas jumper today, and the pets too if they'll let you.", "Your one-song dance is \"Last Christmas\" by Wham!, no arguments.", "Blanket fort dinner||Build a proper fort out of blankets, cushions and chairs. Fairy lights inside are mandatory. Eat your dinner in it.", "mind", "Agree a time for everyone to start winding down tonight, and set a timer so nobody has to be the bad guy.", "Have a Christmas disco in the living room with the big light off and a torch for a spotlight.", "Have everyone wear a Christmas jumper today, and the pets too if they'll let you.", ""], ["2026-12-19", "Lights walk", "", "Go for a walk to see the Christmas lights in your area.", "Go for a short stroll to see the nearest Christmas lights.||Do a 5k walk or jog that loops past the best Christmas lights.", "Notice one moment tonight that makes you stop and think \"wow\", and jot it down in your journal.", "Together", "Turn it into a group walk and bring a flask of something warm to share.", "On a lights walk, guess how many inflatable Santas you'll see, and see whose guess is closest.", "Make a flask of mulled apple juice: warm apple juice with a cinnamon stick, a few cloves and a strip of orange peel.", "Christmas lights inspector||Do a Japanese walk around your area and rate the best-decorated houses out of 10. Announce the winners by text.", "body", "Before you go, everyone guesses how many inflatable Santas you'll see, then count them on the way.", "Walk to see the Christmas lights together, with torches and wellies.", "Bring a flask of hot chocolate to share halfway round.", ""], ["2026-12-20", "Make & give", "", "Spend ten minutes stretching: reach up tall, reach down towards your toes, and gently twist to each side, holding each one for a few slow breaths.", "Spend ten minutes stretching: reach up tall, reach down towards your knees, and gently twist to each side.||Do a 20-minute stretch session with hip openers and hamstring stretches.", "In your journal, write down one thing you're happy to leave behind in this year, whether it's a habit, a worry or a pair of shoes that never fitted.", "Nourish", "Bake or make something to give away, like gingerbread, spiced nuts or jars of hot chocolate mix.", "Bake biscuits together, decorate them, and give some away to friends or neighbours.", "Easy spiced nuts: toss mixed nuts in a little melted butter, honey, cinnamon and salt, then roast for about ten minutes.", "Bird buffet||Take a pinecone from your treasure walk, coat it in peanut butter, roll it in birdseed and hang it outside. Name your first visitor.", "heart", "Everyone writes down something they'd like to stop worrying about, scrunches it up and throws it in the recycling.", "Do 'stir the pudding': stand with your feet wide and circle your body round like a big spoon, five times each way.", "Bake biscuits together, decorate them, and give some away to friends or neighbours.", ""], ["2026-12-21", "Shortest day", "", "Get outside for ten minutes around midday, while it's at its brightest.", "Go for a five-minute walk around midday, while it's at its brightest.||Go for a 30-minute brisk walk at midday.", "In your journal, write about what went well this year, and what you'd like more of next year.", "Softness", "Light a candle at sunset. Write down one thing you're leaving in the dark and one thing you're bringing into the light.", "Make a paper lantern together and talk about how the days start getting longer from tomorrow.", "Light your candle and listen to \"River\" by Joni Mitchell.", "Raindrop races||Pick a raindrop each on the window and commentate the race.", "mind", "Talk about everyone's favourite thing from this year.", "Go outside together at midday and see whose shadow is longest. It's the shortest day, so they'll be long ones.", "Make a paper lantern together and talk about how the days start getting longer from tomorrow.", ""], ["2026-12-22", "Give a little", "", "Walk or cycle one trip you'd normally make by car.", "Park a bit further away than usual and walk the rest of the way.||Walk or cycle every short trip you'd normally drive today.", "In your journal, write down one strength that helped you get through this year.", "Kindness", "Make your coffee at home instead of buying one, and give the £5 you saved to a charity you care about.", "Have the kids choose a toy or book to donate, and help decide which charity gets the £5.", "If you're not sure where to give, your local food bank or a winter night shelter will put it to really good use.", "Ask the elders||Call a parent, grandparent or older friend and ask: \"What was Christmas like when you were 10?\" Write down your favourite detail.", "heart", "Ask everyone what they think they're good at, then tell each other what you think too.", "Walk or scoot one trip you'd usually go by car.", "Have the kids choose a toy or book to donate, and help decide which charity gets the £5.", ""], ["2026-12-23", "Together time", "", "Go for a short walk with whoever you're spending time with.", "Have a stroll around the block with whoever you're with.||Suggest a proper 45-minute group walk.", "Plan one escape hatch for the busy days ahead, like a walk on your own at 3pm, and put it in your calendar now so it actually happens.", "Together", "Play a game with people you love, whether it's cards, a board game or charades.", "Play charades together, acting out Christmas films without speaking while everyone else guesses.", "My game pick is Articulate or Pictionary. Both get gloriously loud.", "Carol karaoke for one||Sing one carol start to finish, fully committed, with a hairbrush mic. Send a voice note to someone who'll appreciate it.", "body", "Agree a fresh-air break for the busy days, like everyone heading outside at 3pm.", "Go for a short walk together and play follow the leader, taking turns at the front.", "Play charades together, acting out Christmas films without speaking while everyone else guesses.", ""], ["2026-12-24", "Christmas Eve", "", "Go for a ten-minute stroll in the evening.", "Go for a five-minute stroll in the evening.||Go for a 30-minute brisk walk in the evening.", "Take a moment to notice five things you can see, four you can hear and three you can feel.", "Whimsy", "Watch a Christmas film with people you love, and make sure there are snacks.", "Mix oats and bird seed to make \"reindeer food\", then sprinkle it in the garden before bed.", "My film pick is \"The Holiday\", or \"Elf\" if there are little ones around.", "Secret elf deed||Do one anonymous kindness, like a note on a neighbour's door or a treat left out for the delivery driver.", "mind", "Play 5-4-3-2-1 together: find five things you can see, four you can hear, three you can touch, two you can smell and one you can taste.", "Go for an evening walk and keep an eye on the sky for Santa's sleigh.", "Mix oats and bird seed to make reindeer food, then sprinkle it in the garden before bed.", ""], ["2026-12-25", "Christmas Day", "", "Go for a walk after lunch, for at least ten minutes.", "Have a stroll around the block after lunch.||Go for a 45-minute walk, or a short run in the morning before everything starts.", "Before you eat, go round the table and have everyone say one thing they're grateful for this year. If you'd rather not say yours out loud, write it down.", "Together", "Call someone you love who you're not spending the day with. If you can't find a time that suits you both, record them a voice note instead.", "Head outside together for a walk and try out any new presents, like scooters or bikes.", "Christmas Day can be lovely and a lot, all at the same time. Wherever you are and whoever you're with, I hope you find one quiet moment today that feels like it's just yours.", "The 10-minute escape||Slip away for 10 phone-free minutes (garden, window, bathroom, no judgement) and just breathe. Be kind to yours-elf.", "body", "Before you eat, everyone says one thing they're grateful for this year, and which present they're most excited to have given.", "Head outside together after lunch and try out any new presents, like scooters or bikes.", "Call someone you love who isn't with you today, and let the kids show them their favourite present.", ""], ["2026-12-26", "Boxing Day", "", "Go for a walk with whoever you're with today.", "Have a gentle stroll round the block.||Go for a 10k walk or a run to blow the cobwebs away.", "Drink a big glass of water, then write down the best thing you ate yesterday and who you were with.", "Softness", "Stay in your pyjamas, watch a film and don't feel guilty about it.", "Pile blankets onto the sofa and watch a film together.", "My Boxing Day film is \"Paddington 2\". It makes everything better.", "Boxing Day doorstep drop||Plate up some leftover mince pies or chocolates and knock on the door of a neighbour you've never properly spoken to. Say \"Merry Christmas from number [your door]!\" and introduce yourself properly.", "heart", "Everyone drinks a glass of water, then says the best thing they ate yesterday.", "Go for a walk together and bring a ball or a frisbee.", "Pile blankets onto the sofa and watch a film together.", ""], ["2026-12-27", "Carry on", "", "Do this ten-minute workout: 12 bodyweight squats, 10 push-ups against the kitchen counter, and a 30-second plank. Rest for a minute, then do the whole set twice more.", "Do 10 sit-to-stands from a chair, 10 wall push-ups and 30 seconds of marching on the spot. Rest, then do it twice more.||Do five rounds of 12 goblet squats with a dumbbell or kettlebell, 12 floor push-ups and a 45-second plank, resting for a minute between rounds.", "In your journal, write down one thing that made you laugh this week, then send a message to whoever was part of it to tell them.", "Together", "Spend ten minutes doing a jigsaw or a puzzle with someone. If you don't have one in, try the New York Times Connections puzzle together.", "Build an obstacle course in the living room using cushions and chairs.", "Jigsaw tip: do the edges first, then sort the rest by colour. It's weirdly calming.", "Pyjama walk||Put a coat over your pyjamas and go for a 15-minute walk. Nobody will ever know.", "body", "Everyone shares the funniest thing that happened this week.", "Build an obstacle course in the living room using cushions and chairs, and time each other.", "Do a jigsaw or a puzzle together for ten minutes.", ""], ["2026-12-28", "Reach out", "", "Go for a walk with someone, or call someone while you walk.", "Go for a ten-minute walk while you call someone.||Go for a long walk with someone, for at least an hour.", "Write down three people you'd like to see more of next year. Then message one of them and put a date in the calendar.", "Kindness", "Send a message to someone who might be on their own this week, just to say you're thinking of them.", "Draw a picture together and post it to someone who might be on their own.", "You don't need to say much. \"Thinking of you, hope you're doing OK\" is plenty.", "Dictionary dare||Open a dictionary (or a book) at a random page and point at a word without looking. Work it into conversation three times today. If anyone asks, tell them it's your word of the day.", "heart", "Everyone chooses a friend they'd like to see more of next year, and you plan a time to meet up.", "Go for a walk together and call a relative on speakerphone on the way.", "Draw a picture together and post it to someone who might be on their own.", ""], ["2026-12-29", "Fresh start kitchen", "", "Spend ten minutes stretching out the sofa time: roll your shoulders, reach up tall, and gently twist from side to side.", "Spend ten minutes stretching: roll your shoulders, reach up tall, and gently twist from side to side.||Follow a 30-minute full-body stretch or yoga video.", "Give yourself a day off alcohol and added sugar. Stock up on fizzy water and clementines so there's something to reach for.", "Nourish", "Turn your leftovers into something new, like bubble and squeak, a soup or a curry.", "Cook something with the leftovers together and let the kids give it a silly name.", "My bubble and squeak: fry leftover potatoes and sprouts in butter until crispy, then put a fried egg on top.", "Your year in 10 photos||Pick 10 photos from your camera roll and caption each in three words. Send them to someone who's in one.", "heart", "Have a no-added-sugar day as a family, and let the kids invent a fruity pudding for after dinner.", "Stretch together like bears waking up from hibernation: big yawns, long arms, pointy toes.", "Cook something with the leftovers together and let the kids give it a silly name.", ""], ["2026-12-30", "Plan January", "", "Get your diary or phone calendar and book in three walks or workouts for January, with a day and a time for each.", "Book three ten-minute walks into your diary for January, with a day and a time for each.||Book three workouts a week into your diary for the whole of January, including at least one with weights.", "Choose two habits from this calendar you'd like to keep next year, and put the first one in your calendar for the first week of January.", "Softness", "Scroll back through this calendar and reread your favourite card from this month.", "As a family, choose one habit from this calendar to keep doing next year.", "Book one thing to look forward to in January, even something small like a cinema trip with a friend.", "Thank you for existing||Handwrite a letter to someone who won't be expecting it and thank them for simply existing. Mention one specific moment or thing about them that made your year better. Real paper, real stamp, real postbox.", "body", "As a family, choose one habit from this calendar to keep doing next year.", "Plan three family walks or park trips for January and put them on the calendar.", "Look back through this calendar together and choose everyone's favourite card.", ""], ["2026-12-31", "You've got post", "", "Do the same test you did on 1 December, counting how many sit-to-stands you can do in 30 seconds, and compare your numbers.", "Redo your test from 1 December and compare your numbers.||Redo every test from 1 December, including push-ups and the plank, and compare your numbers.", "In your journal, write your three favourite moments from December.", "Whimsy", "Write a just-for-fun wish list for 2027.", "Do the star jump test again and compare everyone's score with 1 December. Then give each person a slip of paper to write a wish for next year, fold them up, and keep them in a jar to open next Christmas.", "Read your letter first, then put on \"Dancing in the Moonlight\" by Toploader and see the year out properly.", "The non-resolution||Skip \"new year, new me\". Pick one tiny habit to carry into January, then bring back the mini dessert and candle from 27 November and toast it.", "body", "Everyone shares their three favourite moments from December.", "Do the star jump test again and compare everyone's score with 1 December.", "Give each person a slip of paper to write a wish for next year. Fold them up and keep them in a jar to open next Christmas.", ""]];
+const SPARE_QUESTS=[]; // reserve side quests for swaps
+const BETA=[["2026-11-06", "Test drive", "", "Walk for ten minutes, at whatever pace feels good.", "Go for a five-minute walk at an easy pace.||Walk for 20 minutes wearing a backpack with a few kilos in it, and find a hill or a few flights of stairs on the way.", "Open your wellness journal and write down one thing you'd like to try this winter that you've never done before.", "Softness", "Make a hot drink and drink it sitting down, without your phone.", "Go on a ten-minute walk and take turns spotting anything red.", "", "Hot drink sommelier||Blind taste-test three teas or hot chocolates and write tasting notes like a wine expert (\"notes of cardboard and quiet regret\").", "body", "Everyone draws one thing they'd love to do this winter.", "Go on a ten-minute walk and take turns spotting anything red.", "Make everyone a warm drink and drink it together, sitting down, with no screens.", ""], ["2026-11-07", "Fresh sheets", "", "Do ten bodyweight squats: feet hip-width apart, sit back as if you're aiming for a chair, then stand up tall.", "Stand up from a chair and sit back down slowly ten times, using your hands to help.||Do three rounds of 15 goblet squats holding a dumbbell or kettlebell, with a 30-second rest between rounds.", "Before bed, write down three things that went well today, however small.", "Softness", "Put fresh sheets on your bed and get in a little earlier than usual.", "Build a den with the old sheets before they go in the wash.", "", "Hallway hopscotch||Mark out a hopscotch grid with masking tape and play a best-of-three.", "heart", "At bedtime, everyone shares three things that went well today.", "Do ten frog jumps together: squat down low, then jump up high.", "Build a den with the old sheets before they go in the wash.", ""], ["2026-11-08", "Sunday quiet", "", "Go for a 20-minute walk somewhere with trees.", "Go for a ten-minute walk somewhere with trees.||Walk for 40 minutes, at a pace where you can talk but not sing.", "Play reverse charades with friends or family: one person secretly picks the word, a different person acts it out, and everyone else guesses.", "Together", "Ring an older relative or friend and ask how their week has been.", "Ask a grandparent or older family friend what games they played when they were little, then play one together.", "", "Blind portrait||Draw someone's face without looking at the paper. Put the result on display until after Christmas. If you're on your own today, make it a self-portrait.", "mind", "Play reverse charades: one person whispers an animal to the actor, who acts it out while everyone else guesses.", "Go for a 20-minute walk somewhere with trees, and find the biggest one.", "Ask a grandparent or older family friend what games they played when they were little, then play one together.", ""], ["2026-11-09", "Monday reset", "", "Do ten wall push-ups: hands on the wall at shoulder height, lower your chest towards it, then push back.", "Do two sets of five wall push-ups.||Do three sets of ten push-ups on the floor, then three sets of ten chest presses lying on the floor with a pair of dumbbells or two full water bottles.", "Write down the three jobs you most want done this week and pick the one that matters most. If you can do it today, do it. If not, put it in your calendar with a time.", "Nourish", "Make a proper lunch tonight to take with you tomorrow.", "Let the kids design tomorrow's lunchbox and help pack it.", "", "One magic trick||Learn a single card or coin trick and perform it at least three times.", "mind", "Talk about the week ahead, and let each person choose one thing they want to do.", "Do ten wall push-ups together and count them out loud.", "Let the kids design tomorrow's lunchbox and help pack it.", ""], ["2026-11-10", "Lights on", "", "Get outside for ten minutes before midday.", "Go for a five-minute walk before midday.||Go for a brisk 20-minute walk before work or at lunchtime.", "On your walk, count five different sounds you can hear.", "Whimsy", "Find the song that was number one the week you were born (search \"number one on my birthday\") and play it loud.", "Find out what was number one on everyone's birthday and have a dance to each one.", "", "Thank them by name||Thank a bus driver, barista or shop worker by name and tell them they've made your day.", "body", "On a walk, everyone closes their eyes for ten seconds and counts how many sounds they can hear.", "Get outside together before midday, even if it's just a trip to the park.", "Find out what was number one on everyone's birthday and have a dance to each one.", ""], ["2026-11-11", "Balance", "", "Stand on one leg while you brush your teeth, swapping legs halfway.", "Stand on one leg while you brush your teeth, holding the edge of the sink with one hand.||Do ten single-leg deadlifts on each side holding a dumbbell or kettlebell, then brush your teeth standing on one leg with your eyes closed, close to something you can grab.", "At 11am, stop for two minutes of quiet, wherever you are.", "Kindness", "Text someone a photo of something that reminded you of them.", "Have a flamingo contest: who can stand on one leg the longest?", "", "Collect a no||Try a little rejection therapy: ask for something you fully expect to be refused, like asking the café to draw a reindeer in your coffee foam, or a shop to knock a pound off because you're feeling festive. Celebrate the no. If you get a yes, celebrate harder.", "body", "At 11am, everyone stops for two minutes of quiet.", "Have a flamingo contest: who can stand on one leg the longest?", "Send a photo or a drawing to someone who'd love to get it, like a grandparent.", ""], ["2026-11-12", "Screens down", "", "Spend five minutes stretching before bed: reach up tall, roll your shoulders, and hug your knees to your chest.", "Spend five minutes stretching before bed: reach up tall, roll your shoulders, and hug your knees to your chest.||Follow a 15-minute bedtime yoga video.", "Put your phone on charge in another room 30 minutes before bed.", "Softness", "Read a few pages of a book you've been meaning to start.", "Read a bedtime story with the lights low, and let the kids do the voices.", "", "The £5 treasure||Hit a charity shop with £5, find the most gloriously odd item, and gift it to someone with a note explaining exactly why it made you think of them.", "mind", "Put all the screens away 30 minutes before the kids go to bed.", "Do bedtime stretches together: reach up to the ceiling, then curl up small like a sleepy mouse.", "Read a bedtime story with the lights low, and let the kids do the voices.", ""], ["2026-11-13", "Friday feeling", "", "Put on two upbeat songs and dance to both.", "Dance to one upbeat song, at whatever pace suits you.||Follow a 20-minute dance workout video.", "Write down one thing you did this week that you're quietly proud of.", "Together", "Make a plan with a friend for the weekend. Pick a day and a time so it actually happens.", "Play freeze dance: everyone stops dead when the music pauses.", "", "Pocket-money drop||Tape some coins to a vending machine with a note saying \"Treat's on me.\"", "body", "Everyone shares one thing they're proud of from this week.", "Play freeze dance: everyone stops dead when the music pauses.", "Plan a weekend treat together, like a trip to the park, and pick the day and time.", ""], ["2026-11-14", "Soup day", "", "Go for a 30-minute walk, and pick up the vegetables for your soup on the way.", "Go for a 15-minute walk, and pick up one or two of the soup vegetables on the way.||Walk for 45 minutes and carry the soup vegetables home in a backpack, or swap it for a 5k run or a parkrun.", "Cook with the radio or a podcast on and your phone out of reach.", "Nourish", "Make a big pot of soup with winter vegetables, like leek and potato or carrot and coriander. Freeze some for later.", "Let the kids wash and tear up the vegetables, then give the soup a name.", "", "Ask a stranger for a song||Ask someone you don't know for their favourite Christmas song, and play it on your way home.", "heart", "While the soup cooks, everyone closes their eyes and guesses what they can smell.", "Walk to the shop together to buy the soup vegetables, and let the kids carry one each.", "Let the kids wash and tear up the vegetables, then give the soup a name.", ""], ["2026-11-15", "Slow Sunday", "", "Follow a 15-minute gentle yoga or stretching video.", "Follow a ten-minute beginners' yoga video.||Follow a 30-minute yoga flow.", "Pick one thing to do purely because it's fun. If you can do it today, do it. If not, put it in your calendar now.", "Softness", "Have a long bath or shower with something that smells lovely.", "Do animal yoga together: be a cat, a dog and a snake.", "", "Sock puppet news||Make a sock puppet and have it read out this weekend's household news, like a very serious newsreader.", "heart", "Everyone chooses one thing they'd like to do next week purely because it's fun.", "Do animal yoga together: be a cat, a dog and a snake.", "Have a bubbly bath time with a favourite toy, and take it slow.", ""], ["2026-11-16", "Stairs", "", "Take the stairs every time you can today, and do one extra flight just because.", "Holding the rail, walk up and down a flight of stairs twice today, slowly.||Walk up and down a full flight of stairs five times in a row, holding a dumbbell in each hand.", "Learn a card game you've never played, like rummy or cribbage, using the rules below, and play a hand.", "Kindness", "Leave a kind note for someone you live or work with.", "Count the stairs together, and race (carefully) to the top.", "", "Lift-music lunch||Eat your lunch to lift music today. Search \"elevator music\" and see how fancy it makes a sandwich.", "body", "Teach the kids a card game, like snap or go fish, and play three rounds.", "Count the stairs together, and race (carefully) to the top.", "Hide a kind note for someone in the house to find.", ""], ["2026-11-17", "Plank", "", "Hold a plank for 20 seconds, rest, and do it three times.", "Do a plank leaning on the kitchen counter for 20 seconds, rest, and do this three times.||Hold a plank for 45 seconds, three times, then do ten renegade rows with light dumbbells.", "Drink a glass of water before each meal today.", "Nourish", "Eat a fruit or vegetable you haven't had in ages.", "Make funny faces out of fruit on a plate, then eat them.", "", "Pet portrait||Draw your pet, or a pet you wish you had, as a royal portrait. Give it a very grand title.", "mind", "Everyone has a glass of water before each meal, and makes a toast with it.", "Hold a plank together and see who can last the longest.", "Make funny faces out of fruit on a plate, then eat them.", ""], ["2026-11-18", "Kind words", "", "Go for a ten-minute walk at lunchtime.", "Go for a five-minute walk at lunchtime.||Walk briskly for 30 minutes at lunchtime.", "In your journal, write down three things you know now that you wish you'd known ten years ago.", "Kindness", "Message someone you haven't spoken to in a while, just to say hello.", "Write each other little notes and hide them in coats or school bags.", "", "Mirror message||Leave a sticky note with a cheerful message on a mirror somewhere, like the office loo, for a stranger to find.", "mind", "Everyone says one thing they're good at, out loud, without being modest.", "Go for a ten-minute walk together after school.", "Write each other little notes and hide them in coats or school bags.", ""], ["2026-11-19", "Strong legs", "", "Do ten bodyweight lunges on each leg.", "Holding the back of a chair, do five small lunges on each leg.||Do three rounds of 12 lunges on each leg, holding a dumbbell in each hand.", "Tidy one small space, like your bag, a drawer or your desk.", "Whimsy", "Try a bit of dopamine dressing: wear something bright that makes you smile today, like colourful socks or your best earrings.", "Let the kids choose one thing for you to wear today.", "", "Paper aeroplane championship||Make three paper aeroplanes, give them names, and hold a grand final down the hallway.", "body", "Set a five-minute timer and tidy one small space together, like the toy box or a bookshelf.", "Do giant steps across the room together, bending your knees low on every step.", "Let the kids choose one thing for you to wear today.", ""], ["2026-11-20", "Friday night in", "", "Follow a ten-minute dance or workout video before dinner.", "Follow a ten-minute beginners' workout video before dinner.||Follow a 25-minute workout video with dumbbells before dinner.", "Leave your phone in another room while you eat dinner.", "Together", "Invite a friend round for something simple, like toast and a film.", "Have a living-room picnic for dinner, on a blanket on the floor.", "", "Joke exchange||Text three people your worst joke and ask them to send theirs back.", "heart", "Leave all the phones in another room during dinner.", "Put on a kids' dance video and follow along together.", "Have a living-room picnic for dinner, on a blanket on the floor.", ""], ["2026-11-21", "Big walk", "", "Go for a 45-minute walk somewhere new, like a park, a canal or a nature reserve.", "Go for a 20-minute walk somewhere you like, with places to sit along the way.||Go for a 90-minute hike wearing a backpack with a few kilos in it, or a 5k run.", "Leave your headphones at home and notice what you can hear instead.", "Together", "Invite someone along, and stop for a hot drink halfway.", "Bring a bag and each collect one interesting thing to take home.", "", "Puddle verdict||Rate every puddle you pass out of ten, then jump in the winner. Wellies recommended.", "body", "On the walk, stop for one minute and see who can hear the most different birds.", "Go for a walk somewhere new together, as far as little legs can manage.", "Bring a bag and each collect one interesting thing to take home.", ""], ["2026-11-22", "Ready, set", "", "Spend ten minutes stretching: reach up tall, reach down towards your toes, and circle your hips.", "Spend ten minutes stretching: reach up tall, reach towards your knees, and circle your hips.||Follow a 20-minute full-body stretch video.", "Pick one thing you'd like to have done by the end of December, just for the fun of it, and put it in your calendar now.", "Softness", "Get ready for tomorrow: put your trainers by the door and your favourite mug by the kettle.", "Make a paper chain with one link for each day until Christmas, and hang it up.", "", "Christmas song bingo||Write down five Christmas songs. Tick each one off when you hear it out and about. First to five wins.", "mind", "Talk about one thing everyone would like to do before Christmas.", "Do a ten-minute stretch together, pretending to be trees growing tall.", "Make a paper chain with one link for each day until Christmas, and hang it up.", ""]]; // test cards for beta testers, 6–22 Nov
+const data=DAYS.concat(BETA).map(d=>({date:d[0],title:d[1],line:d[2],body:d[3],alt:d[4],mind:d[5],tag:d[6],heart:d[7],kids:d[8],pick:d[9]||'',quest:d[10]||'',tipFor:d[11]||'body',kM:d[12]||'',kB:d[13]||'',kH:d[14]||''}));
+const QUOTES={"2026-11-23": ["How we spend our days is, of course, how we spend our lives.", "Annie Dillard"], "2026-11-24": ["I just like to smile. Smiling's my favourite.", "Buddy, Elf"], "2026-11-25": ["Fall seven times, stand up eight.", "Japanese proverb"], "2026-11-26": ["Everybody needs beauty as well as bread.", "John Muir"], "2026-11-27": ["There's no such thing as bad weather, only unsuitable clothing.", "Alfred Wainwright"], "2026-11-28": ["Rest is not idleness.", "John Lubbock"], "2026-11-29": ["If we're kind and polite, the world will be right.", "Aunt Lucy, Paddington 2"], "2026-11-30": ["I believe in believe.", "Ted Lasso"], "2026-12-01": ["I'm not a has-been. I'm a will-be.", "Lauren Bacall"], "2026-12-02": ["No one has ever become poor by giving.", "Anne Frank"], "2026-12-03": ["Life moves pretty fast. If you don't stop and look around once in a while, you could miss it.", "Ferris Bueller"], "2026-12-04": ["We are here on Earth to fart around.", "Kurt Vonnegut"], "2026-12-05": ["Wherever you go, there you are.", "Jon Kabat-Zinn"], "2026-12-06": ["Self-care is how you take your power back.", "Lalah Delia"], "2026-12-07": ["Life is like riding a bicycle. To keep your balance you must keep moving.", "Albert Einstein"], "2026-12-08": ["To love oneself is the beginning of a lifelong romance.", "Oscar Wilde"], "2026-12-09": ["One cannot think well, love well, sleep well, if one has not dined well.", "Virginia Woolf"], "2026-12-10": ["Be curious, not judgmental.", "Ted Lasso"], "2026-12-11": ["Those who don't believe in magic will never find it.", "Roald Dahl"], "2026-12-12": ["In every walk with nature one receives far more than he seeks.", "John Muir"], "2026-12-13": ["I will honour Christmas in my heart, and try to keep it all the year.", "Charles Dickens"], "2026-12-14": ["The best way to spread Christmas cheer is singing loud for all to hear.", "Buddy, Elf"], "2026-12-15": ["Be the heroine of your life, not the victim.", "Nora Ephron"], "2026-12-16": ["Almost everything will work again if you unplug it for a few minutes, including you.", "Anne Lamott"], "2026-12-17": ["Laughter is a form of internal jogging.", "Norman Cousins"], "2026-12-18": ["If you are always trying to be normal, you will never know how amazing you can be.", "Maya Angelou"], "2026-12-19": ["Christmas waves a magic wand over this world, and behold, everything is softer and more beautiful.", "Norman Vincent Peale"], "2026-12-20": ["You can't use up creativity. The more you use, the more you have.", "Maya Angelou"], "2026-12-21": ["In the midst of winter, I found there was, within me, an invincible summer.", "Albert Camus"], "2026-12-22": ["Be kind whenever possible. It is always possible.", "Dalai Lama"], "2026-12-23": ["Only connect.", "E. M. Forster"], "2026-12-24": ["Christmas is doing a little something extra for someone.", "Charles M. Schulz"], "2026-12-25": ["It was always said of him, that he knew how to keep Christmas well.", "Charles Dickens"], "2026-12-26": ["Doing nothing often leads to the very best of something.", "Winnie the Pooh, Christopher Robin"], "2026-12-27": ["Small deeds done are better than great deeds planned.", "Peter Marshall"], "2026-12-28": ["Friendship is born at that moment when one person says to another, 'What! You too?'", "C. S. Lewis"], "2026-12-29": ["No one is born a great cook. One learns by doing.", "Julia Child"], "2026-12-30": ["Cheers to a new year and another chance for us to get it right.", "Oprah Winfrey"], "2026-12-31": ["If you want the rainbow, you gotta put up with the rain.", "Dolly Parton"], "preview": ["We are here on Earth to fart around.", "Kurt Vonnegut"], "2026-11-06": ["Well begun is half done.", "Aristotle"], "2026-11-07": ["Joy is not in things; it is in us.", "Richard Wagner"], "2026-11-08": ["The days are long, but the years are short.", "Gretchen Rubin"], "2026-11-09": ["Act as if what you do makes a difference. It does.", "William James"], "2026-11-10": ["Remember to look up at the stars and not down at your feet.", "Stephen Hawking"], "2026-11-11": ["Nothing is so strong as gentleness, nothing so gentle as real strength.", "Francis de Sales"], "2026-11-12": ["Your body hears everything your mind says.", "Naomi Judd"], "2026-11-13": ["Laughter is the shortest distance between two people.", "Victor Borge"], "2026-11-14": ["Every day may not be good, but there's something good in every day.", "Anonymous"], "2026-11-15": ["It is a happy talent to know how to play.", "Ralph Waldo Emerson"], "2026-11-16": ["To infinity and beyond!", "Buzz Lightyear, Toy Story"], "2026-11-17": ["Just keep swimming.", "Dory, Finding Nemo"], "2026-11-18": ["No act of kindness, no matter how small, is ever wasted.", "Aesop"], "2026-11-19": ["Do. Or do not. There is no try.", "Yoda, The Empire Strikes Back"], "2026-11-20": ["There's no place like home.", "Dorothy, The Wizard of Oz"], "2026-11-21": ["Adventure is out there!", "Charles Muntz, Up"], "2026-11-22": ["Tomorrow is a new day with no mistakes in it yet.", "L. M. Montgomery, Anne of Green Gables"]};
+const N=DAYS.length;
+const PREVIEW={date:'preview',title:'A little taster',line:'',body:'Roll your shoulders slowly backwards ten times.',alt:'Sitting down, roll your shoulders slowly backwards ten times.||Roll your shoulders backwards ten times and forwards ten times, then hold a doorway chest stretch for 30 seconds.',kM:'Take three slow breaths together, blowing out like you are cooling hot soup.',kB:'Do ten shoulder rolls together, then ten the other way.',kH:'Take turns choosing a favourite song, and have everyone listen with their eyes closed.',mind:'Take three slow breaths, making each breath out a little longer than the breath in.',tipFor:'mind',tag:'Softness',heart:'Put on a song you really love and listen to it all the way through without doing anything else.',kids:'Take turns choosing a favourite song, and have everyone listen with their eyes closed.',quest:'Text a friend the song you picked, and ask them for theirs.',pick:'My song pick for this one is "Here Comes the Sun" by The Beatles.'};
+const cur=()=>current==='preview'?PREVIEW:data[current];
+const isFuture=d=>d.date!=='preview'&&d.date>today&&!(TEST_MODE&&peek);
+const SECRET_KEY='2026-12-20';
+let justUnlocked=false;
+const secretOn=()=>peek||(log[SECRET_KEY]||[]).length>0;
+const TOTAL=()=>secretOn()?N:32;
+const BACKS=['back-stripe','back-sprig','back-checker','back-dots','back-wave','back-gingham'];
+const PHASES=[
+  {name:'Test cards for beta testers',from:N,to:N+BETA.length,beta:true},
+  {name:'Warm-up Week',script:'a gentle start',range:'23–30 November',desc:'Easy first steps, so you\'re already in motion when December starts.',from:0,to:8},
+  {name:'24 days of wellness',weeks:[[8,15],[15,22],[22,29],[29,32]],script:'one card a day',range:'1–24 December',desc:'The cards get shorter and more sociable as Christmas gets closer.',from:8,to:32},
+  {name:'The secret bridge to the new year',script:'psst, you found it',range:'25–31 December',desc:'Seven bonus cards for the funny in-between days. Short, sociable and kind. Tell no one (or tell everyone).',from:32,to:39,secret:true}
+];
+
+const store={get(k,f){try{const v=localStorage.getItem(k);return v?JSON.parse(v):f}catch(e){return f}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+let log=store.get('mm-log',{});
+const TEST_MODE=false; // ← set to true to open every card and show the test bar
+let peek=TEST_MODE; // admin view
+const lit=d=>(log[d]||[]).length>0, gold=d=>(log[d]||[]).length===3;
+// before launch, test cards stand in for the first bulbs so beta testers can light the tree
+const REAL=()=>today<data[0].date?data.slice(N,N+BETA.length).concat(data.slice(BETA.length,N)):data.slice(0,N);
+const litCount=()=>REAL().filter(d=>lit(d.date)).length, goldCount=()=>REAL().filter(d=>gold(d.date)).length;
+function todayISO(){const t=new Date();return t.getFullYear()+'-'+String(t.getMonth()+1).padStart(2,'0')+'-'+String(t.getDate()).padStart(2,'0')}
+const today=todayISO();
+const fmt=iso=>new Date(iso+'T12:00:00').toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long'});
+const short=iso=>new Date(iso+'T12:00:00').toLocaleDateString('en-GB',{day:'numeric',month:'short'});
+const isOpen=d=>peek||d.date<=today;
+const tiltOf=i=>((i*37)%7-3)*.45; // stable gentle tilt
+
+/* ---------- Deck ---------- */
+let dealt=false;
+let seenSet=new Set(store.get('mm-seen',[]));
+let flippedBack=new Set(store.get('mm-flipped',[]));
+function revBackHTML(d,idx,secret,done){
+  const dt=new Date(d.date+'T12:00:00');
+  const pips=Object.keys(STRANDS).map(k=>`<span class="pip${done.includes(k)?' on':''}" style="--c:${STRANDS[k].c}"></span>`).join('');
+  return `<div class="face ${secret?'back-rainbow':BACKS[idx%BACKS.length]} scallop"><div class="back-num"><div><div class="groovy">${dt.getDate()}</div><div class="pips" aria-hidden="true">${pips}</div></div></div></div>`;
+}
+async function flipOver(b,d,idx,secret){
+  const toBack=!flippedBack.has(d.date);toBack?flippedBack.add(d.date):flippedBack.delete(d.date);store.set('mm-flipped',[...flippedBack]);
+  const done=log[d.date]||[];
+  const html=`<span class="edge scallop" aria-hidden="true"></span>${toBack?revBackHTML(d,idx,secret,done):frontHTML(d,done)}`;
+  if(calm()||!b.animate){b.innerHTML=html;return}
+  b.style.animation='none';
+  await b.animate([{transform:'perspective(600px) rotateY(0)'},{transform:'perspective(600px) rotateY(90deg)'}],{duration:200,easing:'ease-in'}).finished;
+  b.innerHTML=html;
+  await b.animate([{transform:'perspective(600px) rotateY(-90deg)'},{transform:'perspective(600px) rotateY(0)'}],{duration:260,easing:'ease-out'}).finished;
+}
+const ICON={Softness:'🕯️',Whimsy:'🎈',Kindness:'💌',Together:'🫶',Nourish:'🥣'};
+function frontHTML(d,done){
+  const dt=new Date(d.date+'T12:00:00');
+  const pips=Object.keys(STRANDS).map(k=>`<span class="pip${done.includes(k)?' on':''}" style="--c:${STRANDS[k].c}"></span>`).join('');
+  return `<div class="face front scallop"><div class="dt script">${dt.getDate()} ${dt.toLocaleDateString('en-GB',{month:'short'})}</div><div class="ic" aria-hidden="true">${ICON[d.tag]||'✦'}</div><div class="tt">${d.title}</div><div class="pips" aria-hidden="true">${pips}</div></div>`;
+}
+function backHTML(d,idx,secret){
+  const dt=new Date(d.date+'T12:00:00');
+  return `<div class="face ${secret?'back-rainbow':BACKS[idx%BACKS.length]} scallop"><div class="back-num"><div><div class="groovy">${dt.getDate()}</div><small>${dt.toLocaleDateString('en-GB',{month:'short'})}</small></div></div></div>`;
+}
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+const calm=()=>matchMedia('(prefers-reduced-motion: reduce)').matches;
+async function revealCard(b,idx){
+  const d=data[idx];seenSet.add(d.date);store.set('mm-seen',[...seenSet]);
+  if(!calm()&&b.animate){
+    b.classList.remove('ready');b.style.animation='none';
+    await b.animate([{transform:'perspective(600px) rotateY(0) scale(1)'},{transform:'perspective(600px) rotateY(90deg) scale(1.12)'}],{duration:220,easing:'ease-in'}).finished;
+    b.innerHTML=`<span class="edge scallop" aria-hidden="true"></span>${frontHTML(d,log[d.date]||[])}`;
+    await b.animate([{transform:'perspective(600px) rotateY(-90deg) scale(1.12)'},{transform:'perspective(600px) rotateY(0) scale(1)'}],{duration:320,easing:'cubic-bezier(.2,.8,.3,1.4)'}).finished;
+    burst(b);await sleep(380);
+  }
+  openModal(idx);renderGrid();
+}
+
+function renderGrid(){
+  const root=document.getElementById('phases');root.innerHTML='';
+  PHASES.forEach(p=>{
+    if(p.secret&&!secretOn())return;
+    if(p.beta&&today>=data[0].date&&!peek)return;
+    const sec=document.createElement('section');sec.className='phase'+(p.secret?' secret':'')+(p.secret&&justUnlocked?' reveal':'');
+    sec.innerHTML=`<div class="phase-head"><h2 class="groovy">${p.name}</h2></div>`;
+    const grid=document.createElement('div');grid.className='deck';
+    const wrapped=new Set();
+    if(p.weeks&&!peek){p.weeks.forEach(([a,b],wi)=>{if(data[a].date>today){for(let k=a;k<b;k++)wrapped.add(k);
+      const n=Math.round((new Date(data[a].date+'T12:00:00')-new Date(today+'T12:00:00'))/864e5);
+      const pc=document.createElement('div');pc.className='parcel';pc.style.setProperty('--row',wi);
+      const d1=new Date(data[a].date+'T12:00:00').getDate(),d2=new Date(data[b-1].date+'T12:00:00').getDate();
+      pc.innerHTML=`<span class="bow" aria-hidden="true">🎀</span><span class="ptag"><b>Week ${wi+1}</b><span>${d1}–${d2} December</span><span>${n===1?'opens tomorrow':'opens in '+n+' days'}</span></span>`;
+      pc._at=a;grid._parcels=(grid._parcels||[]).concat(pc);}})}
+    data.slice(p.from,p.to).forEach((d,i)=>{
+      if(wrapped.has(p.from+i)){const pc=(grid._parcels||[]).find(x=>x._at===p.from+i);if(pc)grid.appendChild(pc);return}
+      const idx=p.from+i,dt=new Date(d.date+'T12:00:00'),open=isOpen(d),done=log[d.date]||[],faceUp=done.length>0;
+      const b=document.createElement('button');b.dataset.d=d.date;
+      b.className='card'+(p.secret?' holo':'')+(open?'':' locked')+(d.date===today?' today':'')+(done.length===3?' gold':'');
+      b.style.setProperty('--tilt',tiltOf(idx)+'deg');
+      if(!dealt){b.style.setProperty('--d',(idx*0.03).toFixed(2)+'s');b.style.setProperty('--dx',((idx%5)-2)*14+'px')}else b.style.animation='none';
+      const seen=faceUp||seenSet.has(d.date);
+      let inner;
+      if(open&&seen){inner=flippedBack.has(d.date)?revBackHTML(d,idx,p.secret,done):frontHTML(d,done);}
+      else{
+        inner=backHTML(d,idx,p.secret)+
+          (!open?`<span class="seal">${(()=>{const n=Math.round((new Date(d.date+'T12:00:00')-new Date(today+'T12:00:00'))/864e5);return n===1?'reveal tomorrow':'reveal in '+n+' days'})()}</span>`:'<span class="seal reveal">Reveal ✦</span>');
+        if(open)b.classList.add('ready');
+      }
+      b.innerHTML=`<span class="edge scallop" aria-hidden="true"></span>${inner}`;
+      b.setAttribute('aria-label',`${fmt(d.date)}: ${open?d.title:'not open yet'}${done.length?`, ${done.length} of 3 done`:''}`);
+      if(open)b.onclick=()=>seen?openModal(idx):revealCard(b,idx);else b.setAttribute('aria-disabled','true');
+      if(open&&seen){const w=document.createElement('div');w.className='cw';w.append(b);
+        const f=document.createElement('button');f.className='flipbtn';f.setAttribute('aria-label',`Flip card ${dt.getDate()} over`);f.textContent='↻';
+        f.onclick=()=>flipOver(b,d,idx,p.secret);w.append(f);grid.appendChild(w);}
+      else grid.appendChild(b);
+    });
+    sec.appendChild(grid);root.appendChild(sec);
+  });
+  dealt=true;justUnlocked=false;
+  renderStats();
+}
+
+let streakVal=0,popDate=null;
+function renderStats(){
+  const L=litCount();
+  document.getElementById('litCount').textContent=L;
+  document.getElementById('goldCount').textContent=goldCount();
+  document.getElementById('totalCount').textContent=TOTAL();
+  document.getElementById('fill').style.width=(L/TOTAL()*100)+'%';
+  let s=0,i=REAL().findIndex(d=>d.date===today);
+  if(i===-1&&today>data[N-1].date)i=N-1;
+  if(i>=0&&!lit(data[i].date))i--;
+  while(i>=0&&lit(data[i].date)){s++;i--}
+  streakVal=s;document.getElementById('streak').textContent=s;
+  const n=document.getElementById('notice'),tb=document.getElementById('todayBtn');
+  queueMicrotask(()=>{n.hidden=!n.innerHTML});const note=document.getElementById('ctaNote');note.hidden=true;
+  if(today<data[0].date){
+    const days=Math.round((new Date(data[0].date+'T12:00:00')-new Date(today+'T12:00:00'))/864e5);
+    const hasTest=data.some(d=>d.date===today);
+    n.innerHTML='';tb.disabled=!hasTest;note.textContent=hasTest?'Today\'s card is a test card. The real calendar starts on Monday 23 November.':'Your first card opens on Monday 23 November';note.hidden=false;
+  }else if(today>data[N-1].date){
+    n.innerHTML='';tb.disabled=true;note.textContent='Happy new year';note.hidden=false;
+  }else{
+    n.innerHTML='';tb.disabled=false;
+  }
+  renderTree();renderBadges();
+}
+
+/* ---------- Tree ---------- */
+const PALETTE=['#C63B2F','#F09A93','#FFF3DC','#D9A23C','#F6B9B2','#E4572E'];
+const ROWS=[3,4,6,7,9,10],bulbPos=[];
+ROWS.forEach((n,r)=>{const y=78+r*(288-78)/(ROWS.length-1),half=(y-30)*.42;for(let i=0;i<n;i++){const t=i/(n-1);bulbPos.push([150-half+t*2*half,y+Math.sin(i*1.3+r)*5])}});
+function renderTree(){
+  const g=document.getElementById('bulbs');g.innerHTML='';const NS='http://www.w3.org/2000/svg';
+  REAL().forEach((d,i)=>{
+    if(i>=32&&!secretOn())return;
+    const [x,y]=bulbPos[i],c=document.createElementNS(NS,'circle'),n=(log[d.date]||[]).length,on=n>0,gd=n===3;
+    c.setAttribute('cx',x.toFixed(1));c.setAttribute('cy',y.toFixed(1));c.setAttribute('r',['5.5','5','6.2','7.5'][n]);c.dataset.d=d.date;
+    c.setAttribute('class','bulb'+(on?' on l'+n:'')+(gd?' gold':'')+(on&&popDate===d.date?' pop':''));
+    if(on){c.style.fill=PALETTE[i%PALETTE.length];if(popDate!==d.date)c.style.animationDelay=((i*.37)%2.8).toFixed(2)+'s'}
+    const t=document.createElementNS(NS,'title');t.textContent=`${fmt(d.date)}: ${d.title}`;c.appendChild(t);g.appendChild(c);
+  });
+  const L=litCount(),left=24-L;
+  document.getElementById('starPath').setAttribute('class','star'+(goldCount()===N?' on':''));
+  document.getElementById('ny').style.display=(secretOn()&&cnt(32,39)===7)?'':'none';
+  document.getElementById('treeSub').textContent=L===0?'Tick off what you do on each card to light a bulb. Do all three for a shining one.'
+    :`${L} light${L===1?'':'s'} on, ${goldCount()} golden. `+(left>0?`${left} more and the star switches on.`:'The star is on. Glowing, frankly.');
+  document.getElementById('treeDesc').textContent=`Your tree: ${L} of 39 lights on`;
+}
+
+/* ---------- Badges ---------- */
+const cnt=(a,b)=>data.slice(a,b).filter(d=>lit(d.date)).length;
+const BADGES=[
+ {ico:'✨',name:'First light',hint:'Open 1 card',test:()=>litCount()>=1},
+ {ico:'🧣',name:'Warmed up',hint:'3 warm-up cards',test:()=>cnt(0,8)>=3},
+ {ico:'🌟',name:'Golden',hint:'All 3 on one card',test:()=>goldCount()>=1},
+ {ico:'🧦',name:'Week one',hint:'Open 7 cards',test:()=>litCount()>=7},
+ {ico:'🔥',name:'On a roll',hint:'5-day streak',test:()=>streakVal>=5},
+ {ico:'🦌',name:'Fortnight',hint:'Open 14 cards',test:()=>litCount()>=14},
+ {ico:'💝',name:'Big heart',hint:'10 Heart actions',test:()=>data.filter(d=>(log[d.date]||[]).includes('heart')).length>=10},
+ {ico:'⭐',name:'Star on top',hint:'Open 24 cards',test:()=>litCount()>=24},
+ {ico:'⛄',name:'Secret keeper',hint:'All 7 secret cards',secret:true,test:()=>cnt(32,39)===7},
+ {ico:'🎄',name:'Yours-elf',hint:'All 39 cards',test:()=>litCount()===N}
+];
+let earnedPrev=new Set(store.get('mm-badges',[])),lastNew=[];
+function renderBadges(){lastNew=[];return;
+  const ul=document.getElementById('badges');ul.innerHTML='';const earned=[];lastNew=[];
+  BADGES.forEach(b=>{
+    const ok=b.test(),fresh=ok&&!earnedPrev.has(b.name);if(ok)earned.push(b.name);if(fresh)lastNew.push(b);
+    const li=document.createElement('li');li.className='badge scallop'+(ok?'':' locked')+(fresh&&popDate?' new':'');
+    const hide=b.secret&&!secretOn(),bn=hide?'???':b.name,bh=hide?'Keep going…':b.hint;
+    li.innerHTML=`<span class="ico" aria-hidden="true">${hide?'🎁':b.ico}</span><b>${bn}</b><small>${ok?'Earned':bh}</small>`;
+    li.setAttribute('aria-label',`${bn}: ${ok?'earned':'locked, '+bh}`);ul.appendChild(li);
+  });
+  earnedPrev=new Set(earned);store.set('mm-badges',earned);
+}
+
+/* ---------- Modal ---------- */
+let current=null,sel=new Set(),lastFocus=null;
+function openModal(idx){
+  current=idx;lastFocus=document.activeElement;const d=cur();const isPrev=idx==='preview';
+  sel=new Set(log[d.date]||[]);
+  document.getElementById('flipBack').className='scallop '+(isPrev?'back-stripe':idx>=32?'back-rainbow':BACKS[idx%BACKS.length]);
+  const flip=document.getElementById('flip');flip.style.animation='none';void flip.offsetWidth;flip.style.animation='';
+  document.getElementById('mTitle').textContent=d.title;
+  document.getElementById('mDate').textContent=isPrev?'Sample card':(idx<N?`${fmt(d.date)} · card ${idx+1} of ${N}`:`${fmt(d.date)} · test card ${idx-N+1} of ${BETA.length}`);
+  document.getElementById('mLine').hidden=true;document.getElementById('mTipX').textContent=d.line;{const qx=document.getElementById('mQuestX'),qp=(d.quest||'').split('||');qx.textContent='';if(qp.length>1){const st=document.createElement('strong');st.textContent=qp[0]+'. ';qx.append(st,qp[1])}else qx.textContent=qp[0]}document.getElementById('mQuest').hidden=!d.quest;document.getElementById('mTip').hidden=true;
+  {const q=QUOTES[d.date];document.getElementById('mQuote').hidden=!q;if(q){document.getElementById('mQ').textContent='“'+q[0]+'”';document.getElementById('mQa').textContent=q[1]}}
+  document.getElementById('mKids').hidden=true;kidsMode=settings.kids==='yes';paintKidsT();
+  renderLetterBox();
+  const sup=document.getElementById('mSupport');
+  sup.hidden=!['2026-12-21','2026-12-24','2026-12-25','2026-12-28'].includes(d.date);
+  sup.innerHTML='If this season feels heavy, you\'re not alone. In the UK and Ireland, Samaritans are free to call any time on <b>116 123</b> (samaritans.org).';
+  
+  document.getElementById('toast').textContent='';const cel=document.getElementById('celebrate');cel.hidden=true;cel.textContent='';
+  renderOpts();renderForm();renderWhos();
+  const fin=document.querySelector('.fr-in');fin.scrollTop=0;
+  const first=isPrev||!openedSet.has(d.date);
+  fin.classList.toggle('intro',first);document.getElementById('opts').classList.remove('stagger');
+  if(first&&!isPrev&&!isFuture(d)){openedSet.add(d.date);store.set('mm-opened',[...openedSet])}
+  const s=document.getElementById('scrim');s.classList.add('open');s.setAttribute('aria-hidden','false');document.getElementById('close').focus();
+}
+const ICONS=[[/journal|letter/i,'💌'],[/photo|camera/i,'📸'],[/lunchbox/i,'🥪'],[/draw|picture|paper chain|lantern/i,'🖍️'],[/star jump|frog jump|wheelbarrow|obstacle|giant steps|tug of war/i,'🤸'],[/bath/i,'🛁'],[/fruit/i,'🍓'],[/glass of water/i,'💧'],[/tidy|toy box/i,'🧹'],[/listen|sounds|hear/i,'👂'],[/shadow/i,'🌞'],[/fort|den\b/i,'⛺'],[/phone in a drawer|phone in another room/i,'📵'],[/dance|disco/i,'💃'],[/\bsing\b|sing-along|singing|carol/i,'🎤'],[/song|playlist|music/i,'🎵'],[/breath/i,'🌬️'],[/stretch|yoga/i,'🧘'],[/push-up|plank|squat|circuit|workout|rows|backpack/i,'💪'],[/sit down and stand|sit-to-stand|stand up and sit/i,'🪑'],[/stair|step/i,'🪜'],[/one leg|balance/i,'🦩'],[/cycle/i,'🚲'],[/lights/i,'✨'],[/walk|wheel|outside|stroll/i,'🚶'],[/cook|dinner|recipe|veg|leftovers|stew|crumble|bake|biscuits/i,'🍲'],[/hot chocolate|hot drink|warm drink|\btea\b|coffee|\bmugs?\b|\bcups?\b/i,'☕'],[/phone|screen/i,'📵'],[/write|list|note/i,'✍️'],[/candle/i,'🕯️'],[/sheets|early night|\bbed\b|bedtime/i,'🛏️'],[/snowflake/i,'❄️'],[/jumper|socks/i,'🧦'],[/compliment|kind/i,'💬'],[/\bcall\b|\bring\b|message|voice note|\bcard\b|post it/i,'💌'],[/food bank|charity|donate|£5/i,'🎁'],[/neighbour/i,'🏡'],[/hand cream|massage/i,'🤲'],[/photo/i,'📸'],[/leaf|stone|pine cone/i,'🍂'],[/film/i,'🎬'],[/game|jigsaw|puzzle|charades/i,'🧩'],[/friend|people/i,'🫶'],[/think|notice|worry|proud|strength|look at/i,'🧠']];
+function iconFor(t,k){for(const [r,e] of ICONS)if(r.test(t))return e;return STRANDS[k].ico}
+const VIDS=[[/body scan/i,'Body scan','1 minute body scan meditation'],[/box breathing/i,'Box breathing','box breathing exercise guided'],[/breath/i,'Slow breathing','4 6 breathing exercise guided'],[/chair yoga|yoga/i,'Gentle yoga','Yoga With Adriene 10 minute gentle yoga'],[/stretch/i,'Stretches','10 minute full body stretch beginners'],[/sit down and stand|sit-to-stand/i,'Sit-to-stands','sit to stand exercise how to'],[/wall push-ups/i,'Wall push-ups','wall push ups for beginners'],[/plank/i,'Planks','how to plank for beginners'],[/squat/i,'Squats','how to squat for beginners'],[/one leg|balance/i,'Balance','standing balance exercises beginners'],[/stepping up|step-ups|stair/i,'Step-ups','step ups on stairs exercise'],[/backpack|towel/i,'Rows at home','backpack row exercise at home'],[/circuit|workout/i,'Home workout','10 minute beginner home workout no equipment'],[/snowflake/i,'Paper snowflakes','how to make paper snowflakes'],[/paper lantern/i,'Paper lantern','how to make a paper lantern']];
+function renderHowto(d){const box=document.getElementById('howto');box.innerHTML='';const seen=new Set();
+  [d.mind,d.body,d.heart].forEach(t=>{for(const [r,label,q] of VIDS){if(r.test(t)&&!seen.has(label)){seen.add(label);const a=document.createElement('a');a.href='https://www.youtube.com/results?search_query='+encodeURIComponent(q);a.target='_blank';a.rel='noopener';a.textContent='▶ '+label;box.appendChild(a);break}}});
+  if(box.children.length){const l=document.createElement('span');l.textContent='Need a hand? Watch how:';box.prepend(l)}box.hidden=!box.children.length}
+
+/* ---------- Inline timers ---------- */
+const NUMW={one:1,two:2,three:3,four:4,five:5,six:6,seven:7,eight:8,nine:9,ten:10,fifteen:15,twenty:20,thirty:30,forty:40,'forty-five':45,sixty:60,ninety:90};
+function timerSecs(t){
+  if(/video|before bed|earlier than usual|once an hour|every hour|half an hour|book |diary|calendar|at 11am|for the whole/i.test(t))return 0;
+  let m=t.match(/\b(\d+|one|two|three|four|five|six|seven|eight|nine|ten|fifteen|twenty|thirty|forty-five|forty|sixty|ninety)[- ](second|minute)s?\b/i);
+  if(m){const n=/^\d+$/.test(m[1])?+m[1]:NUMW[m[1].toLowerCase()];const sec=n*(/minute/i.test(m[2])?60:1);return sec>0&&sec<=5400?sec:0}
+  if(/\b(a|one) minute\b/i.test(t))return 60;
+  return 0}
+const fmtT=s=>Math.floor(s/60)+':'+String(s%60).padStart(2,'0');
+let tmr=null,actx=null;
+function jingle(up){try{actx=actx||new (window.AudioContext||window.webkitAudioContext)();const now=actx.currentTime;
+  const notes=up?[1046.5,1318.5,1568]:[1568,1318.5,1046.5,2093];
+  notes.forEach((f,i)=>{const o=actx.createOscillator(),g=actx.createGain();o.type='triangle';o.frequency.value=f;
+    const t0=now+i*0.12;g.gain.setValueAtTime(0.0001,t0);g.gain.exponentialRampToValueAtTime(0.25,t0+0.01);g.gain.exponentialRampToValueAtTime(0.0001,t0+0.35);
+    o.connect(g);g.connect(actx.destination);o.start(t0);o.stop(t0+0.4)});}catch(e){}}
+function paintTimer(){if(!tmr)return;const el=document.getElementById('tm-'+tmr.k);if(!el)return;
+  if(tmr.done){el.className='optimer done';el.textContent='✦ Time\'s up';return}
+  const left=Math.max(0,Math.ceil((tmr.end-Date.now())/1000));el.className='optimer run';el.textContent='⏱ '+fmtT(left)+' · tap to stop'}
+function stopTimer(){if(tmr){clearInterval(tmr.iv);tmr=null}}
+function timerButton(k,sec){const b=document.createElement('button');b.type='button';b.className='optimer';b.id='tm-'+k;
+  const label='⏱ Start '+(sec<60?sec+'-second':sec%60?fmtT(sec):(sec/60)+'-minute')+' timer';b.textContent=label;
+  if(tmr&&tmr.k===k)setTimeout(paintTimer,0);
+  b.onclick=()=>{if(tmr&&tmr.k===k&&!tmr.done){stopTimer();b.className='optimer';b.textContent=label;return}
+    stopTimer();jingle(true);tmr={k,end:Date.now()+sec*1000,done:false};
+    tmr.iv=setInterval(()=>{if(Date.now()>=tmr.end){clearInterval(tmr.iv);tmr.done=true;jingle(false);paintTimer();const e=document.getElementById('tm-'+k);if(e)burst(e);return}paintTimer()},250);paintTimer()};
+  return b}
+let kidsMode=false;
+function bodyFor(d){const [g,h]=(d.alt||'').split('||');return settings.level==='gentle'&&g?g:settings.level==='harder'&&h?h:d.body}
+function strandText(d,k){if(kidsMode){const kv={mind:d.kM,body:d.kB,heart:d.kH}[k];if(kv)return kv;return k==='body'?d.body:d[k]}return k==='body'?bodyFor(d):d[k]}
+function renderOpts(){
+  const d=cur(),future=isFuture(d),box=document.getElementById('opts');box.innerHTML='';
+  ['mind','body','heart'].forEach(k=>{const txt=strandText(d,k);
+    const s=STRANDS[k],col=kidsMode?'var(--kid)':s.c,b=document.createElement('button');b.type='button';b.className='opt';b.style.setProperty('--c',col);
+    b.setAttribute('aria-pressed',String(sel.has(k)));b.disabled=future;
+    b.innerHTML=`<span class="oi" aria-hidden="true">${iconFor(txt,k)}</span><span><span class="k"></span><span class="x"></span></span><span class="box" aria-hidden="true">${sel.has(k)?'✓':''}</span>`;
+    const lvl=k==='body'&&!kidsMode&&settings.level!=='standard'?(settings.level==='gentle'?' · gentler':' · harder'):'';
+    b.querySelector('.k').textContent=(k==='heart'?`${s.ico} Heart · ${d.tag}`:`${s.ico} ${s.name}`)+lvl+(kidsMode?' · with kids':'');
+    b.querySelector('.x').textContent=txt;
+    b.onclick=()=>{const adding=!sel.has(k);adding?sel.add(k):sel.delete(k);commit(adding,b)};
+    const w=document.createElement('div');w.className='optwrap'+(kidsMode?' kid':'');w.style.setProperty('--c',col);w.appendChild(b);
+    const LINKS=[[/Connections/,'Play Connections','https://www.nytimes.com/games/connections'],[/Guardian's free quick crossword/,'Guardian quick crossword','https://www.theguardian.com/crosswords/series/quick'],
+      [/Wikipedia's random article/,'Random Wikipedia article','https://en.wikipedia.org/wiki/Special:Random'],
+      [/\brummy\b/i,'Rummy rules','https://www.pagat.com/rummy/rummy.html'],[/cribbage/i,'Cribbage rules','https://www.pagat.com/adders/crib6.html'],
+      [/\bsnap\b/i,'Snap rules','https://www.pagat.com/war/snap.html'],[/go fish/i,'Go fish rules','https://www.pagat.com/quartet/gofish.html']];
+    LINKS.filter(([r])=>r.test(txt)).forEach(([,l,u])=>{const a=document.createElement('a');a.className='optvid';a.href=u;a.target='_blank';a.rel='noopener';a.textContent='🔗 '+l;w.appendChild(a)});
+    const v=VIDS.find(([r])=>r.test(txt));
+    if(v){const a=document.createElement('a');a.className='optvid';a.href='https://www.youtube.com/results?search_query='+encodeURIComponent(v[2]);a.target='_blank';a.rel='noopener';a.textContent='▶ Watch how: '+v[1];w.appendChild(a)}
+    {const sec=timerSecs(txt);if(sec&&!future&&d.date!=='preview'||sec&&d.date==='preview')w.appendChild(timerButton(k+'-'+(kidsMode?'k':'a')+'-'+d.date,sec))}
+    box.appendChild(w);
+  });
+  document.getElementById('pickHint').textContent=d.date==='preview'?'':future?(()=>{const n=Math.round((new Date(d.date+'T12:00:00')-new Date(today+'T12:00:00'))/864e5);return n===1?'Reveals tomorrow.':`Reveals in ${n} days.`})():'';document.getElementById('pickHint').hidden=!document.getElementById('pickHint').textContent;
+}
+const LEVEL=['','Lit ✦','Brighter ✦✦','Shining ✦✦✦'];
+function renderForm(){
+  const d=cur(),saved=log[d.date]||[],isPrev=d.date==='preview';
+  const st=document.getElementById('tickState');
+  const n=isPrev?sel.size:saved.length;
+  st.textContent=n?LEVEL[n]:'';st.dataset.n=n;st.hidden=!n;
+  const canPin=!isPrev&&!isFuture(d)&&saved.length>0&&wall.db&&!postIds[d.date];
+  document.getElementById('mForm').hidden=!canPin;
+  document.getElementById('fShareRow').hidden=true;
+}
+async function commit(adding,btn){
+  document.getElementById('opts').classList.remove('stagger');
+  const d=cur(),k=d.date;
+  if(k==='preview'){renderOpts();renderForm();if(adding)burst(btn);return}
+  if(isFuture(d))return;
+  const before=(log[k]||[]).length;
+  if(sel.size)log[k]=[...sel];else delete log[k];
+  store.set('mm-log',log);
+  const unlocking=k===SECRET_KEY&&before===0&&sel.size>0&&!peek;if(unlocking)justUnlocked=true;
+  if(adding)flyDate=k;
+  renderGrid();renderOpts();renderForm();
+  const cel=document.getElementById('celebrate');cel.hidden=true;
+  if(adding)burst(btn);
+  if(unlocking){cel.textContent='🌈 Psst. That card had a key in it. Scroll to the bottom.';cel.hidden=false;setTimeout(()=>burst(btn),300)}
+  if(!sel.size&&postIds[k]&&wall.db){try{await wall.db.doc('wall/'+postIds[k]).delete()}catch(err){}delete postIds[k];store.set('mm-posts',postIds);renderForm()}
+}
+let flyDate=null;
+let openedSet=new Set(store.get('mm-opened',[]));
+document.getElementById('introGo').onclick=()=>{const fin=document.querySelector('.fr-in');fin.classList.remove('intro');document.getElementById('opts').classList.add('stagger');document.getElementById('opts').querySelector('button')?.focus()};
+function closeModal(){stopTimer();const s=document.getElementById('scrim');s.classList.remove('open');s.setAttribute('aria-hidden','true');if(lastFocus&&document.body.contains(lastFocus))lastFocus.focus();
+  if(flyDate){const k=flyDate;flyDate=null;flyToSack(k)}}
+async function flyToSack(k){
+  const tree=document.querySelector('.mytree'),sack=document.getElementById('sack');
+  if(calm()||!sack){popDate=k;renderTree();popDate=null;return}
+  tree.scrollIntoView({behavior:'smooth',block:'center'});await sleep(650);
+  const d=data.find(x=>x.date===k),fc=document.createElement('div');fc.className='flycard';
+  fc.innerHTML=`<span class="edge scallop"></span>${frontHTML(d,log[k]||[])}`;document.body.appendChild(fc);
+  const r=sack.getBoundingClientRect(),tx=r.left+r.width/2-innerWidth/2,ty=r.top+r.height/2-innerHeight/2;
+  await fc.animate([
+    {transform:'translate(-50%,-50%) scale(1) rotate(0)',opacity:1},
+    {transform:`translate(calc(-50% + ${tx*0.45}px),calc(-50% + ${ty*0.2-120}px)) scale(.7) rotate(-14deg)`,opacity:1,offset:.45},
+    {transform:`translate(calc(-50% + ${tx}px),calc(-50% + ${ty}px)) scale(.12) rotate(25deg)`,opacity:.9}
+  ],{duration:900,easing:'cubic-bezier(.4,0,.2,1)'}).finished;
+  fc.remove();
+  sack.classList.remove('wiggle');void sack.getBoundingClientRect();sack.classList.add('wiggle');
+  await sleep(250);popDate=k;renderTree();popDate=null;
+  const bulb=document.querySelector(`#bulbs circle[data-d="${k}"]`);if(bulb)burst(bulb);
+}
+function burst(el){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  const r=el.getBoundingClientRect(),cx=r.left+r.width/2,cy=r.top+r.height/2;
+  for(let i=0;i<14;i++){const s=document.createElement('span');s.className='burst';s.textContent=i%3?'✦':'✧';
+    const a=Math.random()*Math.PI*2,dist=60+Math.random()*90;
+    s.style.left=cx+'px';s.style.top=cy+'px';s.style.setProperty('--x',Math.cos(a)*dist+'px');s.style.setProperty('--y',Math.sin(a)*dist+'px');
+    s.style.color=['#D9A23C','#C63B2F','#F09A93'][i%3];document.body.appendChild(s);setTimeout(()=>s.remove(),1100)}
+}
+
+document.getElementById('mCopy').onclick=async()=>{
+  const d=cur();
+  const done=(log[d.date]||[]).length;
+  const txt=done?`${'✦'.repeat(done)} I did ${data.indexOf(d)<N?'card '+(data.indexOf(d)+1):'a test card'} of Be kind to yours-elf: ${d.title}.`:`Be kind to yours-elf · ${fmt(d.date)}: ${d.title}\nPick one (or all three):\n🧠 ${strandText(d,'mind')}\n💪 ${strandText(d,'body')}\n✨ ${strandText(d,'heart')}`;
+  const t=document.getElementById('toast');
+  try{await navigator.clipboard.writeText(txt);t.textContent='Copied. Paste it anywhere.'}catch(e){t.textContent='Couldn\'t copy here.'}
+};
+document.getElementById('close').onclick=closeModal;
+document.getElementById('scrim').onclick=e=>{if(e.target.id==='scrim')closeModal()};
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.getElementById('scrim').classList.contains('open'))closeModal()});
+
+let photoData='';function clearPhoto(){}
+const wall={db:null};const postIds={};function renderWhos(){document.getElementById('mWhos').textContent=''}
+/* ---------- Letter to January you ---------- */
+const LETTER_DAY='2026-11-23', DELIVER='2026-12-31';
+let letter=store.get('mm-letter',null); // {text, at}
+function renderLetterBox(){const d=cur();document.getElementById('mLetter').hidden=d.date!==LETTER_DAY;document.getElementById('mJournal').hidden=d.date===LETTER_DAY||!/journal/i.test(d.mind)}
+function calUrl(){const t='A letter from November you 💌',d='Your letter from Be kind to yours-elf:\n\n'+(letter&&letter.text||'');
+  return 'https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent(t)+'&dates=20261231T090000/20261231T091500&details='+encodeURIComponent(d)}
+function renderLetter(){
+  const ta=document.getElementById('lText'),btn=document.getElementById('lSeal'),pp=document.getElementById('mLetterP');
+  if(letter&&letter.text){ta.hidden=true;btn.textContent='Rewrite it';pp.textContent=today>=DELIVER?'It\'s arrived. Open it at the top of the page.':'Sealed ✉ Arrives 31 December.'}
+  else{ta.hidden=false;btn.textContent='Seal it ✉';pp.textContent='Write a letter to yourself to open on New Year\'s Eve. It could be a pep talk, a few predictions, or just an update on how things are going. It stays sealed until 31 December.'}
+  document.getElementById('lToast').textContent='';
+  const cl=document.getElementById('calLink');cl.hidden=!(letter&&letter.text)||today>=DELIVER;if(!cl.hidden)cl.href=calUrl();
+}
+document.getElementById('lSeal').onclick=async()=>{
+  const ta=document.getElementById('lText'),t=document.getElementById('lToast');
+  if(letter&&letter.text&&ta.hidden){ta.value=letter.text;ta.hidden=false;document.getElementById('lSeal').textContent='Seal it ✉';ta.focus();letter=null;return}
+  const text=ta.value.trim();if(!text){t.textContent='Write a line or two first.';return}
+  letter={text,at:Date.now()};store.set('mm-letter',letter);
+  ta.value='';renderLetter();renderPost();burst(document.getElementById('lSeal'));
+};
+function renderPost(){
+  const sec=document.getElementById('post'),h=document.getElementById('postH'),pp=document.getElementById('postP'),b=document.getElementById('postBtn'),paper=document.getElementById('postLetter');
+  if(!letter||!letter.text){sec.hidden=true;paper.hidden=true;return}
+  sec.hidden=false;
+  if(today>=DELIVER){h.textContent='You\'ve got post';pp.textContent='';b.hidden=false}
+  else{h.textContent='A letter is on its way';pp.textContent='Arrives 31 December.';b.hidden=false;b.textContent='Edit letter';paper.hidden=true}
+}
+document.getElementById('postBtn').onclick=async()=>{
+  if(today<DELIVER){await openJournal('letter');const ta=document.getElementById('lText');ta.value=letter.text;ta.hidden=false;document.getElementById('lSeal').textContent='Seal it ✉';document.getElementById('mLetterP').textContent='Make any changes, then seal it again.';setTimeout(()=>ta.focus(),600);return}
+  const paper=document.getElementById('postLetter');
+  if(!paper.hidden){paper.hidden=true;document.getElementById('postBtn').textContent='Open it';return}
+  paper.textContent=letter.text;const sg=document.createElement('span');sg.className='sign';sg.textContent='Love, yours-elf';paper.appendChild(sg);
+  paper.hidden=false;document.getElementById('postBtn').textContent='Fold it away';burst(document.getElementById('postBtn'));
+};
+
+/* ---------- Journal ---------- */
+const JPROMPTS={"2026-11-23": "What would make this December a good one for you? Be specific: a person, a place, a dinner.", "2026-11-24": "What's something you're looking forward to this week, even if it's just a good dinner?", "2026-11-25": "What's the worry that keeps popping up today? Write it down here and see if it feels any smaller on paper.", "2026-11-26": "How was tonight's dinner? Feel free to review it like a slightly over-the-top food critic.", "2026-11-27": "What did you notice outside today that you'd usually walk straight past?", "2026-11-28": "What actually helps you switch off at night, and what keeps you up instead?", "2026-11-29": "Who always makes you laugh, and when could you see them next?", "2026-11-30": "What's a tough part of this year that you got through, and what's one thing that's going well right now?", "2026-12-01": "What were three good things about today, however ordinary?", "2026-12-02": "When were you braver than you expected this year? It could be anything from a big conversation to finally booking the dentist.", "2026-12-03": "What's the job you've been putting off, and how did it feel to finally make a start?", "2026-12-04": "What are you quietly proud of from this week?", "2026-12-05": "Who did you spend time with today, and what was the best part of it?", "2026-12-06": "What's one thing that would make next week a little bit easier?", "2026-12-07": "What's one thing you said yes to lately that you'd rather have said no to?", "2026-12-08": "What's an unkind thing you've said to yourself lately? Try rewriting it the way a good friend would put it.", "2026-12-09": "What's the meal that always tastes like home to you?", "2026-12-10": "What are three things you can't control right now, and one thing you can?", "2026-12-11": "What was the nicest minute of your day?", "2026-12-12": "Which signs of winter did you spot today, and which was your favourite?", "2026-12-13": "What's one thing you're going to do this week that's just for you, and when will you do it?", "2026-12-14": "What's something you're proud of today, even if it's small?", "2026-12-15": "What have you done or got through this year? Write it all down, from the big things to the surprisingly hard small ones.", "2026-12-16": "How did an hour without your phone feel, and did you reach for it out of habit?", "2026-12-17": "Who would you love to hear from right now, and what would you want to say to them?", "2026-12-18": "What time are you planning to leave tonight? Writing it down now makes it much easier to stick to later.", "2026-12-19": "What was the moment tonight that made you stop and look twice?", "2026-12-20": "What are you happy to leave behind in this year, whether it's a habit, a worry or a pair of shoes that never fitted?", "2026-12-21": "What went well this year, and what would you like more of next year?", "2026-12-22": "What did you get better at this year, even if nobody else noticed?", "2026-12-23": "What's your escape hatch for the next few days? A walk, a nap, a strategic trip to the shop?", "2026-12-24": "If you could only keep one Christmas Eve tradition, which would it be?", "2026-12-25": "What was your favourite moment of today, and who told the worst cracker joke?", "2026-12-26": "What's the best thing you ate yesterday, and how many times did you go back for it?", "2026-12-27": "What made you laugh this week? Writing it down means you get to enjoy it twice.", "2026-12-28": "Who would you like to see more of next year, and how could you make that happen?", "2026-12-29": "What would make January feel a bit easier for you, realistically?", "2026-12-30": "Which two habits from this calendar do you want to keep going into the new year?", "2026-12-31": "What were your three favourite moments of December?"};
+let journal=store.get('mm-journal',{});let jDate=today;
+function jTab(t){document.querySelectorAll('#jback [role=tab]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.t===t)));document.getElementById('jLetter').hidden=t!=='letter';document.getElementById('jNotes').hidden=t!=='notes'}
+document.querySelectorAll('#jback [role=tab]').forEach(b=>b.onclick=()=>jTab(b.dataset.t));
+function renderJournal(){
+  renderLetter();document.getElementById('toLetter').textContent=letter&&letter.text?'✉ Edit my letter to January you':'✉ Write a letter to January you';
+  const d=data.find(x=>x.date===jDate);
+  document.getElementById('jLabel').textContent=fmt(jDate);
+  const ta=document.getElementById('jText');ta.value=journal[jDate]||'';const pr=JPROMPTS[jDate]||"What's one thing from today worth remembering?";document.getElementById('jPrompt').textContent=pr;ta.placeholder='Start writing here…';
+  const list=document.getElementById('jList');list.innerHTML='';
+  Object.keys(journal).filter(k=>k!==jDate&&journal[k]).sort().reverse().forEach(k=>{const e=document.createElement('div');e.className='jentry';const b=document.createElement('b');b.textContent=fmt(k);e.append(b,journal[k]);list.appendChild(e)});
+}
+async function openJournal(tab,date){tab=tab||'notes';jDate=(date&&date!=='preview')?date:today;renderJournal();jTab(tab);const f=document.getElementById('treeflip');
+  f.scrollIntoView({behavior:calm()?'auto':'smooth',block:'start'});await sleep(calm()?0:350);
+  f.classList.add('flipped');document.getElementById('treefront').inert=true;document.getElementById('jback').inert=false;setTimeout(()=>document.getElementById('jclose').focus(),500)}
+function closeJournal(){const f=document.getElementById('treeflip');if(!f.classList.contains('flipped'))return;f.classList.remove('flipped');document.getElementById('treefront').inert=false;document.getElementById('jback').inert=true;document.getElementById('journalBtn').focus()}
+document.getElementById('journalBtn').onclick=()=>openJournal('notes');
+document.getElementById('toLetter').onclick=()=>{jTab('letter');renderLetter()};document.getElementById('toNotes').onclick=()=>jTab('notes');
+document.getElementById('openJournal2').onclick=()=>{closeModal();openJournal('letter')};
+document.getElementById('mJournalBtn').onclick=()=>{const d=cur().date;closeModal();openJournal('notes',d)};
+document.getElementById('jclose').onclick=closeJournal;
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeJournal()});
+document.getElementById('jSave').onclick=async()=>{
+  const v=document.getElementById('jText').value.trim(),t=document.getElementById('jToast');
+  if(v)journal[jDate]=v;else delete journal[jDate];store.set('mm-journal',journal);t.textContent='Saved.';
+};
+
+/* ---------- How it works tour ---------- */
+const howS=document.getElementById('howScrim');let slide=0,howFrom=null;
+function showSlide(i){slide=i;const sl=document.querySelectorAll('#slides .slide');sl.forEach((e,k)=>{e.hidden=k!==i});
+  document.querySelectorAll('#dots i').forEach((d,k)=>d.classList.toggle('on',k===i));
+  document.getElementById('tourBack').style.visibility=i?'visible':'hidden';
+  document.getElementById('tourNext').textContent=i===sl.length-1?'Get started ✦':'Next'}
+function openHow(){howFrom=document.activeElement;showSlide(0);howS.classList.add('open');howS.setAttribute('aria-hidden','false');document.getElementById('tourNext').focus()}
+function closeHow(){const first=!store.get('mm-toured',false);howS.classList.remove('open');howS.setAttribute('aria-hidden','true');store.set('mm-toured',true);if(first&&!store.get('mm-settings',null)){setTimeout(openSet,250);return}if(howFrom&&howFrom.focus)howFrom.focus()}
+document.getElementById('howBtn').onclick=openHow;
+document.getElementById('tourNext').onclick=()=>{slide<document.querySelectorAll('#slides .slide').length-1?showSlide(slide+1):closeHow()};
+document.getElementById('tourBack').onclick=()=>{if(slide)showSlide(slide-1)};
+howS.onclick=e=>{if(e.target===howS)closeHow()};
+document.addEventListener('keydown',e=>{if(!howS.classList.contains('open'))return;if(e.key==='Escape')closeHow();if(e.key==='ArrowRight'&&slide<document.querySelectorAll('#slides .slide').length-1)showSlide(slide+1);if(e.key==='ArrowLeft'&&slide)showSlide(slide-1)});
+if(!store.get('mm-toured',false))setTimeout(openHow,900);
+const saveS=document.getElementById('saveScrim');
+document.getElementById('beenBtn').onclick=()=>{saveS.classList.add('open');saveS.setAttribute('aria-hidden','false');document.getElementById('codeIn').focus()};
+function closeSave(){saveS.classList.remove('open');saveS.setAttribute('aria-hidden','true')}
+document.getElementById('saveClose').onclick=closeSave;saveS.onclick=e=>{if(e.target===saveS)closeSave()};
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&saveS.classList.contains('open'))closeSave()});
+
+/* ---------- Save code ---------- */
+document.getElementById('codeCopy').onclick=async()=>{
+  const t=document.getElementById('codeToast');
+  const code='ELF1.'+btoa(unescape(encodeURIComponent(JSON.stringify({log,journal,letter,name:myName,settings}))));
+  try{await navigator.clipboard.writeText(code);t.textContent='Copied.'}catch(e){const i=document.getElementById('codeIn');i.value=code;i.select();t.textContent='Select and copy the code below.'}
+};
+document.getElementById('codeLoad').onclick=()=>{
+  const t=document.getElementById('codeToast'),v=document.getElementById('codeIn').value.trim();
+  try{
+    if(!v.startsWith('ELF1.'))throw 0;
+    const o=JSON.parse(decodeURIComponent(escape(atob(v.slice(5)))));
+    if(o.log&&typeof o.log==='object'){const clean={};for(const k in o.log){if(Array.isArray(o.log[k])&&/^2026-1[12]-\d\d$/.test(k))clean[k]=o.log[k].filter(x=>STRANDS[x])}log=clean;store.set('mm-log',log)}
+    if(o.journal&&typeof o.journal==='object'){journal={};for(const k in o.journal)if(typeof o.journal[k]==='string')journal[k]=o.journal[k].slice(0,1500);store.set('mm-journal',journal)}
+    if(o.letter&&typeof o.letter.text==='string'){letter={text:o.letter.text.slice(0,2000),at:+o.letter.at||0};store.set('mm-letter',letter)}
+    if(o.settings&&typeof o.settings==='object'){settings={level:['gentle','standard','harder'].includes(o.settings.level)?o.settings.level:'standard',kids:o.settings.kids==='yes'?'yes':'no'};store.set('mm-settings',settings)}
+    if(typeof o.name==='string'){myName=o.name.slice(0,30);store.set('mm-myname',myName);renderName()}
+    renderGrid();renderPost();t.textContent='Restored. Welcome back.';
+  }catch(e){t.textContent='That code didn\'t work. Check you copied all of it.'}
+};
+
+const shareText=()=>{const L=litCount(),G=goldCount();return `🎄 ${myName?myName+'\'s':'My'} Be kind to yours-elf tree: ${L} of ${TOTAL()} lights on, ${G} shining.${G===N?' ⭐ The star is on!':''}`};
+async function treePNG(){
+  const src=document.getElementById('treeSvg'),cl=src.cloneNode(true);
+  const all=src.querySelectorAll('*'),cAll=cl.querySelectorAll('*');
+  all.forEach((el,i)=>{const cs=getComputedStyle(el),t=cAll[i];if(!t.setAttribute)return;
+    if(cs.fill&&cs.fill!=='none')t.setAttribute('fill',cs.fill);t.setAttribute('opacity',cs.opacity);if(cs.display==='none')t.setAttribute('display','none');t.removeAttribute('class');t.style.animation='none'});
+  cl.setAttribute('xmlns','http://www.w3.org/2000/svg');cl.setAttribute('width','600');cl.setAttribute('height','684');
+  const url=URL.createObjectURL(new Blob([new XMLSerializer().serializeToString(cl)],{type:'image/svg+xml'}));
+  const img=new Image();await new Promise((r,j)=>{img.onload=r;img.onerror=j;img.src=url});
+  const W=1080,H=1350,c=document.createElement('canvas');c.width=W;c.height=H;const x=c.getContext('2d');
+  x.fillStyle='#F2A79E';x.fillRect(0,0,W,H);
+  for(let i=0;i<W;i+=36){x.fillStyle=(i/36)%2?'#FFF8EC':'#C63B2F';x.fillRect(i,H-36,36,18);x.fillStyle=(i/36)%2?'#C63B2F':'#FFF8EC';x.fillRect(i,H-18,36,18)}
+  x.fillStyle='#FFF8EC';x.beginPath();x.roundRect(70,70,W-140,H-200,40);x.fill();
+  x.strokeStyle='#D9A23C';x.lineWidth=6;x.stroke();
+  try{await document.fonts.ready}catch(e){}
+  x.textAlign='center';x.fillStyle='#C63B2F';x.font='54px Shrikhand, Georgia, serif';x.fillText(myName?`${myName}'s tree`:'My tree',W/2,175);
+  x.drawImage(img,(W-600)/2,215,600,684);
+  const L=litCount(),G=goldCount();
+  x.fillStyle='#3A2420';x.font='600 40px "DM Sans", sans-serif';x.fillText(`${L} of ${TOTAL()} lights on · ${G} shining`,W/2,965);
+  x.fillStyle='#B88A31';x.font='64px "Bagel Fat One", Georgia, serif';x.fillText('Be kind to yours-elf',W/2,1070);
+  x.fillStyle='#7A625A';x.font='30px "DM Sans", sans-serif';x.fillText('A wellness advent calendar',W/2,1120);
+  URL.revokeObjectURL(url);
+  return await new Promise(r=>c.toBlob(r,'image/png'));
+}
+let shareBlob=null;const shareS=document.getElementById('shareScrim');
+document.getElementById('shareTree').onclick=async()=>{
+  const t=document.getElementById('shareToast');t.textContent='';
+  try{shareBlob=await treePNG();document.getElementById('shareImg').src=URL.createObjectURL(shareBlob)}catch(e){shareBlob=null;t.textContent='Couldn\'t make the image here, but you can still copy the message.'}
+  shareS.classList.add('open');shareS.setAttribute('aria-hidden','false');document.getElementById('shareClose').focus();
+  if(!window.claude||typeof claude.use!=='function'){document.getElementById('shareSave').hidden=!shareBlob}else try{const dl=await claude.use('downloads');document.getElementById('shareSave').hidden=!(dl&&shareBlob)}catch(e){}
+};
+document.getElementById('shareSave').onclick=async()=>{const t=document.getElementById('shareToast');
+  if(!window.claude||typeof claude.use!=='function'){try{const a=document.createElement('a');a.href=URL.createObjectURL(shareBlob);a.download='my-yours-elf-tree.png';document.body.append(a);a.click();a.remove();t.textContent='Saved.'}catch(e){t.textContent='Couldn\'t save here. Try press and hold on the image.'}return}
+  try{const dl=await claude.use('downloads');await dl.save({filename:'my-yours-elf-tree.png',data:shareBlob});t.textContent='Saved.'}catch(e){t.textContent=e&&e.code==='declined'?'':'Couldn\'t save here. Try press and hold on the image.'}};
+document.getElementById('shareCopyImg').onclick=async()=>{const t=document.getElementById('shareToast');
+  try{await navigator.clipboard.write([new ClipboardItem({'image/png':shareBlob})]);t.textContent='Image copied.'}catch(e){t.textContent='Couldn\'t copy the image here. Try press and hold, or save it.'}};
+document.getElementById('shareCopyTxt').onclick=async()=>{const t=document.getElementById('shareToast');
+  try{await navigator.clipboard.writeText(shareText());t.textContent='Message copied.'}catch(e){t.textContent='Couldn\'t copy here.'}};
+const closeShare=()=>{shareS.classList.remove('open');shareS.setAttribute('aria-hidden','true')};
+document.getElementById('shareClose').onclick=closeShare;shareS.onclick=e=>{if(e.target===shareS)closeShare()};
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&shareS.classList.contains('open'))closeShare()});
+
+/* ---------- Name ---------- */
+let myName=store.get('mm-myname','');
+function renderName(){document.getElementById('treeName').textContent=myName?`${myName}'s tree`:'Your tree';document.getElementById('nameBtn').setAttribute('aria-label',myName?'Change your name':'Add your name')}
+document.getElementById('nameBtn').onclick=()=>{const f=document.getElementById('nameForm');f.hidden=!f.hidden;if(!f.hidden){const i=document.getElementById('nameIn');i.value=myName;i.focus()}};
+document.getElementById('nameForm').onsubmit=e=>{e.preventDefault();myName=document.getElementById('nameIn').value.trim();store.set('mm-myname',myName);renderName();e.target.hidden=true};
+renderName();
+
+if(TEST_MODE){const tb=document.getElementById('testbar');tb.hidden=false;
+  document.getElementById('testReset').onclick=()=>{['mm-log','mm-seen','mm-opened','mm-letter','mm-journal','mm-toured','mm-myname','mm-settings','mm-flipped'].forEach(k=>{try{localStorage.removeItem(k)}catch(e){}});location.reload()};
+  document.getElementById('peek').hidden=false;document.getElementById('peek').setAttribute('aria-pressed','true')}
+/* ---------- Settings ---------- */
+let settings=Object.assign({level:'standard',kids:'no'},store.get('mm-settings',{}));
+const LEVEL_HINT={gentle:'Shorter walks and easier versions of each move, like wall push-ups and sit-to-stands.',standard:'Walks, bodyweight squats, wall push-ups and the like.',harder:'A proper challenge, with dumbbells or kettlebells, floor push-ups, longer planks and runs.'};
+const setS=document.getElementById('setScrim');
+function paintSet(){document.querySelectorAll('#setLevel button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.v===settings.level)));
+  document.querySelectorAll('#setKids button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.v===settings.kids)));
+  document.getElementById('setLevelHint').textContent=LEVEL_HINT[settings.level]}
+document.querySelectorAll('#setLevel button').forEach(b=>b.onclick=()=>{settings.level=b.dataset.v;paintSet()});
+document.querySelectorAll('#setKids button').forEach(b=>b.onclick=()=>{settings.kids=b.dataset.v;paintSet()});
+function openSet(){document.getElementById('setName').value=myName;paintSet();setS.classList.add('open');setS.setAttribute('aria-hidden','false');document.getElementById('setName').focus()}
+function closeSet(){setS.classList.remove('open');setS.setAttribute('aria-hidden','true')}
+document.getElementById('setSave').onclick=()=>{store.set('mm-settings',settings);myName=document.getElementById('setName').value.trim().slice(0,30);store.set('mm-myname',myName);renderName();closeSet();if(current!==null&&document.getElementById('scrim').classList.contains('open')){renderOpts();applyKids()}};
+document.getElementById('setBtn').onclick=openSet;setS.onclick=e=>{if(e.target===setS)closeSet()};
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&setS.classList.contains('open'))closeSet()});
+const aboutS=document.getElementById('aboutScrim');let aboutFrom=null;
+function openAbout(){aboutFrom=document.activeElement;aboutS.classList.add('open');aboutS.setAttribute('aria-hidden','false');document.getElementById('aboutClose').focus()}
+function closeAbout(){aboutS.classList.remove('open');aboutS.setAttribute('aria-hidden','true');if(aboutFrom&&aboutFrom.focus)aboutFrom.focus()}
+document.getElementById('aboutBtn').onclick=openAbout;document.getElementById('aboutClose').onclick=closeAbout;aboutS.onclick=e=>{if(e.target===aboutS)closeAbout()};
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&aboutS.classList.contains('open'))closeAbout()});
+function paintKidsT(){const t=document.getElementById('kidsT');t.setAttribute('aria-pressed',String(kidsMode));t.textContent=kidsMode?'🧒 Showing kids\' versions':'🧒 Doing this with kids?'}
+function applyKids(){kidsMode=settings.kids==='yes';paintKidsT();if(current!==null)renderOpts()}
+
+/* ---------- Kids (per card) ---------- */
+document.getElementById('kidsT').onclick=e=>{kidsMode=!kidsMode;paintKidsT();renderOpts();if(kidsMode)burst(e.currentTarget)};
+document.getElementById('previewBtn').onclick=()=>openModal('preview');
+renderPost();
+
+const peekBtn=document.getElementById('peek');
+peekBtn.onclick=()=>{peek=!peek;peekBtn.setAttribute('aria-pressed',String(peek));renderGrid()};
+(async()=>{try{if(!window.claude||typeof claude.use!=='function')return;const u=await claude.use('user');if(u&&await u.isOwner()){document.getElementById('signoff').addEventListener('click',()=>{peekBtn.hidden=!peekBtn.hidden})}}catch(e){}})();
+document.getElementById('todayBtn').onclick=async()=>{const i=data.findIndex(d=>d.date===today);if(i<0)return;const c=document.querySelector(`.card[data-d="${today}"]`);if(c&&c.classList.contains('ready')){c.scrollIntoView({behavior:'smooth',block:'center'});await sleep(500);revealCard(c,i)}else openModal(i)};
+peekBtn.setAttribute('aria-pressed',String(peek));
+renderGrid();
+</script>
+</body>
+</html>
