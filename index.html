@@ -369,6 +369,13 @@ footer #aboutBtn{margin-bottom:10px}
 .whos{font-size:.88rem;color:var(--muted);margin:0 0 12px}
 .complete{border-top:1px dashed var(--line);padding-top:14px}
 .complete h4{font-family:'Yellowtail',cursive;font-weight:400;font-size:1.5rem;color:var(--tomato);margin:0 0 8px}
+.betatag{position:absolute;left:50%;top:8px;transform:translateX(-50%);z-index:3;white-space:nowrap;font-size:.58rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;background:#7A55B8;color:#fff;border-radius:999px;padding:2px 7px;pointer-events:none}
+.fbfab{position:fixed;right:14px;bottom:14px;z-index:40;font:inherit;font-size:.82rem;font-weight:700;background:var(--pine);color:#fff;border:2px solid #fff;border-radius:999px;padding:8px 14px;box-shadow:0 4px 14px rgba(0,0,0,.18);cursor:pointer}
+body:has(.open[aria-hidden="false"]) .fbfab{display:none}
+.fbcard{display:block;margin:10px auto 0;font:inherit;font-size:.8rem;background:none;border:0;color:var(--muted);text-decoration:underline;cursor:pointer}
+#fbScrim select{font:inherit;border:1px solid var(--line);background:#fff;border-radius:10px;padding:9px 12px;width:100%}
+#fbScrim .fbnote{text-align:left;margin:4px 0 0;font-size:.8rem}
+footer #fbFoot{margin-bottom:10px}
 .field{display:grid;gap:4px;margin-bottom:10px}
 .field label,.flabel{font-size:.76rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
 .field input[type=text],.field textarea{font:inherit;border:1px solid var(--line);background:#fff;border-radius:10px;padding:9px 12px;width:100%}
@@ -562,6 +569,7 @@ footer .script{font-size:1.5rem;color:var(--tomato)}
 <footer>
   <div class="wrap">
     <button class="howlink" id="aboutBtn" aria-haspopup="dialog">About this project</button>
+    <button class="howlink" id="fbFoot" aria-haspopup="dialog">Send feedback to the creator</button>
     <div class="script" id="signoff">With love, yours truly</div>
     <div><button class="toggle" id="peek" aria-pressed="false" hidden><span class="switch"></span>Admin view</button></div>
     <div class="legal"><b>Here's some legal stuff I have to put here because the AI robot that helped me make this site told me I might get sued if I don't:</b><br>These are general suggestions, not medical advice. If you have a health condition or injury, or are pregnant, check with a GP or physio before trying new exercise. Stop anything that causes pain, dizziness or chest discomfort.<br><br>Your ticks, journal notes and letter are saved only in this browser. Nothing is sent to me or anyone else. If you share this device, anyone using the same browser can see them. Clearing your browser data deletes them, so copy your save code (under “Been here before?”) if you want to keep them.</div>
@@ -590,6 +598,7 @@ footer .script{font-size:1.5rem;color:var(--tomato)}
       <div class="whos" id="mWhos"></div>
       <div id="mForm" hidden></div><div id="fShareRow" hidden></div>
       <aside class="quest" id="mQuest"><b>🎲 Bonus side quest</b><span id="mQuestX"></span></aside>
+      <button type="button" class="fbcard" id="fbCard">💬 Send feedback about this card</button>
       <aside class="tip" id="mTip"><b>🧝 Santa's little helper tip</b><span id="mTipX"></span></aside>
       <div class="celebrate" id="celebrate" role="status" hidden></div>
       <div class="actions" style="margin-top:12px" hidden><button type="button" class="btn ghost" id="mCopy" hidden>Share this card</button><span class="toast" id="toast" role="status"></span></div>
@@ -638,6 +647,26 @@ footer .script{font-size:1.5rem;color:var(--tomato)}
       <p>There’s no sign-up required and no data tracking. Everything stays on your browser.</p>
       <p>This project is free to use, but if you’d like to give something back for using this tool, please <a href="https://www.justgiving.com/fundraising/darcy1793832488739?utm_medium=FR&amp;utm_source=CL" target="_blank" rel="noopener">donate to Samaritans</a>, or pass a small kindness on to someone near you.</p>
     <div style="text-align:center;margin-top:14px"><button class="btn ghost" id="aboutClose">Close</button></div>
+  </div>
+</div>
+
+<button class="fbfab" id="fbFab" aria-haspopup="dialog">💬 Send feedback</button>
+<div class="sheet-scrim" id="fbScrim" aria-hidden="true">
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="fbH">
+    <div class="grab" aria-hidden="true"></div>
+    <h3 class="groovy" id="fbH">Send feedback</h3>
+    <form id="fbForm" novalidate>
+      <div class="field"><label for="fbText">What feedback do you have?</label><textarea id="fbText" name="feedback" rows="4" required></textarea></div>
+      <div class="field"><span class="flabel">Does this relate to a particular day's card?</span>
+        <div class="seg" role="group" aria-label="Relates to a card" id="fbRel"><button type="button" data-v="no" aria-pressed="true">No</button><button type="button" data-v="yes" aria-pressed="false">Yes</button></div>
+      </div>
+      <div class="field" id="fbDateF" hidden><label for="fbDate">Which card?</label><select id="fbDate" name="card"></select></div>
+      <div class="field"><label for="fbMore">Anything else?</label><textarea id="fbMore" name="anything_else" rows="2"></textarea></div>
+      <input type="checkbox" name="botcheck" id="fbBot" tabindex="-1" autocomplete="off" style="display:none">
+      <p class="hint fbnote">Please don't include personal details like your full name, address or health information. Feedback is sent by email to the creator.</p>
+      <p class="hint" id="fbMsg" role="status" style="margin:6px 0 0"></p>
+      <div class="actions" style="margin-top:8px"><button type="button" class="btn ghost" id="fbCancel">Cancel</button><button type="submit" class="btn primary" id="fbSend">Send</button></div>
+    </form>
   </div>
 </div>
 
@@ -792,7 +821,7 @@ function renderGrid(){
           (!open?`<span class="seal">${(()=>{const n=Math.round((new Date(d.date+'T12:00:00')-new Date(today+'T12:00:00'))/864e5);return n===1?'reveal tomorrow':'reveal in '+n+' days'})()}</span>`:'<span class="seal reveal">Reveal ✦</span>');
         if(open)b.classList.add('ready');
       }
-      b.innerHTML=`<span class="edge scallop" aria-hidden="true"></span>${inner}`;
+      b.innerHTML=`<span class="edge scallop" aria-hidden="true"></span>${inner}`+(idx>=N?'<span class="betatag">Beta · for testing</span>':'');
       b.setAttribute('aria-label',`${fmt(d.date)}: ${open?d.title:'not open yet'}${done.length?`, ${done.length} of 3 done`:''}`);
       if(open)b.onclick=()=>seen?openModal(idx):revealCard(b,idx);else b.setAttribute('aria-disabled','true');
       if(open&&seen){const w=document.createElement('div');w.className='cw';w.append(b);
@@ -889,7 +918,7 @@ function openModal(idx){
   document.getElementById('flipBack').className='scallop '+(isPrev?'back-stripe':idx>=32?'back-rainbow':BACKS[idx%BACKS.length]);
   const flip=document.getElementById('flip');flip.style.animation='none';void flip.offsetWidth;flip.style.animation='';
   document.getElementById('mTitle').textContent=d.title;
-  document.getElementById('mDate').textContent=isPrev?'Sample card':(idx<N?`${fmt(d.date)} · card ${idx+1} of ${N}`:`${fmt(d.date)} · test card ${idx-N+1} of ${BETA.length}`);
+  document.getElementById('mDate').textContent=isPrev?'Sample card':(idx<N?`${fmt(d.date)} · card ${idx+1} of ${N}`:`Beta version for testing · ${fmt(d.date)} · test card ${idx-N+1} of ${BETA.length}`);
   document.getElementById('mLine').hidden=true;document.getElementById('mTipX').textContent=d.line;{const qx=document.getElementById('mQuestX'),qp=(d.quest||'').split('||');qx.textContent='';if(qp.length>1){const st=document.createElement('strong');st.textContent=qp[0]+'. ';qx.append(st,qp[1])}else qx.textContent=qp[0]}document.getElementById('mQuest').hidden=!d.quest;document.getElementById('mTip').hidden=true;
   {const q=QUOTES[d.date];document.getElementById('mQuote').hidden=!q;if(q){document.getElementById('mQ').textContent='“'+q[0]+'”';document.getElementById('mQa').textContent=q[1]}}
   document.getElementById('mKids').hidden=true;kidsMode=settings.kids==='yes';paintKidsT();
@@ -939,6 +968,31 @@ function timerButton(k,sec){const b=document.createElement('button');b.type='but
     stopTimer();jingle(true);tmr={k,end:Date.now()+sec*1000,done:false};
     tmr.iv=setInterval(()=>{if(Date.now()>=tmr.end){clearInterval(tmr.iv);tmr.done=true;jingle(false);paintTimer();const e=document.getElementById('tm-'+k);if(e)burst(e);return}paintTimer()},250);paintTimer()};
   return b}
+
+/* ---------- Feedback (sent by email via Web3Forms) ---------- */
+const FEEDBACK_KEY=''; // ← paste the Web3Forms access key here
+const fbS=document.getElementById('fbScrim');let fbFrom=null;
+(function(){const sel=document.getElementById('fbDate');data.forEach((d,i)=>{const o=document.createElement('option');o.value=d.date;o.textContent=(i>=N?'Test card · ':'')+fmt(d.date)+' · '+d.title;sel.append(o)})})();
+function openFb(){fbFrom=document.activeElement;const sel=document.getElementById('fbDate');if(data.some(d=>d.date===today))sel.value=today;
+  document.getElementById('fbMsg').textContent='';fbS.classList.add('open');fbS.setAttribute('aria-hidden','false');setTimeout(()=>document.getElementById('fbText').focus(),50)}
+function closeFb(){fbS.classList.remove('open');fbS.setAttribute('aria-hidden','true');if(fbFrom&&fbFrom.focus)fbFrom.focus()}
+let fbRel='no';
+document.querySelectorAll('#fbRel button').forEach(b=>b.onclick=()=>{fbRel=b.dataset.v;document.querySelectorAll('#fbRel button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));document.getElementById('fbDateF').hidden=fbRel!=='yes'});
+document.getElementById('fbFab').onclick=openFb;
+document.getElementById('fbCard').onclick=()=>{const d=cur();if(!d||d.date==='preview'){openFb();return}openFb();fbRel='yes';document.querySelectorAll('#fbRel button').forEach(x=>x.setAttribute('aria-pressed',String(x.dataset.v==='yes')));document.getElementById('fbDateF').hidden=false;document.getElementById('fbDate').value=d.date};document.getElementById('fbFoot').onclick=openFb;document.getElementById('fbCancel').onclick=closeFb;
+fbS.onclick=e=>{if(e.target===fbS)closeFb()};
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&fbS.classList.contains('open'))closeFb()});
+document.getElementById('fbForm').onsubmit=async e=>{e.preventDefault();const msg=document.getElementById('fbMsg'),btn=document.getElementById('fbSend');
+  const text=document.getElementById('fbText').value.trim();if(!text){msg.textContent='Add a little feedback first.';document.getElementById('fbText').focus();return}
+  if(!FEEDBACK_KEY){msg.textContent='Feedback isn\'t switched on yet. Please try again soon.';return}
+  const card=fbRel==='yes'?document.getElementById('fbDate').selectedOptions[0].textContent:'Not about a specific card';
+  btn.disabled=true;msg.textContent='Sending…';
+  try{const r=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify({access_key:FEEDBACK_KEY,subject:'Be kind to yours-elf: new feedback',from_name:'Be kind to yours-elf',feedback:text,card,anything_else:document.getElementById('fbMore').value.trim()||'(nothing)',movement_level:settings.level,kids_mode:settings.kids,botcheck:document.getElementById('fbBot').checked})});
+    const j=await r.json().catch(()=>({}));
+    if(r.ok&&j.success!==false){msg.textContent='Thank you! Your feedback has been sent.';document.getElementById('fbForm').reset();fbRel='no';document.querySelectorAll('#fbRel button').forEach(x=>x.setAttribute('aria-pressed',String(x.dataset.v==='no')));document.getElementById('fbDateF').hidden=true;setTimeout(closeFb,1600)}
+    else msg.textContent='Sorry, that didn\'t send. Please try again in a minute.'}
+  catch(err){msg.textContent='Sorry, that didn\'t send. Please check your connection and try again.'}
+  finally{btn.disabled=false}};
 let kidsMode=false;
 function bodyFor(d){const [g,h]=(d.alt||'').split('||');return settings.level==='gentle'&&g?g:settings.level==='harder'&&h?h:d.body}
 function strandText(d,k){if(kidsMode){const kv={mind:d.kM,body:d.kB,heart:d.kH}[k];if(kv)return kv;return k==='body'?d.body:d[k]}return k==='body'?bodyFor(d):d[k]}
