@@ -970,7 +970,7 @@ function timerButton(k,sec){const b=document.createElement('button');b.type='but
   return b}
 
 /* ---------- Feedback (sent by email via Web3Forms) ---------- */
-const FEEDBACK_KEY=''; // ← paste the Web3Forms access key here
+const FEEDBACK_KEY='7b5a0ff3-d535-4689-933b-ea1a66393d3a'; // ← paste the Web3Forms access key here
 const fbS=document.getElementById('fbScrim');let fbFrom=null;
 (function(){const sel=document.getElementById('fbDate');data.forEach((d,i)=>{const o=document.createElement('option');o.value=d.date;o.textContent=(i>=N?'Test card · ':'')+fmt(d.date)+' · '+d.title;sel.append(o)})})();
 function openFb(){fbFrom=document.activeElement;const sel=document.getElementById('fbDate');if(data.some(d=>d.date===today))sel.value=today;
